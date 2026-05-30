@@ -19,5 +19,8 @@
   "seminars/Seminar_1.ipynb": {
     "Seminar_1.html": "8324b6a0",
     "Seminar_1.tex": "c80e09e4"
+  },
+  "seminars/seminars.qmd": {
+    "seminars.html": "c389b547"
   }
 }

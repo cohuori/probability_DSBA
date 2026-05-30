@@ -103,5 +103,12 @@
     "title": "Seminar 1: Basics of Combinatorics",
     "section": "4.1 Useful Consequences",
     "text": "4.1 Useful Consequences\nFrom the Hockey-Stick Identity we obtain\n\\[\n\\sum_{i=1}^{n}i=\\frac{n(n+1)}{2}\n\\]\nand\n\\[\n\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1)}{6}.\n\\]"
+  },
+  {
+    "objectID": "seminars/seminars.html",
+    "href": "seminars/seminars.html",
+    "title": "1 Seminars",
+    "section": "",
+    "text": "1 Seminars\n\nSeminar 1: Basics of Combinatorics"
   }
 ]

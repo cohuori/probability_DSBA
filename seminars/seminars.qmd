@@ -1,3 +1,4 @@
 # Seminars
 
 - [Seminar 1: Basics of Combinatorics](seminars/Seminar_1.html)
+
