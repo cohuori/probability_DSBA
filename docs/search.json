@@ -49,6 +49,34 @@
     "text": "2.1 Useful Consequences\nFrom the Hockey-Stick Identity we obtain\n\\[\n\\sum_{i=1}^{n}i=\\frac{n(n+1)}{2}\n\\]\nand\n\\[\n\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1)}{6}.\n\\]"
   },
   {
+    "objectID": "seminars/Seminar_1.html#derangements",
+    "href": "seminars/Seminar_1.html#derangements",
+    "title": "Seminar 1: Basics of Combinatorics",
+    "section": "3.1 Derangements",
+    "text": "3.1 Derangements\nA derangement of \\(n\\) objects is a permutation in which no object remains in its original position.\nLet \\(D_n\\) denote the number of derangements of an \\(n\\)-element set.\n\n3.1.1 Inclusion–Exclusion Formula\nUsing the Inclusion–Exclusion Principle, one obtains\n\\[\nD_n\n=\nn!\n\\left(\n1-\\frac1{1!}\n+\\frac1{2!}\n-\\frac1{3!}\n+\\cdots\n+(-1)^n\\frac1{n!}\n\\right).\n\\]\nEquivalently,\n\\[\nD_n\n=\nn!\\sum_{k=0}^{n}\\frac{(-1)^k}{k!}.\n\\]"
+  },
+  {
+    "objectID": "seminars/Seminar_1.html#basic-idea",
+    "href": "seminars/Seminar_1.html#basic-idea",
+    "title": "Seminar 1: Basics of Combinatorics",
+    "section": "5.1 Basic Idea",
+    "text": "5.1 Basic Idea\nSuppose that we want to estimate the probability of an event \\(A\\).\nIf we repeat the experiment independently \\(N\\) times and observe that the event occurs \\(M\\) times, then\n\\[\nP(A)\\approx\\frac{M}{N}.\n\\]\nAs \\(N\\) becomes large, this approximation becomes increasingly accurate.\nThis phenomenon is a consequence of the Law of Large Numbers, which states that the empirical frequency of an event converges to its true probability."
+  },
+  {
+    "objectID": "seminars/Seminar_1.html#why-does-it-work",
+    "href": "seminars/Seminar_1.html#why-does-it-work",
+    "title": "Seminar 1: Basics of Combinatorics",
+    "section": "5.2 Why Does It Work?",
+    "text": "5.2 Why Does It Work?\nSuppose that the true probability of an event is \\(p\\).\nIf we perform \\(N\\) independent experiments and count the number of successes \\(M\\), then\n\\[\n\\frac{M}{N}\n\\longrightarrow\np\n\\qquad\\text{as}\\qquad\nN\\to\\infty.\n\\]\nThus, by generating enough random samples, we can estimate probabilities with arbitrary precision."
+  },
+  {
+    "objectID": "seminars/Seminar_1.html#example-lucky-tram-tickets",
+    "href": "seminars/Seminar_1.html#example-lucky-tram-tickets",
+    "title": "Seminar 1: Basics of Combinatorics",
+    "section": "5.3 Example: Lucky Tram Tickets",
+    "text": "5.3 Example: Lucky Tram Tickets\nA six-digit ticket is called lucky if the sum of its first three digits equals the sum of its last three digits. Computing the exact probability requires a nontrivial combinatorial argument.\nInstead, we can estimate the probability by generating a large number of random tickets and checking how often the event occurs. For example, after simulating one million random tickets, we obtain\n\\[\nP(\\text{lucky ticket})\n\\approx\n0.055.\n\\]\nThe exact value is\n\\[\nP(\\text{lucky ticket})\n=\n\\frac{55252}{10^6}\n=\n0.055252.\n\\]\nThe simulation provides an excellent approximation.\n\n\nShow Python code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nnp.random.seed(42)\n\nN = 1_000_000\n\n# Generate N random six-digit tickets\ntickets = np.random.randint(0, 1_000_000, size=N)\n\n# Extract digits\nd1 = tickets // 100000\nd2 = (tickets // 10000) % 10\nd3 = (tickets // 1000) % 10\n\nd4 = (tickets // 100) % 10\nd5 = (tickets // 10) % 10\nd6 = tickets % 10\n\nleft_sum = d1 + d2 + d3\nright_sum = d4 + d5 + d6\n\nlucky = (left_sum == right_sum)\n\nestimated_probability = np.mean(lucky)\n\nprint(f\"Estimated probability = {estimated_probability:.6f}\")\nprint(f\"Estimated number of lucky tickets = {estimated_probability*1_000_000:.0f}\")\n\n\nEstimated probability = 0.055233\nEstimated number of lucky tickets = 55233"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "1 Probability Theory",
