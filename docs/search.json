@@ -1,68 +1,5 @@
 [
   {
-    "objectID": "Seminar_1.html#sum-rule",
-    "href": "Seminar_1.html#sum-rule",
-    "title": "Seminar 1: Counting Techniques",
-    "section": "3.1 Sum Rule",
-    "text": "3.1 Sum Rule\nSuppose that a task can be performed in \\(n_1\\) ways or in \\(n_2\\) ways, and that the two possibilities are mutually exclusive. Then the total number of possible outcomes equals \\(n_1+n_2\\).\n\n3.1.1 Example\nA class consists of 15 boys and 12 girls. If we wish to choose a class representative, then the number of possible choices is\n\\[15+12=27.\\]"
-  },
-  {
-    "objectID": "Seminar_1.html#product-rule",
-    "href": "Seminar_1.html#product-rule",
-    "title": "Seminar 1: Counting Techniques",
-    "section": "3.2 Product Rule",
-    "text": "3.2 Product Rule\nSuppose that a procedure consists of \\(k\\) consecutive steps. If Step \\(i\\) can be performed in \\(n_i\\) ways for every \\(i=1,\\ldots,k\\), then the total number of possible outcomes equals\n\\[n_1n_2\\cdots n_k.\\]\n\n3.2.1 Example\nA password consists of three letters followed by two digits. Since each letter can be chosen in 26 ways and each digit in 10 ways, the total number of possible passwords equals\n\\[26^3\\cdot10^2\\]"
-  },
-  {
-    "objectID": "Seminar_1.html#pigeonhole-principle",
-    "href": "Seminar_1.html#pigeonhole-principle",
-    "title": "Seminar 1: Counting Techniques",
-    "section": "3.3 Pigeonhole Principle",
-    "text": "3.3 Pigeonhole Principle\nIf \\(n+1\\) objects are placed into \\(n\\) boxes, then at least one box must contain at least two objects.\n\n3.3.1 Example\nAmong 13 people there are always at least two born in the same month. Indeed, the objects are the people and the boxes are the months of the year. Since \\(13&gt;12\\), the conclusion follows immediately."
-  },
-  {
-    "objectID": "Seminar_1.html#counting-formulas",
-    "href": "Seminar_1.html#counting-formulas",
-    "title": "Seminar 1: Counting Techniques",
-    "section": "3.4 Counting Formulas",
-    "text": "3.4 Counting Formulas\n\n\n\n\n\n\n\n\n\nWith Repetition\nWithout Repetition\n\n\n\n\nCombinations\n\\(\\displaystyle \\binom{n+k-1}{k}\\)\n\\(\\displaystyle \\binom{n}{k}\\)\n\n\nArrangements\n\\(\\displaystyle n^k\\)\n\\(\\displaystyle \\frac{n!}{(n-k)!}\\)"
-  },
-  {
-    "objectID": "Seminar_1.html#binomial-theorem",
-    "href": "Seminar_1.html#binomial-theorem",
-    "title": "Seminar 1: Counting Techniques",
-    "section": "3.5 Binomial Theorem",
-    "text": "3.5 Binomial Theorem\nFor every \\(n\\in\\mathbb Z_+\\),\n\\[\n(x+y)^n\n=\n\\sum_{k=0}^{n}\n\\binom{n}{k}\nx^k y^{\\,n-k}.\n\\]"
-  },
-  {
-    "objectID": "Seminar_1.html#useful-consequences",
-    "href": "Seminar_1.html#useful-consequences",
-    "title": "Seminar 1: Counting Techniques",
-    "section": "4.1 Useful Consequences",
-    "text": "4.1 Useful Consequences\nFrom the Hockey-Stick Identity we obtain\n\\[\n\\sum_{i=1}^{n}i=\\frac{n(n+1)}{2}\n\\]\nand\n\\[\n\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1)}{6}.\n\\]"
-  },
-  {
-    "objectID": "lectures.html",
-    "href": "lectures.html",
-    "title": "1 Lectures",
-    "section": "",
-    "text": "1 Lectures\n\nLecture 1: Combinatorial Foundations\nLecture 2: Probability Axioms - Lecture 3: Conditional Probability"
-  },
-  {
-    "objectID": "seminars.html",
-    "href": "seminars.html",
-    "title": "1 Seminars",
-    "section": "",
-    "text": "1 Seminars\n\nSeminar 1: Basics of Combinatorics"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "1 Probability Theory",
-    "section": "",
-    "text": "1 Probability Theory\nWelcome to the course webpage."
-  },
-  {
     "objectID": "seminars/Seminar_1.html#sum-rule",
     "href": "seminars/Seminar_1.html#sum-rule",
     "title": "Seminar 1: Basics of Combinatorics",
@@ -105,10 +42,24 @@
     "text": "4.1 Useful Consequences\nFrom the Hockey-Stick Identity we obtain\n\\[\n\\sum_{i=1}^{n}i=\\frac{n(n+1)}{2}\n\\]\nand\n\\[\n\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1)}{6}.\n\\]"
   },
   {
-    "objectID": "seminars/seminars.html",
-    "href": "seminars/seminars.html",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "1 Probability Theory",
+    "section": "",
+    "text": "1 Probability Theory\nWelcome to the course webpage."
+  },
+  {
+    "objectID": "seminars.html",
+    "href": "seminars.html",
     "title": "1 Seminars",
     "section": "",
     "text": "1 Seminars\n\nSeminar 1: Basics of Combinatorics"
+  },
+  {
+    "objectID": "lectures.html",
+    "href": "lectures.html",
+    "title": "1 Lectures",
+    "section": "",
+    "text": "1 Lectures\n\nLecture 1: Combinatorial Foundations\nLecture 2: Probability Axioms - Lecture 3: Conditional Probability"
   }
 ]
