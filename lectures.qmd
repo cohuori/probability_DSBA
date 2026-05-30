@@ -1,0 +1,6 @@
+# Lectures
+
+- [Lecture 1: Combinatorial 
+Foundations](lectures/lecture01.html) 
+- Lecture 2: Probability Axioms - Lecture 3: 
+Conditional Probability

@@ -1,0 +1,19 @@
+{
+  "index.qmd": {
+    "index.html": "27d64cbc"
+  },
+  "lectures.qmd": {
+    "lectures.html": "600f2377"
+  },
+  "Seminar_1.ipynb": {
+    "Seminar_1.html": "db9d5489",
+    "Seminar_1.tex": "dce2744f"
+  },
+  "seminars.qmd": {
+    "seminars.html": "2299c399"
+  },
+  "seminars/Seminar01_Counting.ipynb": {
+    "Seminar01_Counting.html": "b1fa5509",
+    "Seminar01_Counting.tex": "b6038fe4"
+  }
+}

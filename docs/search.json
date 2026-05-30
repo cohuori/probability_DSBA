@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "seminars/Seminar01_Counting.html",
+    "href": "seminars/Seminar01_Counting.html",
+    "title": "Lecture 1: Combinatorial Foundations of Probability",
+    "section": "",
+    "text": "Probability Theory by  Carlos Buitrago  · Fall 2026"
+  },
+  {
+    "objectID": "seminars/Seminar01_Counting.html#example",
+    "href": "seminars/Seminar01_Counting.html#example",
+    "title": "Lecture 1: Combinatorial Foundations of Probability",
+    "section": "1.1 Example",
+    "text": "1.1 Example\nA password consists of 4 digits.\nHow many passwords exist?\nWe have\n\\[\n10^4=10000.\n\\]\nThe probability of guessing correctly in one attempt is\n\\[\n\\frac{1}{10000}.\n\\]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "1 Probability Theory",
+    "section": "",
+    "text": "Welcome to the course webpage.\n\n\n\nLectures - Seminars - Homework - Exam information"
+  },
+  {
+    "objectID": "index.html#contents",
+    "href": "index.html#contents",
+    "title": "1 Probability Theory",
+    "section": "",
+    "text": "Lectures - Seminars - Homework - Exam information"
+  },
+  {
+    "objectID": "seminars.html",
+    "href": "seminars.html",
+    "title": "1 Seminars",
+    "section": "",
+    "text": "1 Seminars\n\nSeminar 1: Counting Techniques"
+  },
+  {
+    "objectID": "lectures.html",
+    "href": "lectures.html",
+    "title": "1 Lectures",
+    "section": "",
+    "text": "1 Lectures\n\nLecture 1: Combinatorial Foundations\nLecture 2: Probability Axioms - Lecture 3: Conditional Probability"
+  }
+]
