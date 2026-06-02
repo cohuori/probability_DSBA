@@ -1,5 +1,159 @@
 [
   {
+    "objectID": "seminars/seminar_2.html",
+    "href": "seminars/seminar_2.html",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "",
+    "text": "A probability space is a triple \\((\\Omega,\\mathcal{F},P)\\) consisting of:\n\nA sample space \\(\\Omega\\), the set of all possible outcomes.\nA \\(\\sigma\\)-algebra \\(\\mathcal{F}\\) of subsets of \\(\\Omega\\), whose elements are called events.\nA probability measure \\(P:\\mathcal{F}\\to[0,1]\\).\n\nA collection \\(\\mathcal{F}\\subseteq 2^\\Omega\\) is called a \\(\\sigma\\)-algebra if:\n\n\\(\\Omega\\in\\mathcal{F}\\);\n\\(A\\in\\mathcal{F}\\implies A^c\\in\\mathcal{F}\\);\nif \\(A_1,A_2,\\ldots\\in\\mathcal{F}\\), then \\(\\bigcup_{n=1}^{\\infty}A_n\\in\\mathcal{F}\\).\n\nA function \\(P:\\mathcal{F}\\to[0,1]\\) is called a probability measure if:\n\n\\(P(\\Omega)=1\\);\nfor every pairwise disjoint sequence \\(A_1,A_2,\\ldots\\in\\mathcal{F}\\), \\[\nP\\!\\left(\\bigcup_{n=1}^{\\infty}A_n\\right)\n=\n\\sum_{n=1}^{\\infty}P(A_n).\n\\]\n\nFrom the axioms one obtains the basic properties\n\\[\nP(A^c)=1-P(A),\n\\]\n\\[\nA\\subseteq B \\quad\\Longrightarrow\\quad P(A)\\le P(B),\n\\]\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-die-roll",
+    "href": "seminars/seminar_2.html#example-die-roll",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "2.1 Example: Die Roll",
+    "text": "2.1 Example: Die Roll\nConsider one fair die roll. Then \\(\\Omega=\\{1,2,3,4,5,6\\}\\), \\(\\mathcal F=2^\\Omega\\), and \\(P(\\{\\omega\\})=1/6\\) for every \\(\\omega\\in\\Omega\\).\nLet \\(A=\\{\\text{the result is even}\\}=\\{2,4,6\\}\\). Then \\(P(A)=|A|/|\\Omega|=3/6=1/2\\).\n\n\nEmpirical probability: 0.4962\nTheoretical probability: 0.5"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-two-dice",
+    "href": "seminars/seminar_2.html#example-two-dice",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "2.2 Example: Two Dice",
+    "text": "2.2 Example: Two Dice\nRoll two fair dice. Then \\(\\Omega=\\{1,\\ldots,6\\}^2\\) and \\(|\\Omega|=36\\). Let \\(A=\\{\\text{the sum is }7\\}\\). The favorable outcomes are \\((1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\\), hence \\(|A|=6\\) and \\(P(A)=6/36=1/6\\).\n\n\n\n\n\n\n\n\n\nTheoretical P(S=7) = 0.166667\nN=   100: Empirical P(S=7) = 0.180000\nN=100000: Empirical P(S=7) = 0.167760"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-cards",
+    "href": "seminars/seminar_2.html#example-cards",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "2.3 Example: Cards",
+    "text": "2.3 Example: Cards\nSuppose we draw cards from a standard deck of \\(52\\) cards. The probability of drawing an ace is \\(4/52=1/13\\).\nIf two cards are drawn without replacement, then the probability that both cards are aces is\n\\[\n\\frac{4}{52}\\cdot\\frac{3}{51}.\n\\]\n\n\nEmpirical probability: 0.00475\nTheoretical probability: 0.004524886877828055"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-bus-problem",
+    "href": "seminars/seminar_2.html#example-bus-problem",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "3.1 Example: Bus Problem",
+    "text": "3.1 Example: Bus Problem\nSuppose you and a bus arrive independently and uniformly at random between \\(12:00\\) and \\(13:00\\). The bus waits for \\(15\\) minutes before leaving, and you also wait \\(15\\) minutes if the bus has not arrived yet.\nAfter rescaling time to \\([0,1]\\), \\(15\\) minutes corresponds to \\(1/4\\). You catch the bus if \\(|X-Y|\\le 1/4\\). The bad region consists of two triangles with total area \\(2\\cdot (3/4)^2/2=9/16\\). Therefore,\n\\[\nP(\\text{catch the bus})=1-\\frac{9}{16}=\\frac{7}{16}.\n\\]\n\n\nEmpirical probability: 0.43745\nTheoretical probability: 0.4375"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#bertrands-paradox",
+    "href": "seminars/seminar_2.html#bertrands-paradox",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "3.2 Bertrand’s Paradox",
+    "text": "3.2 Bertrand’s Paradox\nConsider a circle of radius \\(R\\). We choose a chord at random and ask\n\\[\nP(\\text{the chord is longer than the side of an inscribed equilateral triangle})=?\n\\]\nThe side length of an inscribed equilateral triangle is \\(\\sqrt{3}R\\). If \\(d\\) is the distance from the center of the circle to the chord, then the chord length is \\(L=2\\sqrt{R^2-d^2}\\). Hence\n\\[\nL&gt;\\sqrt{3}R\n\\quad\\Longleftrightarrow\\quad\nd&lt;\\frac{R}{2}.\n\\]\nThe ambiguity is that the phrase “choose a chord at random” can mean different things.\nMethod 1: random endpoints. Choose two points independently and uniformly on the circumference and join them by a chord. This gives\n\\[\nP\\left(L&gt;\\sqrt{3}R\\right)=\\frac13.\n\\]\nMethod 2: random distance from the center. Choose the distance \\(d\\) uniformly from \\([0,R]\\), then choose the direction of the chord uniformly at random. Since the chord is long exactly when \\(d&lt;R/2\\), this gives\n\\[\nP\\left(L&gt;\\sqrt{3}R\\right)=\\frac12.\n\\]\nMethod 3: random midpoint. Choose the midpoint of the chord uniformly from the disk. The chord is long exactly when the midpoint lies inside the disk of radius \\(R/2\\), so this gives\n\\[\nP\\left(L&gt;\\sqrt{3}R\\right)\n=\n\\frac{\\pi(R/2)^2}{\\pi R^2}\n=\n\\frac14.\n\\]\nThus the same informal question gives three different answers:\n\\[\n\\frac13,\\qquad \\frac12,\\qquad \\frac14.\n\\]\nThis is Bertrand’s paradox. It shows that a probability problem is not well-defined until the probability space, or equivalently the random mechanism, is precisely specified.\n\n\nBertrand's Paradox\n\nMethod 1: Random endpoints\nEmpirical probability:   0.3299\nTheoretical probability: 0.3333\n\nMethod 2: Random distance from center\nEmpirical probability:   0.5006\nTheoretical probability: 0.5000\n\nMethod 3: Random midpoint in disk\nEmpirical probability:   0.2509\nTheoretical probability: 0.2500"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-binomial-distribution",
+    "href": "seminars/seminar_2.html#example-binomial-distribution",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "4.1 Example: Binomial Distribution",
+    "text": "4.1 Example: Binomial Distribution\nLet \\(S_n\\) be the number of successes in \\(n\\) independent Bernoulli trials with success probability \\(p\\). Then\n\\[\nP(S_n=m)=\\binom{n}{m}p^m(1-p)^{n-m},\\qquad m=0,1,\\ldots,n.\n\\]\nFor example, if a fair coin is tossed \\(10\\) times, then the probability of exactly \\(5\\) heads is\n\\[\nP(S_{10}=5)=\\binom{10}{5}\\left(\\frac12\\right)^{10}.\n\\]"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-at-least-one-success",
+    "href": "seminars/seminar_2.html#example-at-least-one-success",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "4.2 Example: At Least One Success",
+    "text": "4.2 Example: At Least One Success\nIf \\(S_n\\sim\\mathrm{Bin}(n,p)\\), then\n\\[\nP(S_n\\ge 1)=1-P(S_n=0)=1-(1-p)^n.\n\\]\nThis formula is often easier than adding many probabilities."
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-most-probable-number-of-successes",
+    "href": "seminars/seminar_2.html#example-most-probable-number-of-successes",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "4.3 Example: Most Probable Number of Successes",
+    "text": "4.3 Example: Most Probable Number of Successes\nIf \\(S_n\\sim\\mathrm{Bin}(n,p)\\), then a most probable value is\n\\[\nm=\\lfloor (n+1)p\\rfloor.\n\\]\nIf \\((n+1)p\\) is an integer, then both \\((n+1)p-1\\) and \\((n+1)p\\) are modes.\n\n\nMode by formula: 6\nMode by computation: 6"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-dependent-events",
+    "href": "seminars/seminar_2.html#example-dependent-events",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "5.1 Example: Dependent Events",
+    "text": "5.1 Example: Dependent Events\nDraw two cards without replacement from a standard deck. Let \\(A=\\{\\text{first card is an ace}\\}\\) and \\(B=\\{\\text{second card is an ace}\\}\\). Then\n\\[\nP(A)=\\frac4{52},\\qquad P(B)=\\frac4{52},\n\\]\nbut\n\\[\nP(A\\cap B)=\\frac4{52}\\cdot\\frac3{51}\\neq \\frac4{52}\\cdot\\frac4{52}.\n\\]\nTherefore, \\(A\\) and \\(B\\) are not independent.\n\n\nP(A): 0.07821\nP(B): 0.07597\nP(A and B): 0.00465\nP(A)P(B): 0.0059416137"
+  },
+  {
+    "objectID": "seminars/seminar_2.html#example-pairwise-but-not-mutual-independence",
+    "href": "seminars/seminar_2.html#example-pairwise-but-not-mutual-independence",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "5.2 Example: Pairwise but Not Mutual Independence",
+    "text": "5.2 Example: Pairwise but Not Mutual Independence\nToss two fair coins and write the outcomes as \\(X,Y\\in\\{0,1\\}\\). Define three events\n\\[\nA=\\{X=0\\},\\qquad B=\\{Y=0\\},\\qquad C=\\{X=Y\\}.\n\\]\nThen \\(A\\), \\(B\\), and \\(C\\) are pairwise independent. However,\n\\[\nP(A\\cap B\\cap C)=\\frac14,\n\\]\nwhile\n\\[\nP(A)P(B)P(C)=\\frac12\\cdot\\frac12\\cdot\\frac12=\\frac18.\n\\]\nTherefore, the events are pairwise independent but not mutually independent."
+  },
+  {
+    "objectID": "seminars/seminar_2.html#true-randomness-vs-pseudorandomness",
+    "href": "seminars/seminar_2.html#true-randomness-vs-pseudorandomness",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "6.1 True Randomness vs Pseudorandomness",
+    "text": "6.1 True Randomness vs Pseudorandomness\nA computer executes a sequence of deterministic instructions. If we start a program twice with exactly the same initial conditions, it will perform exactly the same calculations and produce exactly the same output.\nFor this reason, most “random” numbers generated by a computer are not truly random. Instead, they are pseudorandom numbers.\nA pseudorandom number generator (PRNG) is a deterministic algorithm that produces a sequence of numbers that behaves as if it were random.\nGiven an initial value called a seed, the generator produces\n\\[\nx_0,x_1,x_2,\\ldots\n\\]\naccording to a deterministic rule\n\\[\nx_{n+1}=f(x_n).\n\\]\nIf the same seed is used again, exactly the same sequence will be generated.\nFor example:\nimport numpy as np\n\nnp.random.seed(42)\n\nprint(np.random.random())\nprint(np.random.random())\nprint(np.random.random())\nRunning this code twice produces exactly the same numbers."
+  },
+  {
+    "objectID": "seminars/seminar_2.html#why-does-this-work",
+    "href": "seminars/seminar_2.html#why-does-this-work",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "6.2 Why Does This Work?",
+    "text": "6.2 Why Does This Work?\nAlthough pseudorandom numbers are generated deterministically, good generators are designed so that their outputs satisfy many statistical properties expected from genuinely random sequences.\nFor practical purposes, the sequence appears random:\n\nfrequencies are approximately correct;\ncorrelations are extremely small;\npatterns are difficult to detect;\nmany statistical tests cannot distinguish the sequence from true randomness.\n\nAs a result, pseudorandom generators are sufficient for most scientific simulations, machine learning algorithms, statistical experiments, computer graphics, and video games."
+  },
+  {
+    "objectID": "seminars/seminar_2.html#how-difficult-is-it-to-generate-truly-random-numbers",
+    "href": "seminars/seminar_2.html#how-difficult-is-it-to-generate-truly-random-numbers",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "6.3 How Difficult Is It to Generate Truly Random Numbers?",
+    "text": "6.3 How Difficult Is It to Generate Truly Random Numbers?\nGenerating true randomness is surprisingly difficult.\nA computer by itself cannot create randomness from nothing because its internal operations are deterministic.\nTo obtain genuine randomness, we must rely on unpredictable physical phenomena such as:\n\nradioactive decay;\nthermal noise in electronic circuits;\natmospheric noise;\nphoton arrival times;\nquantum measurements.\n\nSuch devices are called hardware random number generators (HRNGs).\nFor example, some modern processors contain dedicated hardware that measures microscopic physical noise and converts it into random bits."
+  },
+  {
+    "objectID": "seminars/seminar_2.html#why-is-true-randomness-important",
+    "href": "seminars/seminar_2.html#why-is-true-randomness-important",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "6.4 Why Is True Randomness Important?",
+    "text": "6.4 Why Is True Randomness Important?\nFor many simulations, pseudorandom numbers are perfectly adequate.\nHowever, some applications require unpredictability rather than merely statistical randomness.\nExamples include:\n\ncryptography;\nsecure communications;\nonline banking;\ndigital signatures;\npassword generation;\nblockchain technologies;\nmilitary systems.\n\nSuppose a cryptographic system generates passwords using a predictable pseudorandom generator. If an attacker discovers the algorithm and the seed, every future password can be predicted.\nFor this reason, cryptographic systems often combine pseudorandom generators with physical sources of randomness."
+  },
+  {
+    "objectID": "seminars/seminar_2.html#randomness-and-monte-carlo-methods",
+    "href": "seminars/seminar_2.html#randomness-and-monte-carlo-methods",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "6.5 Randomness and Monte Carlo Methods",
+    "text": "6.5 Randomness and Monte Carlo Methods\nOne of the most important applications of random numbers is Monte Carlo simulation.\nThe basic idea is simple:\n\nGenerate many random outcomes.\nCompute the quantity of interest for each outcome.\nAverage the results.\n\nFor example, to estimate\n\\[\nP(A),\n\\]\nwe can simulate the experiment many times and compute\n\\[\n\\hat P(A)\n=\n\\frac{\\text{number of times }A\\text{ occurs}}\n     {\\text{number of simulations}}.\n\\]\nThe Law of Large Numbers guarantees that\n\\[\n\\hat P(A)\\to P(A)\n\\qquad\\text{as}\\qquad\nN\\to\\infty.\n\\]\nThis principle is used throughout science and engineering."
+  },
+  {
+    "objectID": "seminars/seminar_2.html#random-numbers-in-real-life",
+    "href": "seminars/seminar_2.html#random-numbers-in-real-life",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "6.6 Random Numbers in Real Life",
+    "text": "6.6 Random Numbers in Real Life\nRandom number generators play a crucial role in many modern technologies:\n\nweather forecasting;\nmachine learning;\nartificial intelligence;\ncomputer graphics and animation;\nrisk analysis in finance;\nepidemiological modeling;\nnuclear physics;\ncryptography and cybersecurity;\nsimulation of communication networks;\nreliability analysis of complex systems.\n\nMany scientific problems are so complicated that exact calculations are impossible, while Monte Carlo simulations using random numbers provide accurate approximations."
+  },
+  {
+    "objectID": "seminars/seminar_2.html#historical-remark",
+    "href": "seminars/seminar_2.html#historical-remark",
+    "title": "Seminar 2: Probabilistic models",
+    "section": "6.7 Historical Remark",
+    "text": "6.7 Historical Remark\nDuring the 1940s, scientists working on the Manhattan Project needed large quantities of random numbers to simulate neutron transport inside nuclear reactors.\nThis led to the development of the Monte Carlo method, named after the famous casino in Monaco.\nToday Monte Carlo methods are among the most powerful computational tools in mathematics, statistics, physics, engineering, finance, and data science."
+  },
+  {
+    "objectID": "seminars/work_in_seminar_1.html",
+    "href": "seminars/work_in_seminar_1.html",
+    "title": "Problems to solve in class",
+    "section": "",
+    "text": "import pandas as pd\nimport random\nfrom IPython.display import display\n\n\nimport pandas as pd\n\nproblem_texts = [\n    # CATEGORY 1\n    \"Class of 100 students: Men/Women and Taking/Not taking Economics table. Find probabilities: woman, taking economics, man or taking economics, woman and taking economics.\",\n    \"Families with three children, probability of boy is 52%. Use outcome table BBB, BBG, ..., GGG. Find probabilities: exactly 2 girls, at least 2 girls, at least one child of each sex, middle child opposite to the other two.\",\n    \"Take 3 cards from a 36-card deck with replacement. Describe elementary outcomes and probabilities. Find P(queen, king, ace) and P(king, king, ace).\",\n    \"Take 3 cards from a 36-card deck without replacement. Answer the same questions as in the previous problem.\",\n    \"Find unions and intersections of given events A, B, C. Decide when one event is a subset of another.\",\n    \"Basic operations with events: mutually exclusive events, union formula, complement of intersection.\",\n    \"Survey of houses: holes in roof, broken windows, both problems. Find probabilities of union, roof holes only, exactly one problem, no problems.\",\n    \"Pick a random word from the sentence: 'Suppose a word is picked at random from this sentence.' Find sample space and probabilities involving letters and vowels.\",\n    \"In a group of students, 25% smoke hookah, 60% drink alcohol, 15% do both. Find fraction with at least one bad habit.\",\n    \"20 families near Wolfenstein Castle: 4 have 1 child, 8 have 2, 5 have 3, 3 have 4. If we meet a random local child, find p1, p2, p3, p4.\",\n    \"Roll a red die and a green die. Find the probability that the red die is larger than the green die.\",\n    \"Two dice are rolled. Find probabilities: the numbers differ by 1 or less; the maximum is 5 or larger.\",\n    \"Galileo dice problem: three dice. Compare probability of total 9 and total 10.\",\n\n    # CATEGORY 2\n    \"n friends sit around a table in random order. Find the probability that A sits next to B.\",\n    \"Box with 10 white balls and 6 black balls. Choose 4 without replacement. Find probability of at least one black ball and exactly two black balls.\",\n    \"Closet contains n pairs of boots. Randomly select 2r boots. Find probability of no complete pairs and exactly one complete pair.\",\n    \"Birthday problem: among 50 students, find probability that at least two have the same date of birth.\",\n    \"Box with 28 black balls and 4 white balls. Choose 10. Find probability of at least one white, exactly one white, at least two white, exactly two white.\",\n    \"52-card deck, 6 cards drawn. Find probability that the king of spades appears and probability that all four suits appear.\",\n\n    # CATEGORY 3\n    \"Two M-sided dice are thrown. Find probability that the sum is equal to i.\",\n    \"n distinguishable balls are randomly placed into m boxes. Find probability that all boxes are non-empty.\",\n    \"A shelf has 12 books in a row. Choose 5 books randomly. Find probability that no pair of adjacent books is chosen.\",\n    \"Lucky tram ticket: six-digit number is special if sum of first three digits equals sum of last three digits. Find probability of getting a lucky ticket.\"\n]\n\nranks = (\n    [1] * 13 +\n    [2] * 6 +\n    [3] * 4\n)\n\ntopics = (\n    [\"Category 1\"] * 13 +\n    [\"Category 2\"] * 6 +\n    [\"Category 3\"] * 4\n)\n\nproblems = pd.DataFrame({\n    \"problem_id\": list(range(1, len(problem_texts) + 1)),\n    \"topic\": topics,\n    \"problem_text\": problem_texts,\n    \"rank\": ranks\n})\n\ndisplay(problems)\n\n\n\n\n\n\n\n\nproblem_id\ntopic\nproblem_text\nrank\n\n\n\n\n0\n1\nCategory 1\nClass of 100 students: Men/Women and Taking/No...\n1\n\n\n1\n2\nCategory 1\nFamilies with three children, probability of b...\n1\n\n\n2\n3\nCategory 1\nTake 3 cards from a 36-card deck with replacem...\n1\n\n\n3\n4\nCategory 1\nTake 3 cards from a 36-card deck without repla...\n1\n\n\n4\n5\nCategory 1\nFind unions and intersections of given events ...\n1\n\n\n5\n6\nCategory 1\nBasic operations with events: mutually exclusi...\n1\n\n\n6\n7\nCategory 1\nSurvey of houses: holes in roof, broken window...\n1\n\n\n7\n8\nCategory 1\nPick a random word from the sentence: 'Suppose...\n1\n\n\n8\n9\nCategory 1\nIn a group of students, 25% smoke hookah, 60% ...\n1\n\n\n9\n10\nCategory 1\n20 families near Wolfenstein Castle: 4 have 1 ...\n1\n\n\n10\n11\nCategory 1\nRoll a red die and a green die. Find the proba...\n1\n\n\n11\n12\nCategory 1\nTwo dice are rolled. Find probabilities: the n...\n1\n\n\n12\n13\nCategory 1\nGalileo dice problem: three dice. Compare prob...\n1\n\n\n13\n14\nCategory 2\nn friends sit around a table in random order. ...\n2\n\n\n14\n15\nCategory 2\nBox with 10 white balls and 6 black balls. Cho...\n2\n\n\n15\n16\nCategory 2\nCloset contains n pairs of boots. Randomly sel...\n2\n\n\n16\n17\nCategory 2\nBirthday problem: among 50 students, find prob...\n2\n\n\n17\n18\nCategory 2\nBox with 28 black balls and 4 white balls. Cho...\n2\n\n\n18\n19\nCategory 2\n52-card deck, 6 cards drawn. Find probability ...\n2\n\n\n19\n20\nCategory 3\nTwo M-sided dice are thrown. Find probability ...\n3\n\n\n20\n21\nCategory 3\nn distinguishable balls are randomly placed in...\n3\n\n\n21\n22\nCategory 3\nA shelf has 12 books in a row. Choose 5 books ...\n3\n\n\n22\n23\nCategory 3\nLucky tram ticket: six-digit number is special...\n3\n\n\n\n\n\n\n\n\nstudents = pd.read_csv(\"students.csv\")\n#display(students)\n\n\ndef assign_problems(\n    students_df,\n    problems_df,\n    n_students,\n    min_rank=None,\n    max_rank=None,\n    seed=None\n):\n    if seed is not None:\n        random.seed(seed)\n\n    # Filter problems by rank\n    available_problems = problems_df.copy()\n\n    if min_rank is not None:\n        available_problems = available_problems[available_problems[\"rank\"] &gt;= min_rank]\n\n    if max_rank is not None:\n        available_problems = available_problems[available_problems[\"rank\"] &lt;= max_rank]\n\n    # Check enough students\n    if n_students &gt; len(students_df):\n        raise ValueError(\"You asked for more students than you have in the list.\")\n\n    # Check enough problems\n    if n_students &gt; len(available_problems):\n        raise ValueError(\"Not enough problems in the selected rank range.\")\n\n    # Randomly choose students and problems\n    chosen_students = students_df.sample(n=n_students, random_state=seed).reset_index(drop=True)\n    chosen_problems = available_problems.sample(n=n_students, random_state=seed).reset_index(drop=True)\n\n    # Combine\n    result = pd.concat([chosen_students, chosen_problems], axis=1)\n\n    return result\n\n\nassignment = assign_problems(\n    students_df=students,\n    problems_df=problems,\n    n_students=3,\n    min_rank=1,\n    max_rank=1,\n    seed=None\n)\n\ndisplay(assignment)\n\n\n\n\n\n\n\n\nstudent\nproblem_id\ntopic\nproblem_text\nrank\n\n\n\n\n0\nStudent 10\n1\nCategory 1\nClass of 100 students: Men/Women and Taking/No...\n1\n\n\n1\nStudent 15\n6\nCategory 1\nBasic operations with events: mutually exclusi...\n1\n\n\n2\nStudent 13\n8\nCategory 1\nPick a random word from the sentence: 'Suppose...\n1\n\n\n\n\n\n\n\n\nfrom datetime import date\n\nassignment[\"date\"] = date.today()\nassignment[\"score\"] = None\nassignment[\"status\"] = \"Pending\"\nassignment[\"comments\"] = \"\"\n\ndisplay(assignment)\n\n\n\n\n\n\n\n\nstudent\nproblem_id\ntopic\nproblem_text\nrank\ndate\nscore\nstatus\ncomments\n\n\n\n\n0\nStudent 10\n1\nCategory 1\nClass of 100 students: Men/Women and Taking/No...\n1\n2026-05-31\nNone\nPending\n\n\n\n1\nStudent 15\n6\nCategory 1\nBasic operations with events: mutually exclusi...\n1\n2026-05-31\nNone\nPending\n\n\n\n2\nStudent 13\n8\nCategory 1\nPick a random word from the sentence: 'Suppose...\n1\n2026-05-31\nNone\nPending\n\n\n\n\n\n\n\n\n\nassignment.loc[0, \"score\"] = 5\nassignment.loc[0, \"status\"] = \"Present\"\n\nassignment.loc[1, \"score\"] = 1\nassignment.loc[1, \"status\"] = \"Present\"\n\nassignment.loc[2, \"score\"] = 8\nassignment.loc[2, \"status\"] = \"Absent\"\n\n\ndisplay(assignment)\n\n\n\n\n\n\n\n\nstudent\nproblem_id\ntopic\nproblem_text\nrank\ndate\nscore\nstatus\ncomments\n\n\n\n\n0\nStudent 10\n1\nCategory 1\nClass of 100 students: Men/Women and Taking/No...\n1\n2026-05-31\n5\nPresent\n\n\n\n1\nStudent 15\n6\nCategory 1\nBasic operations with events: mutually exclusi...\n1\n2026-05-31\n1\nPresent\n\n\n\n2\nStudent 13\n8\nCategory 1\nPick a random word from the sentence: 'Suppose...\n1\n2026-05-31\n8\nAbsent"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "1 Probability Theory",
+    "section": "",
+    "text": "1 Probability Theory\nWelcome to the course webpage."
+  },
+  {
+    "objectID": "seminars.html",
+    "href": "seminars.html",
+    "title": "1 Seminars",
+    "section": "",
+    "text": "1 Seminars\n\nSeminar 1: Basics of Combinatorics"
+  },
+  {
+    "objectID": "lectures.html",
+    "href": "lectures.html",
+    "title": "1 Lectures",
+    "section": "",
+    "text": "1 Lectures\n\nLecture 1: Combinatorial Foundations\nLecture 2: Probability Axioms - Lecture 3: Conditional Probability"
+  },
+  {
     "objectID": "seminars/Seminar_1.html",
     "href": "seminars/Seminar_1.html",
     "title": "Seminar 1: Basics of Combinatorics",
@@ -75,26 +229,5 @@
     "title": "Seminar 1: Basics of Combinatorics",
     "section": "5.3 Example: Lucky Tram Tickets",
     "text": "5.3 Example: Lucky Tram Tickets\nA six-digit ticket is called lucky if the sum of its first three digits equals the sum of its last three digits. Computing the exact probability requires a nontrivial combinatorial argument.\nInstead, we can estimate the probability by generating a large number of random tickets and checking how often the event occurs. For example, after simulating one million random tickets, we obtain\n\\[\nP(\\text{lucky ticket})\n\\approx\n0.055.\n\\]\nThe exact value is\n\\[\nP(\\text{lucky ticket})\n=\n\\frac{55252}{10^6}\n=\n0.055252.\n\\]\nThe simulation provides an excellent approximation.\n\n\nShow Python code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nnp.random.seed(42)\n\nN = 1_000_000\n\n# Generate N random six-digit tickets\ntickets = np.random.randint(0, 1_000_000, size=N)\n\n# Extract digits\nd1 = tickets // 100000\nd2 = (tickets // 10000) % 10\nd3 = (tickets // 1000) % 10\n\nd4 = (tickets // 100) % 10\nd5 = (tickets // 10) % 10\nd6 = tickets % 10\n\nleft_sum = d1 + d2 + d3\nright_sum = d4 + d5 + d6\n\nlucky = (left_sum == right_sum)\n\nestimated_probability = np.mean(lucky)\n\nprint(f\"Estimated probability = {estimated_probability:.6f}\")\nprint(f\"Estimated number of lucky tickets = {estimated_probability*1_000_000:.0f}\")\n\n\nEstimated probability = 0.055233\nEstimated number of lucky tickets = 55233"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "1 Probability Theory",
-    "section": "",
-    "text": "1 Probability Theory\nWelcome to the course webpage."
-  },
-  {
-    "objectID": "seminars.html",
-    "href": "seminars.html",
-    "title": "1 Seminars",
-    "section": "",
-    "text": "1 Seminars\n\nSeminar 1: Basics of Combinatorics"
-  },
-  {
-    "objectID": "lectures.html",
-    "href": "lectures.html",
-    "title": "1 Lectures",
-    "section": "",
-    "text": "1 Lectures\n\nLecture 1: Combinatorial Foundations\nLecture 2: Probability Axioms - Lecture 3: Conditional Probability"
   }
 ]

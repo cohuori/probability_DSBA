@@ -22,5 +22,12 @@
   },
   "seminars/seminars.qmd": {
     "seminars.html": "c389b547"
+  },
+  "seminars/work_in_seminar_1.ipynb": {
+    "work_in_seminar_1.html": "6b4be5e6"
+  },
+  "seminars/seminar_2.ipynb": {
+    "seminar_2.html": "fac1dbb0",
+    "seminar_2.tex": "cecac95d"
   }
 }

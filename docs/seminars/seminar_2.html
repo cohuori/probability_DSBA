@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Carlos Buitrago">
+
+<title>Seminar 2: Probabilistic models – Probability Theory</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Probability Theory</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../lectures.html"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../seminars.html"> 
+<span class="menu-text">Seminars</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#probability-space" id="toc-probability-space" class="nav-link active" data-scroll-target="#probability-space"><span class="header-section-number">1</span> Probability Space</a></li>
+  <li><a href="#classical-probability-model" id="toc-classical-probability-model" class="nav-link" data-scroll-target="#classical-probability-model"><span class="header-section-number">2</span> Classical Probability Model</a>
+  <ul class="collapse">
+  <li><a href="#example-die-roll" id="toc-example-die-roll" class="nav-link" data-scroll-target="#example-die-roll"><span class="header-section-number">2.1</span> Example: Die Roll</a></li>
+  <li><a href="#example-two-dice" id="toc-example-two-dice" class="nav-link" data-scroll-target="#example-two-dice"><span class="header-section-number">2.2</span> Example: Two Dice</a></li>
+  <li><a href="#example-cards" id="toc-example-cards" class="nav-link" data-scroll-target="#example-cards"><span class="header-section-number">2.3</span> Example: Cards</a></li>
+  </ul></li>
+  <li><a href="#geometric-probability-model" id="toc-geometric-probability-model" class="nav-link" data-scroll-target="#geometric-probability-model"><span class="header-section-number">3</span> Geometric Probability Model</a>
+  <ul class="collapse">
+  <li><a href="#example-bus-problem" id="toc-example-bus-problem" class="nav-link" data-scroll-target="#example-bus-problem"><span class="header-section-number">3.1</span> Example: Bus Problem</a></li>
+  <li><a href="#bertrands-paradox" id="toc-bertrands-paradox" class="nav-link" data-scroll-target="#bertrands-paradox"><span class="header-section-number">3.2</span> Bertrand’s Paradox</a></li>
+  </ul></li>
+  <li><a href="#bernoulli-scheme" id="toc-bernoulli-scheme" class="nav-link" data-scroll-target="#bernoulli-scheme"><span class="header-section-number">4</span> Bernoulli Scheme</a>
+  <ul class="collapse">
+  <li><a href="#example-binomial-distribution" id="toc-example-binomial-distribution" class="nav-link" data-scroll-target="#example-binomial-distribution"><span class="header-section-number">4.1</span> Example: Binomial Distribution</a></li>
+  <li><a href="#example-at-least-one-success" id="toc-example-at-least-one-success" class="nav-link" data-scroll-target="#example-at-least-one-success"><span class="header-section-number">4.2</span> Example: At Least One Success</a></li>
+  <li><a href="#example-most-probable-number-of-successes" id="toc-example-most-probable-number-of-successes" class="nav-link" data-scroll-target="#example-most-probable-number-of-successes"><span class="header-section-number">4.3</span> Example: Most Probable Number of Successes</a></li>
+  </ul></li>
+  <li><a href="#independence-of-events" id="toc-independence-of-events" class="nav-link" data-scroll-target="#independence-of-events"><span class="header-section-number">5</span> Independence of Events</a>
+  <ul class="collapse">
+  <li><a href="#example-dependent-events" id="toc-example-dependent-events" class="nav-link" data-scroll-target="#example-dependent-events"><span class="header-section-number">5.1</span> Example: Dependent Events</a></li>
+  <li><a href="#example-pairwise-but-not-mutual-independence" id="toc-example-pairwise-but-not-mutual-independence" class="nav-link" data-scroll-target="#example-pairwise-but-not-mutual-independence"><span class="header-section-number">5.2</span> Example: Pairwise but Not Mutual Independence</a></li>
+  </ul></li>
+  <li><a href="#how-are-random-numbers-generated-by-a-computer" id="toc-how-are-random-numbers-generated-by-a-computer" class="nav-link" data-scroll-target="#how-are-random-numbers-generated-by-a-computer"><span class="header-section-number">6</span> How Are Random Numbers Generated by a Computer?</a>
+  <ul class="collapse">
+  <li><a href="#true-randomness-vs-pseudorandomness" id="toc-true-randomness-vs-pseudorandomness" class="nav-link" data-scroll-target="#true-randomness-vs-pseudorandomness"><span class="header-section-number">6.1</span> True Randomness vs Pseudorandomness</a></li>
+  <li><a href="#why-does-this-work" id="toc-why-does-this-work" class="nav-link" data-scroll-target="#why-does-this-work"><span class="header-section-number">6.2</span> Why Does This Work?</a></li>
+  <li><a href="#how-difficult-is-it-to-generate-truly-random-numbers" id="toc-how-difficult-is-it-to-generate-truly-random-numbers" class="nav-link" data-scroll-target="#how-difficult-is-it-to-generate-truly-random-numbers"><span class="header-section-number">6.3</span> How Difficult Is It to Generate Truly Random Numbers?</a></li>
+  <li><a href="#why-is-true-randomness-important" id="toc-why-is-true-randomness-important" class="nav-link" data-scroll-target="#why-is-true-randomness-important"><span class="header-section-number">6.4</span> Why Is True Randomness Important?</a></li>
+  <li><a href="#randomness-and-monte-carlo-methods" id="toc-randomness-and-monte-carlo-methods" class="nav-link" data-scroll-target="#randomness-and-monte-carlo-methods"><span class="header-section-number">6.5</span> Randomness and Monte Carlo Methods</a></li>
+  <li><a href="#random-numbers-in-real-life" id="toc-random-numbers-in-real-life" class="nav-link" data-scroll-target="#random-numbers-in-real-life"><span class="header-section-number">6.6</span> Random Numbers in Real Life</a></li>
+  <li><a href="#historical-remark" id="toc-historical-remark" class="nav-link" data-scroll-target="#historical-remark"><span class="header-section-number">6.7</span> Historical Remark</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="seminar_2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Seminar 2: Probabilistic models</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Carlos Buitrago </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="probability-space" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Probability Space</h1>
+<p>A <strong>probability space</strong> is a triple <span class="math inline">\((\Omega,\mathcal{F},P)\)</span> consisting of:</p>
+<ol type="1">
+<li>A <strong>sample space</strong> <span class="math inline">\(\Omega\)</span>, the set of all possible outcomes.</li>
+<li>A <strong><span class="math inline">\(\sigma\)</span>-algebra</strong> <span class="math inline">\(\mathcal{F}\)</span> of subsets of <span class="math inline">\(\Omega\)</span>, whose elements are called events.</li>
+<li>A <strong>probability measure</strong> <span class="math inline">\(P:\mathcal{F}\to[0,1]\)</span>.</li>
+</ol>
+<p>A collection <span class="math inline">\(\mathcal{F}\subseteq 2^\Omega\)</span> is called a <strong><span class="math inline">\(\sigma\)</span>-algebra</strong> if:</p>
+<ul>
+<li><span class="math inline">\(\Omega\in\mathcal{F}\)</span>;</li>
+<li><span class="math inline">\(A\in\mathcal{F}\implies A^c\in\mathcal{F}\)</span>;</li>
+<li>if <span class="math inline">\(A_1,A_2,\ldots\in\mathcal{F}\)</span>, then <span class="math inline">\(\bigcup_{n=1}^{\infty}A_n\in\mathcal{F}\)</span>.</li>
+</ul>
+<p>A function <span class="math inline">\(P:\mathcal{F}\to[0,1]\)</span> is called a <strong>probability measure</strong> if:</p>
+<ul>
+<li><span class="math inline">\(P(\Omega)=1\)</span>;</li>
+<li>for every pairwise disjoint sequence <span class="math inline">\(A_1,A_2,\ldots\in\mathcal{F}\)</span>, <span class="math display">\[
+P\!\left(\bigcup_{n=1}^{\infty}A_n\right)
+=
+\sum_{n=1}^{\infty}P(A_n).
+\]</span></li>
+</ul>
+<p>From the axioms one obtains the basic properties</p>
+<p><span class="math display">\[
+P(A^c)=1-P(A),
+\]</span></p>
+<p><span class="math display">\[
+A\subseteq B \quad\Longrightarrow\quad P(A)\le P(B),
+\]</span></p>
+<p><span class="math display">\[
+P(A\cup B)=P(A)+P(B)-P(A\cap B).
+\]</span></p>
+</section>
+<section id="classical-probability-model" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Classical Probability Model</h1>
+<p>The <strong>classical model</strong> is defined by the following assumptions:</p>
+<ul>
+<li><span class="math inline">\(\Omega=\{\omega_1,\ldots,\omega_n\}\)</span> is a finite sample space;</li>
+<li><span class="math inline">\(\mathcal{F}=2^\Omega\)</span>;</li>
+<li>all elementary outcomes are equally likely: <span class="math display">\[
+P(\{\omega_i\})=\frac1n,\qquad i=1,\ldots,n.
+\]</span></li>
+</ul>
+<p>Consequently, for every event <span class="math inline">\(A\subseteq\Omega\)</span>,</p>
+<p><span class="math display">\[
+P(A)=\frac{|A|}{|\Omega|}.
+\]</span></p>
+<p>More generally, if <span class="math inline">\(\Omega\)</span> is finite or countable and <span class="math inline">\(\mathcal{F}=2^\Omega\)</span>, then a probability measure is completely determined by the probabilities of the elementary outcomes <span class="math inline">\(P(\{\omega\})\)</span>, <span class="math inline">\(\omega\in\Omega\)</span>.</p>
+<section id="example-die-roll" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="example-die-roll"><span class="header-section-number">2.1</span> Example: Die Roll</h2>
+<p>Consider one fair die roll. Then <span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>, <span class="math inline">\(\mathcal F=2^\Omega\)</span>, and <span class="math inline">\(P(\{\omega\})=1/6\)</span> for every <span class="math inline">\(\omega\in\Omega\)</span>.</p>
+<p>Let <span class="math inline">\(A=\{\text{the result is even}\}=\{2,4,6\}\)</span>. Then <span class="math inline">\(P(A)=|A|/|\Omega|=3/6=1/2\)</span>.</p>
+<div id="d231a09a" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stdout">
+<pre><code>Empirical probability: 0.4962
+Theoretical probability: 0.5</code></pre>
+</div>
+</div>
+<div id="dd43c1ad" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_2_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-two-dice" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="example-two-dice"><span class="header-section-number">2.2</span> Example: Two Dice</h2>
+<p>Roll two fair dice. Then <span class="math inline">\(\Omega=\{1,\ldots,6\}^2\)</span> and <span class="math inline">\(|\Omega|=36\)</span>. Let <span class="math inline">\(A=\{\text{the sum is }7\}\)</span>. The favorable outcomes are <span class="math inline">\((1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\)</span>, hence <span class="math inline">\(|A|=6\)</span> and <span class="math inline">\(P(A)=6/36=1/6\)</span>.</p>
+<div id="e79651c8" class="cell" data-execution_count="21">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_2_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Theoretical P(S=7) = 0.166667
+N=   100: Empirical P(S=7) = 0.180000
+N=100000: Empirical P(S=7) = 0.167760</code></pre>
+</div>
+</div>
+</section>
+<section id="example-cards" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="example-cards"><span class="header-section-number">2.3</span> Example: Cards</h2>
+<p>Suppose we draw cards from a standard deck of <span class="math inline">\(52\)</span> cards. The probability of drawing an ace is <span class="math inline">\(4/52=1/13\)</span>.</p>
+<p>If two cards are drawn without replacement, then the probability that both cards are aces is</p>
+<p><span class="math display">\[
+\frac{4}{52}\cdot\frac{3}{51}.
+\]</span></p>
+<div id="de954231" class="cell" data-execution_count="22">
+<div class="cell-output cell-output-stdout">
+<pre><code>Empirical probability: 0.00475
+Theoretical probability: 0.004524886877828055</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="geometric-probability-model" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Geometric Probability Model</h1>
+<p>Let <span class="math inline">\(\Omega\subseteq\mathbb{R}^d\)</span> be a measurable set with finite Lebesgue measure <span class="math inline">\(\mu(\Omega)&lt;\infty\)</span>. The <strong>geometric probability model</strong> is defined by</p>
+<p><span class="math display">\[
+\mathcal{F}=\{A\subseteq\Omega:\;A\text{ is measurable}\},
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+P(A)=\frac{\mu(A)}{\mu(\Omega)}, \qquad A\in\mathcal{F}.
+\]</span></p>
+<p>Thus, probabilities are proportional to geometric quantities such as length, area, or volume. Informally, a random point is chosen uniformly from <span class="math inline">\(\Omega\)</span>, and the probability of an event is the fraction of the total measure occupied by the corresponding region.</p>
+<section id="example-bus-problem" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="example-bus-problem"><span class="header-section-number">3.1</span> Example: Bus Problem</h2>
+<p>Suppose you and a bus arrive independently and uniformly at random between <span class="math inline">\(12:00\)</span> and <span class="math inline">\(13:00\)</span>. The bus waits for <span class="math inline">\(15\)</span> minutes before leaving, and you also wait <span class="math inline">\(15\)</span> minutes if the bus has not arrived yet.</p>
+<p>After rescaling time to <span class="math inline">\([0,1]\)</span>, <span class="math inline">\(15\)</span> minutes corresponds to <span class="math inline">\(1/4\)</span>. You catch the bus if <span class="math inline">\(|X-Y|\le 1/4\)</span>. The bad region consists of two triangles with total area <span class="math inline">\(2\cdot (3/4)^2/2=9/16\)</span>. Therefore,</p>
+<p><span class="math display">\[
+P(\text{catch the bus})=1-\frac{9}{16}=\frac{7}{16}.
+\]</span></p>
+<div id="153beaa7" class="cell" data-execution_count="27">
+<div class="cell-output cell-output-stdout">
+<pre><code>Empirical probability: 0.43745
+Theoretical probability: 0.4375</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_2_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="bertrands-paradox" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="bertrands-paradox"><span class="header-section-number">3.2</span> Bertrand’s Paradox</h2>
+<p>Consider a circle of radius <span class="math inline">\(R\)</span>. We choose a chord at random and ask</p>
+<p><span class="math display">\[
+P(\text{the chord is longer than the side of an inscribed equilateral triangle})=?
+\]</span></p>
+<p>The side length of an inscribed equilateral triangle is <span class="math inline">\(\sqrt{3}R\)</span>. If <span class="math inline">\(d\)</span> is the distance from the center of the circle to the chord, then the chord length is <span class="math inline">\(L=2\sqrt{R^2-d^2}\)</span>. Hence</p>
+<p><span class="math display">\[
+L&gt;\sqrt{3}R
+\quad\Longleftrightarrow\quad
+d&lt;\frac{R}{2}.
+\]</span></p>
+<p>The ambiguity is that the phrase “choose a chord at random” can mean different things.</p>
+<p><strong>Method 1: random endpoints.</strong> Choose two points independently and uniformly on the circumference and join them by a chord. This gives</p>
+<p><span class="math display">\[
+P\left(L&gt;\sqrt{3}R\right)=\frac13.
+\]</span></p>
+<p><strong>Method 2: random distance from the center.</strong> Choose the distance <span class="math inline">\(d\)</span> uniformly from <span class="math inline">\([0,R]\)</span>, then choose the direction of the chord uniformly at random. Since the chord is long exactly when <span class="math inline">\(d&lt;R/2\)</span>, this gives</p>
+<p><span class="math display">\[
+P\left(L&gt;\sqrt{3}R\right)=\frac12.
+\]</span></p>
+<p><strong>Method 3: random midpoint.</strong> Choose the midpoint of the chord uniformly from the disk. The chord is long exactly when the midpoint lies inside the disk of radius <span class="math inline">\(R/2\)</span>, so this gives</p>
+<p><span class="math display">\[
+P\left(L&gt;\sqrt{3}R\right)
+=
+\frac{\pi(R/2)^2}{\pi R^2}
+=
+\frac14.
+\]</span></p>
+<p>Thus the same informal question gives three different answers:</p>
+<p><span class="math display">\[
+\frac13,\qquad \frac12,\qquad \frac14.
+\]</span></p>
+<p>This is Bertrand’s paradox. It shows that a probability problem is not well-defined until the probability space, or equivalently the random mechanism, is precisely specified.</p>
+<div id="e6fb3816" class="cell" data-scrolled="false" data-execution_count="46">
+<div class="cell-output cell-output-stdout">
+<pre><code>Bertrand's Paradox
+
+Method 1: Random endpoints
+Empirical probability:   0.3299
+Theoretical probability: 0.3333
+
+Method 2: Random distance from center
+Empirical probability:   0.5006
+Theoretical probability: 0.5000
+
+Method 3: Random midpoint in disk
+Empirical probability:   0.2509
+Theoretical probability: 0.2500</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_2_files/figure-html/cell-8-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="bernoulli-scheme" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Bernoulli Scheme</h1>
+<p>Fix <span class="math inline">\(n\in\mathbb{N}\)</span> and <span class="math inline">\(p\in(0,1)\)</span>. The <strong>Bernoulli scheme</strong> consists of <span class="math inline">\(n\)</span> independent trials, each resulting in success (<span class="math inline">\(1\)</span>) with probability <span class="math inline">\(p\)</span> and failure (<span class="math inline">\(0\)</span>) with probability <span class="math inline">\(1-p\)</span>.</p>
+<p>The sample space is</p>
+<p><span class="math display">\[
+\Omega=\{(x_1,\ldots,x_n):x_i\in\{0,1\}\},
+\]</span></p>
+<p>so that <span class="math inline">\(|\Omega|=2^n\)</span>.</p>
+<p>For an outcome <span class="math inline">\(\omega=(x_1,\ldots,x_n)\)</span>,</p>
+<p><span class="math display">\[
+P(\{\omega\})
+=
+p^{\sum_{i=1}^{n}x_i}
+(1-p)^{\,n-\sum_{i=1}^{n}x_i}.
+\]</span></p>
+<p>The random variable</p>
+<p><span class="math display">\[
+S_n=\sum_{i=1}^{n}x_i
+\]</span></p>
+<p>counts the number of successes.</p>
+<section id="example-binomial-distribution" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="example-binomial-distribution"><span class="header-section-number">4.1</span> Example: Binomial Distribution</h2>
+<p>Let <span class="math inline">\(S_n\)</span> be the number of successes in <span class="math inline">\(n\)</span> independent Bernoulli trials with success probability <span class="math inline">\(p\)</span>. Then</p>
+<p><span class="math display">\[
+P(S_n=m)=\binom{n}{m}p^m(1-p)^{n-m},\qquad m=0,1,\ldots,n.
+\]</span></p>
+<p>For example, if a fair coin is tossed <span class="math inline">\(10\)</span> times, then the probability of exactly <span class="math inline">\(5\)</span> heads is</p>
+<p><span class="math display">\[
+P(S_{10}=5)=\binom{10}{5}\left(\frac12\right)^{10}.
+\]</span></p>
+<div id="8e822131" class="cell" data-execution_count="33">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_2_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-at-least-one-success" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="example-at-least-one-success"><span class="header-section-number">4.2</span> Example: At Least One Success</h2>
+<p>If <span class="math inline">\(S_n\sim\mathrm{Bin}(n,p)\)</span>, then</p>
+<p><span class="math display">\[
+P(S_n\ge 1)=1-P(S_n=0)=1-(1-p)^n.
+\]</span></p>
+<p>This formula is often easier than adding many probabilities.</p>
+</section>
+<section id="example-most-probable-number-of-successes" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="example-most-probable-number-of-successes"><span class="header-section-number">4.3</span> Example: Most Probable Number of Successes</h2>
+<p>If <span class="math inline">\(S_n\sim\mathrm{Bin}(n,p)\)</span>, then a most probable value is</p>
+<p><span class="math display">\[
+m=\lfloor (n+1)p\rfloor.
+\]</span></p>
+<p>If <span class="math inline">\((n+1)p\)</span> is an integer, then both <span class="math inline">\((n+1)p-1\)</span> and <span class="math inline">\((n+1)p\)</span> are modes.</p>
+<div id="69d54223" class="cell" data-execution_count="38">
+<div class="cell-output cell-output-stdout">
+<pre><code>Mode by formula: 6
+Mode by computation: 6</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_2_files/figure-html/cell-10-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="independence-of-events" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Independence of Events</h1>
+<p>Let <span class="math inline">\(A,B\in\mathcal{F}\)</span>. The events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are called <strong>independent</strong> if</p>
+<p><span class="math display">\[
+P(A\cap B)=P(A)P(B).
+\]</span></p>
+<p>Equivalently, whenever <span class="math inline">\(P(B)&gt;0\)</span>,</p>
+<p><span class="math display">\[
+P(A\mid B)=P(A).
+\]</span></p>
+<p>A collection of events <span class="math inline">\(A_1,\ldots,A_n\)</span> is called <strong>pairwise independent</strong> if</p>
+<p><span class="math display">\[
+P(A_i\cap A_j)=P(A_i)P(A_j),
+\qquad i\neq j.
+\]</span></p>
+<p>The events <span class="math inline">\(A_1,\ldots,A_n\)</span> are called <strong>mutually independent</strong> if for every subset <span class="math inline">\(I\subseteq\{1,\ldots,n\}\)</span> with <span class="math inline">\(|I|\ge 2\)</span>,</p>
+<p><span class="math display">\[
+P\!\left(\bigcap_{i\in I}A_i\right)
+=
+\prod_{i\in I}P(A_i).
+\]</span></p>
+<p>Mutual independence implies pairwise independence, but the converse is generally false.</p>
+<section id="example-dependent-events" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="example-dependent-events"><span class="header-section-number">5.1</span> Example: Dependent Events</h2>
+<p>Draw two cards without replacement from a standard deck. Let <span class="math inline">\(A=\{\text{first card is an ace}\}\)</span> and <span class="math inline">\(B=\{\text{second card is an ace}\}\)</span>. Then</p>
+<p><span class="math display">\[
+P(A)=\frac4{52},\qquad P(B)=\frac4{52},
+\]</span></p>
+<p>but</p>
+<p><span class="math display">\[
+P(A\cap B)=\frac4{52}\cdot\frac3{51}\neq \frac4{52}\cdot\frac4{52}.
+\]</span></p>
+<p>Therefore, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not independent.</p>
+<div id="51af1df2" class="cell" data-execution_count="39">
+<div class="cell-output cell-output-stdout">
+<pre><code>P(A): 0.07821
+P(B): 0.07597
+P(A and B): 0.00465
+P(A)P(B): 0.0059416137</code></pre>
+</div>
+</div>
+</section>
+<section id="example-pairwise-but-not-mutual-independence" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="example-pairwise-but-not-mutual-independence"><span class="header-section-number">5.2</span> Example: Pairwise but Not Mutual Independence</h2>
+<p>Toss two fair coins and write the outcomes as <span class="math inline">\(X,Y\in\{0,1\}\)</span>. Define three events</p>
+<p><span class="math display">\[
+A=\{X=0\},\qquad B=\{Y=0\},\qquad C=\{X=Y\}.
+\]</span></p>
+<p>Then <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are pairwise independent. However,</p>
+<p><span class="math display">\[
+P(A\cap B\cap C)=\frac14,
+\]</span></p>
+<p>while</p>
+<p><span class="math display">\[
+P(A)P(B)P(C)=\frac12\cdot\frac12\cdot\frac12=\frac18.
+\]</span></p>
+<p>Therefore, the events are pairwise independent but not mutually independent.</p>
+</section>
+</section>
+<section id="how-are-random-numbers-generated-by-a-computer" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> How Are Random Numbers Generated by a Computer?</h1>
+<p>Throughout this course we will frequently use Python functions such as</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>np.random.random()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>np.random.randint()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>np.random.binomial()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>to simulate random experiments. This naturally raises the following question:</p>
+<blockquote class="blockquote">
+<p>How can a computer generate random numbers if a computer is a deterministic machine?</p>
+</blockquote>
+<hr>
+<section id="true-randomness-vs-pseudorandomness" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="true-randomness-vs-pseudorandomness"><span class="header-section-number">6.1</span> True Randomness vs Pseudorandomness</h2>
+<p>A computer executes a sequence of deterministic instructions. If we start a program twice with exactly the same initial conditions, it will perform exactly the same calculations and produce exactly the same output.</p>
+<p>For this reason, most “random” numbers generated by a computer are not truly random. Instead, they are <strong>pseudorandom numbers</strong>.</p>
+<p>A pseudorandom number generator (PRNG) is a deterministic algorithm that produces a sequence of numbers that behaves <em>as if</em> it were random.</p>
+<p>Given an initial value called a <strong>seed</strong>, the generator produces</p>
+<p><span class="math display">\[
+x_0,x_1,x_2,\ldots
+\]</span></p>
+<p>according to a deterministic rule</p>
+<p><span class="math display">\[
+x_{n+1}=f(x_n).
+\]</span></p>
+<p>If the same seed is used again, exactly the same sequence will be generated.</p>
+<p>For example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Running this code twice produces exactly the same numbers.</p>
+<hr>
+</section>
+<section id="why-does-this-work" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="why-does-this-work"><span class="header-section-number">6.2</span> Why Does This Work?</h2>
+<p>Although pseudorandom numbers are generated deterministically, good generators are designed so that their outputs satisfy many statistical properties expected from genuinely random sequences.</p>
+<p>For practical purposes, the sequence appears random:</p>
+<ul>
+<li>frequencies are approximately correct;</li>
+<li>correlations are extremely small;</li>
+<li>patterns are difficult to detect;</li>
+<li>many statistical tests cannot distinguish the sequence from true randomness.</li>
+</ul>
+<p>As a result, pseudorandom generators are sufficient for most scientific simulations, machine learning algorithms, statistical experiments, computer graphics, and video games.</p>
+<hr>
+</section>
+<section id="how-difficult-is-it-to-generate-truly-random-numbers" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="how-difficult-is-it-to-generate-truly-random-numbers"><span class="header-section-number">6.3</span> How Difficult Is It to Generate Truly Random Numbers?</h2>
+<p>Generating <em>true</em> randomness is surprisingly difficult.</p>
+<p>A computer by itself cannot create randomness from nothing because its internal operations are deterministic.</p>
+<p>To obtain genuine randomness, we must rely on unpredictable physical phenomena such as:</p>
+<ul>
+<li>radioactive decay;</li>
+<li>thermal noise in electronic circuits;</li>
+<li>atmospheric noise;</li>
+<li>photon arrival times;</li>
+<li>quantum measurements.</li>
+</ul>
+<p>Such devices are called <strong>hardware random number generators (HRNGs)</strong>.</p>
+<p>For example, some modern processors contain dedicated hardware that measures microscopic physical noise and converts it into random bits.</p>
+<hr>
+</section>
+<section id="why-is-true-randomness-important" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="why-is-true-randomness-important"><span class="header-section-number">6.4</span> Why Is True Randomness Important?</h2>
+<p>For many simulations, pseudorandom numbers are perfectly adequate.</p>
+<p>However, some applications require unpredictability rather than merely statistical randomness.</p>
+<p>Examples include:</p>
+<ul>
+<li>cryptography;</li>
+<li>secure communications;</li>
+<li>online banking;</li>
+<li>digital signatures;</li>
+<li>password generation;</li>
+<li>blockchain technologies;</li>
+<li>military systems.</li>
+</ul>
+<p>Suppose a cryptographic system generates passwords using a predictable pseudorandom generator. If an attacker discovers the algorithm and the seed, every future password can be predicted.</p>
+<p>For this reason, cryptographic systems often combine pseudorandom generators with physical sources of randomness.</p>
+<hr>
+</section>
+<section id="randomness-and-monte-carlo-methods" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="randomness-and-monte-carlo-methods"><span class="header-section-number">6.5</span> Randomness and Monte Carlo Methods</h2>
+<p>One of the most important applications of random numbers is <strong>Monte Carlo simulation</strong>.</p>
+<p>The basic idea is simple:</p>
+<ol type="1">
+<li>Generate many random outcomes.</li>
+<li>Compute the quantity of interest for each outcome.</li>
+<li>Average the results.</li>
+</ol>
+<p>For example, to estimate</p>
+<p><span class="math display">\[
+P(A),
+\]</span></p>
+<p>we can simulate the experiment many times and compute</p>
+<p><span class="math display">\[
+\hat P(A)
+=
+\frac{\text{number of times }A\text{ occurs}}
+     {\text{number of simulations}}.
+\]</span></p>
+<p>The Law of Large Numbers guarantees that</p>
+<p><span class="math display">\[
+\hat P(A)\to P(A)
+\qquad\text{as}\qquad
+N\to\infty.
+\]</span></p>
+<p>This principle is used throughout science and engineering.</p>
+<hr>
+</section>
+<section id="random-numbers-in-real-life" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="random-numbers-in-real-life"><span class="header-section-number">6.6</span> Random Numbers in Real Life</h2>
+<p>Random number generators play a crucial role in many modern technologies:</p>
+<ul>
+<li>weather forecasting;</li>
+<li>machine learning;</li>
+<li>artificial intelligence;</li>
+<li>computer graphics and animation;</li>
+<li>risk analysis in finance;</li>
+<li>epidemiological modeling;</li>
+<li>nuclear physics;</li>
+<li>cryptography and cybersecurity;</li>
+<li>simulation of communication networks;</li>
+<li>reliability analysis of complex systems.</li>
+</ul>
+<p>Many scientific problems are so complicated that exact calculations are impossible, while Monte Carlo simulations using random numbers provide accurate approximations.</p>
+<hr>
+</section>
+<section id="historical-remark" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="historical-remark"><span class="header-section-number">6.7</span> Historical Remark</h2>
+<p>During the 1940s, scientists working on the Manhattan Project needed large quantities of random numbers to simulate neutron transport inside nuclear reactors.</p>
+<p>This led to the development of the <strong>Monte Carlo method</strong>, named after the famous casino in Monaco.</p>
+<p>Today Monte Carlo methods are among the most powerful computational tools in mathematics, statistics, physics, engineering, finance, and data science.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
