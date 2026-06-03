@@ -8,7 +8,7 @@
 
 <meta name="author" content="Carlos Buitrago">
 
-<title>Seminar 2: Probabilistic models – Probability Theory</title>
+<title>Seminar 2: Probabilistic Models – Probability Theory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -184,38 +184,43 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#probability-space" id="toc-probability-space" class="nav-link active" data-scroll-target="#probability-space"><span class="header-section-number">1</span> Probability Space</a></li>
-  <li><a href="#classical-probability-model" id="toc-classical-probability-model" class="nav-link" data-scroll-target="#classical-probability-model"><span class="header-section-number">2</span> Classical Probability Model</a>
+  <li><a href="#probability-space" id="toc-probability-space" class="nav-link active" data-scroll-target="#probability-space"><span class="header-section-number">1</span> Probability Space</a>
   <ul class="collapse">
-  <li><a href="#example-die-roll" id="toc-example-die-roll" class="nav-link" data-scroll-target="#example-die-roll"><span class="header-section-number">2.1</span> Example: Die Roll</a></li>
-  <li><a href="#example-two-dice" id="toc-example-two-dice" class="nav-link" data-scroll-target="#example-two-dice"><span class="header-section-number">2.2</span> Example: Two Dice</a></li>
-  <li><a href="#example-cards" id="toc-example-cards" class="nav-link" data-scroll-target="#example-cards"><span class="header-section-number">2.3</span> Example: Cards</a></li>
+  <li><a href="#continuity-of-probability" id="toc-continuity-of-probability" class="nav-link" data-scroll-target="#continuity-of-probability"><span class="header-section-number">1.0.1</span> Continuity of Probability</a></li>
+  <li><a href="#inclusionexclusion-principle" id="toc-inclusionexclusion-principle" class="nav-link" data-scroll-target="#inclusionexclusion-principle"><span class="header-section-number">1.0.2</span> Inclusion–Exclusion Principle</a></li>
   </ul></li>
-  <li><a href="#geometric-probability-model" id="toc-geometric-probability-model" class="nav-link" data-scroll-target="#geometric-probability-model"><span class="header-section-number">3</span> Geometric Probability Model</a>
+  <li><a href="#union-bound" id="toc-union-bound" class="nav-link" data-scroll-target="#union-bound"><span class="header-section-number">2</span> Union Bound</a></li>
+  <li><a href="#classical-probability-model" id="toc-classical-probability-model" class="nav-link" data-scroll-target="#classical-probability-model"><span class="header-section-number">3</span> Classical Probability Model</a>
   <ul class="collapse">
-  <li><a href="#example-bus-problem" id="toc-example-bus-problem" class="nav-link" data-scroll-target="#example-bus-problem"><span class="header-section-number">3.1</span> Example: Bus Problem</a></li>
-  <li><a href="#bertrands-paradox" id="toc-bertrands-paradox" class="nav-link" data-scroll-target="#bertrands-paradox"><span class="header-section-number">3.2</span> Bertrand’s Paradox</a></li>
+  <li><a href="#example-die-roll" id="toc-example-die-roll" class="nav-link" data-scroll-target="#example-die-roll"><span class="header-section-number">3.1</span> Example: Die Roll</a></li>
+  <li><a href="#example-two-dice" id="toc-example-two-dice" class="nav-link" data-scroll-target="#example-two-dice"><span class="header-section-number">3.2</span> Example: Two Dice</a></li>
+  <li><a href="#example-cards" id="toc-example-cards" class="nav-link" data-scroll-target="#example-cards"><span class="header-section-number">3.3</span> Example: Cards</a></li>
   </ul></li>
-  <li><a href="#bernoulli-scheme" id="toc-bernoulli-scheme" class="nav-link" data-scroll-target="#bernoulli-scheme"><span class="header-section-number">4</span> Bernoulli Scheme</a>
+  <li><a href="#geometric-probability-model" id="toc-geometric-probability-model" class="nav-link" data-scroll-target="#geometric-probability-model"><span class="header-section-number">4</span> Geometric Probability Model</a>
   <ul class="collapse">
-  <li><a href="#example-binomial-distribution" id="toc-example-binomial-distribution" class="nav-link" data-scroll-target="#example-binomial-distribution"><span class="header-section-number">4.1</span> Example: Binomial Distribution</a></li>
-  <li><a href="#example-at-least-one-success" id="toc-example-at-least-one-success" class="nav-link" data-scroll-target="#example-at-least-one-success"><span class="header-section-number">4.2</span> Example: At Least One Success</a></li>
-  <li><a href="#example-most-probable-number-of-successes" id="toc-example-most-probable-number-of-successes" class="nav-link" data-scroll-target="#example-most-probable-number-of-successes"><span class="header-section-number">4.3</span> Example: Most Probable Number of Successes</a></li>
+  <li><a href="#example-bus-problem" id="toc-example-bus-problem" class="nav-link" data-scroll-target="#example-bus-problem"><span class="header-section-number">4.1</span> Example: Bus Problem</a></li>
+  <li><a href="#bertrands-paradox" id="toc-bertrands-paradox" class="nav-link" data-scroll-target="#bertrands-paradox"><span class="header-section-number">4.2</span> Bertrand’s Paradox</a></li>
   </ul></li>
-  <li><a href="#independence-of-events" id="toc-independence-of-events" class="nav-link" data-scroll-target="#independence-of-events"><span class="header-section-number">5</span> Independence of Events</a>
+  <li><a href="#bernoulli-scheme" id="toc-bernoulli-scheme" class="nav-link" data-scroll-target="#bernoulli-scheme"><span class="header-section-number">5</span> Bernoulli Scheme</a>
   <ul class="collapse">
-  <li><a href="#example-dependent-events" id="toc-example-dependent-events" class="nav-link" data-scroll-target="#example-dependent-events"><span class="header-section-number">5.1</span> Example: Dependent Events</a></li>
-  <li><a href="#example-pairwise-but-not-mutual-independence" id="toc-example-pairwise-but-not-mutual-independence" class="nav-link" data-scroll-target="#example-pairwise-but-not-mutual-independence"><span class="header-section-number">5.2</span> Example: Pairwise but Not Mutual Independence</a></li>
+  <li><a href="#example-binomial-distribution" id="toc-example-binomial-distribution" class="nav-link" data-scroll-target="#example-binomial-distribution"><span class="header-section-number">5.1</span> Example: Binomial Distribution</a></li>
+  <li><a href="#example-at-least-one-success" id="toc-example-at-least-one-success" class="nav-link" data-scroll-target="#example-at-least-one-success"><span class="header-section-number">5.2</span> Example: At Least One Success</a></li>
+  <li><a href="#example-most-probable-number-of-successes" id="toc-example-most-probable-number-of-successes" class="nav-link" data-scroll-target="#example-most-probable-number-of-successes"><span class="header-section-number">5.3</span> Example: Most Probable Number of Successes</a></li>
   </ul></li>
-  <li><a href="#how-are-random-numbers-generated-by-a-computer" id="toc-how-are-random-numbers-generated-by-a-computer" class="nav-link" data-scroll-target="#how-are-random-numbers-generated-by-a-computer"><span class="header-section-number">6</span> How Are Random Numbers Generated by a Computer?</a>
+  <li><a href="#independence-of-events" id="toc-independence-of-events" class="nav-link" data-scroll-target="#independence-of-events"><span class="header-section-number">6</span> Independence of Events</a>
   <ul class="collapse">
-  <li><a href="#true-randomness-vs-pseudorandomness" id="toc-true-randomness-vs-pseudorandomness" class="nav-link" data-scroll-target="#true-randomness-vs-pseudorandomness"><span class="header-section-number">6.1</span> True Randomness vs Pseudorandomness</a></li>
-  <li><a href="#why-does-this-work" id="toc-why-does-this-work" class="nav-link" data-scroll-target="#why-does-this-work"><span class="header-section-number">6.2</span> Why Does This Work?</a></li>
-  <li><a href="#how-difficult-is-it-to-generate-truly-random-numbers" id="toc-how-difficult-is-it-to-generate-truly-random-numbers" class="nav-link" data-scroll-target="#how-difficult-is-it-to-generate-truly-random-numbers"><span class="header-section-number">6.3</span> How Difficult Is It to Generate Truly Random Numbers?</a></li>
-  <li><a href="#why-is-true-randomness-important" id="toc-why-is-true-randomness-important" class="nav-link" data-scroll-target="#why-is-true-randomness-important"><span class="header-section-number">6.4</span> Why Is True Randomness Important?</a></li>
-  <li><a href="#randomness-and-monte-carlo-methods" id="toc-randomness-and-monte-carlo-methods" class="nav-link" data-scroll-target="#randomness-and-monte-carlo-methods"><span class="header-section-number">6.5</span> Randomness and Monte Carlo Methods</a></li>
-  <li><a href="#random-numbers-in-real-life" id="toc-random-numbers-in-real-life" class="nav-link" data-scroll-target="#random-numbers-in-real-life"><span class="header-section-number">6.6</span> Random Numbers in Real Life</a></li>
-  <li><a href="#historical-remark" id="toc-historical-remark" class="nav-link" data-scroll-target="#historical-remark"><span class="header-section-number">6.7</span> Historical Remark</a></li>
+  <li><a href="#example-dependent-events" id="toc-example-dependent-events" class="nav-link" data-scroll-target="#example-dependent-events"><span class="header-section-number">6.1</span> Example: Dependent Events</a></li>
+  <li><a href="#example-pairwise-but-not-mutual-independence" id="toc-example-pairwise-but-not-mutual-independence" class="nav-link" data-scroll-target="#example-pairwise-but-not-mutual-independence"><span class="header-section-number">6.2</span> Example: Pairwise but Not Mutual Independence</a></li>
+  </ul></li>
+  <li><a href="#how-are-random-numbers-generated-by-a-computer" id="toc-how-are-random-numbers-generated-by-a-computer" class="nav-link" data-scroll-target="#how-are-random-numbers-generated-by-a-computer"><span class="header-section-number">7</span> How Are Random Numbers Generated by a Computer?</a>
+  <ul class="collapse">
+  <li><a href="#true-randomness-vs-pseudorandomness" id="toc-true-randomness-vs-pseudorandomness" class="nav-link" data-scroll-target="#true-randomness-vs-pseudorandomness"><span class="header-section-number">7.1</span> True Randomness vs Pseudorandomness</a></li>
+  <li><a href="#why-does-this-work" id="toc-why-does-this-work" class="nav-link" data-scroll-target="#why-does-this-work"><span class="header-section-number">7.2</span> Why Does This Work?</a></li>
+  <li><a href="#how-difficult-is-it-to-generate-truly-random-numbers" id="toc-how-difficult-is-it-to-generate-truly-random-numbers" class="nav-link" data-scroll-target="#how-difficult-is-it-to-generate-truly-random-numbers"><span class="header-section-number">7.3</span> How Difficult Is It to Generate Truly Random Numbers?</a></li>
+  <li><a href="#why-is-true-randomness-important" id="toc-why-is-true-randomness-important" class="nav-link" data-scroll-target="#why-is-true-randomness-important"><span class="header-section-number">7.4</span> Why Is True Randomness Important?</a></li>
+  <li><a href="#randomness-and-monte-carlo-methods" id="toc-randomness-and-monte-carlo-methods" class="nav-link" data-scroll-target="#randomness-and-monte-carlo-methods"><span class="header-section-number">7.5</span> Randomness and Monte Carlo Methods</a></li>
+  <li><a href="#random-numbers-in-real-life" id="toc-random-numbers-in-real-life" class="nav-link" data-scroll-target="#random-numbers-in-real-life"><span class="header-section-number">7.6</span> Random Numbers in Real Life</a></li>
+  <li><a href="#historical-remark" id="toc-historical-remark" class="nav-link" data-scroll-target="#historical-remark"><span class="header-section-number">7.7</span> Historical Remark</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="seminar_2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -225,7 +230,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Seminar 2: Probabilistic models</h1>
+<h1 class="title">Seminar 2: Probabilistic Models</h1>
 </div>
 
 
@@ -281,9 +286,56 @@ A\subseteq B \quad\Longrightarrow\quad P(A)\le P(B),
 <p><span class="math display">\[
 P(A\cup B)=P(A)+P(B)-P(A\cap B).
 \]</span></p>
+<section id="continuity-of-probability" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="continuity-of-probability"><span class="header-section-number">1.0.1</span> Continuity of Probability</h3>
+<p>If <span class="math inline">\(A_1\subseteq A_2\subseteq A_3\subseteq\cdots\)</span>, then</p>
+<p><span class="math display">\[
+P\!\left(\bigcup_{n=1}^{\infty}A_n\right)
+=
+\lim_{n\to\infty}P(A_n).
+\]</span></p>
+<p>Similarly, if <span class="math inline">\(A_1\supseteq A_2\supseteq A_3\supseteq\cdots\)</span>, then</p>
+<p><span class="math display">\[
+P\!\left(\bigcap_{n=1}^{\infty}A_n\right)
+=
+\lim_{n\to\infty}P(A_n).
+\]</span></p>
+<p>These properties are known as <strong>continuity from below</strong> and <strong>continuity from above</strong>.</p>
+<hr>
 </section>
-<section id="classical-probability-model" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Classical Probability Model</h1>
+<section id="inclusionexclusion-principle" class="level3" data-number="1.0.2">
+<h3 data-number="1.0.2" class="anchored" data-anchor-id="inclusionexclusion-principle"><span class="header-section-number">1.0.2</span> Inclusion–Exclusion Principle</h3>
+<p>One of the most important formulas in probability theory is the inclusion–exclusion principle.</p>
+<p>For events <span class="math inline">\(A_1,\ldots,A_n\in\mathcal F\)</span>,</p>
+<p><span class="math display">\[
+P\!\left(\bigcup_{i=1}^{n}A_i\right)
+=
+\sum_{i=1}^{n}P(A_i)
+-
+\sum_{1\le i&lt;j\le n}P(A_i\cap A_j)
++
+\sum_{1\le i&lt;j&lt;k\le n}P(A_i\cap A_j\cap A_k)
+-\cdots
++(-1)^{n-1}
+P(A_1\cap\cdots\cap A_n).
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="union-bound" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Union Bound</h1>
+<p>A useful consequence of the inclusion–exclusion principle is the following estimate.</p>
+<p>For any events <span class="math inline">\(A_1,\ldots,A_n\in\mathcal F\)</span>,</p>
+<p><span class="math display">\[
+P\!\left(\bigcup_{i=1}^{n}A_i\right)
+\le
+\sum_{i=1}^{n}P(A_i).
+\]</span></p>
+<p>This inequality is known as the <strong>union bound</strong> or <strong>Boole’s inequality</strong>.</p>
+<p>Although simple, it is one of the most powerful tools in probability theory and appears throughout the course.</p>
+</section>
+<section id="classical-probability-model" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Classical Probability Model</h1>
 <p>The <strong>classical model</strong> is defined by the following assumptions:</p>
 <ul>
 <li><span class="math inline">\(\Omega=\{\omega_1,\ldots,\omega_n\}\)</span> is a finite sample space;</li>
@@ -297,17 +349,54 @@ P(\{\omega_i\})=\frac1n,\qquad i=1,\ldots,n.
 P(A)=\frac{|A|}{|\Omega|}.
 \]</span></p>
 <p>More generally, if <span class="math inline">\(\Omega\)</span> is finite or countable and <span class="math inline">\(\mathcal{F}=2^\Omega\)</span>, then a probability measure is completely determined by the probabilities of the elementary outcomes <span class="math inline">\(P(\{\omega\})\)</span>, <span class="math inline">\(\omega\in\Omega\)</span>.</p>
-<section id="example-die-roll" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="example-die-roll"><span class="header-section-number">2.1</span> Example: Die Roll</h2>
+<div id="39d18f30" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> comb, pi</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<section id="example-die-roll" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="example-die-roll"><span class="header-section-number">3.1</span> Example: Die Roll</h2>
 <p>Consider one fair die roll. Then <span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>, <span class="math inline">\(\mathcal F=2^\Omega\)</span>, and <span class="math inline">\(P(\{\omega\})=1/6\)</span> for every <span class="math inline">\(\omega\in\Omega\)</span>.</p>
 <p>Let <span class="math inline">\(A=\{\text{the result is even}\}=\{2,4,6\}\)</span>. Then <span class="math inline">\(P(A)=|A|/|\Omega|=3/6=1/2\)</span>.</p>
-<div id="d231a09a" class="cell" data-execution_count="6">
+<div id="047ef6dd" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">10_000</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>rolls <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, size<span class="op">=</span>N)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>event_even <span class="op">=</span> (rolls <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>empirical_prob <span class="op">=</span> event_even.mean()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>theoretical_prob <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Empirical probability:"</span>, empirical_prob)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Theoretical probability:"</span>, theoretical_prob)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Empirical probability: 0.4962
 Theoretical probability: 0.5</code></pre>
 </div>
 </div>
-<div id="dd43c1ad" class="cell" data-execution_count="7">
+<div id="ef6b8846" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sample_sizes <span class="op">=</span> np.arange(<span class="dv">10</span>, N <span class="op">+</span> <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>running_probs <span class="op">=</span> [event_even[:n].mean() <span class="cf">for</span> n <span class="kw">in</span> sample_sizes]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.plot(sample_sizes, running_probs, label<span class="op">=</span><span class="st">"Empirical probability"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.axhline(theoretical_prob, linestyle<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="st">"Theoretical probability"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of simulations"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Probability"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Law of Large Numbers: Probability of an Even Die Roll"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -317,10 +406,105 @@ Theoretical probability: 0.5</code></pre>
 </div>
 </div>
 </section>
-<section id="example-two-dice" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="example-two-dice"><span class="header-section-number">2.2</span> Example: Two Dice</h2>
+<section id="example-two-dice" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="example-two-dice"><span class="header-section-number">3.2</span> Example: Two Dice</h2>
 <p>Roll two fair dice. Then <span class="math inline">\(\Omega=\{1,\ldots,6\}^2\)</span> and <span class="math inline">\(|\Omega|=36\)</span>. Let <span class="math inline">\(A=\{\text{the sum is }7\}\)</span>. The favorable outcomes are <span class="math inline">\((1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\)</span>, hence <span class="math inline">\(|A|=6\)</span> and <span class="math inline">\(P(A)=6/36=1/6\)</span>.</p>
-<div id="e79651c8" class="cell" data-execution_count="21">
+<div id="ff3bdae2" class="cell" data-execution_count="21">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>N_small <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>N_large <span class="op">=</span> <span class="dv">100_000</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Small sample</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>die1 <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, size<span class="op">=</span>N_small)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>die2 <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, size<span class="op">=</span>N_small)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>sums_small <span class="op">=</span> die1 <span class="op">+</span> die2</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>empirical_small <span class="op">=</span> np.mean(sums_small <span class="op">==</span> <span class="dv">7</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>values_small, counts_small <span class="op">=</span> np.unique(sums_small, return_counts<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>probs_small <span class="op">=</span> np.zeros(<span class="dv">11</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v, c <span class="kw">in</span> <span class="bu">zip</span>(values_small, counts_small):</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    probs_small[v <span class="op">-</span> <span class="dv">2</span>] <span class="op">=</span> c <span class="op">/</span> N_small</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Large sample</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>die1 <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, size<span class="op">=</span>N_large)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>die2 <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, size<span class="op">=</span>N_large)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>sums_large <span class="op">=</span> die1 <span class="op">+</span> die2</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>empirical_large <span class="op">=</span> np.mean(sums_large <span class="op">==</span> <span class="dv">7</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>values_large, counts_large <span class="op">=</span> np.unique(sums_large, return_counts<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>probs_large <span class="op">=</span> np.zeros(<span class="dv">11</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v, c <span class="kw">in</span> <span class="bu">zip</span>(values_large, counts_large):</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    probs_large[v <span class="op">-</span> <span class="dv">2</span>] <span class="op">=</span> c <span class="op">/</span> N_large</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Theoretical distribution</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">2</span>, <span class="dv">13</span>)</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>theoretical <span class="op">=</span> np.array([</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>,</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>]) <span class="op">/</span> <span class="dv">36</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>theoretical_prob <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">6</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">5</span>), sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].bar(x, probs_small, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">"Empirical"</span>)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x, theoretical, <span class="st">"o--"</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Theoretical"</span>)</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"N = </span><span class="sc">{</span>N_small<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Empirical P(S=7) = </span><span class="sc">{</span>empirical_small<span class="sc">:.4f}</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Theoretical P(S=7) = </span><span class="sc">{</span>theoretical_prob<span class="sc">:.4f}</span><span class="ss">"</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xlabel(<span class="st">"Sum"</span>)</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">"Probability"</span>)</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend()</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].bar(x, probs_large, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">"Empirical"</span>)</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(x, theoretical, <span class="st">"o--"</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Theoretical"</span>)</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"N = </span><span class="sc">{</span>N_large<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Empirical P(S=7) = </span><span class="sc">{</span>empirical_large<span class="sc">:.4f}</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Theoretical P(S=7) = </span><span class="sc">{</span>theoretical_prob<span class="sc">:.4f}</span><span class="ss">"</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">"Sum"</span>)</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">"Sum of Two Fair Dice: Empirical vs Theoretical Distribution"</span>,</span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Theoretical P(S=7) = </span><span class="sc">{</span>theoretical_prob<span class="sc">:.6f}</span><span class="ss">"</span>)</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"N=</span><span class="sc">{</span>N_small<span class="sc">:&gt;6}</span><span class="ss">: Empirical P(S=7) = </span><span class="sc">{</span>empirical_small<span class="sc">:.6f}</span><span class="ss">"</span>)</span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"N=</span><span class="sc">{</span>N_large<span class="sc">:&gt;6}</span><span class="ss">: Empirical P(S=7) = </span><span class="sc">{</span>empirical_large<span class="sc">:.6f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -335,14 +519,34 @@ N=100000: Empirical P(S=7) = 0.167760</code></pre>
 </div>
 </div>
 </section>
-<section id="example-cards" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="example-cards"><span class="header-section-number">2.3</span> Example: Cards</h2>
+<section id="example-cards" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="example-cards"><span class="header-section-number">3.3</span> Example: Cards</h2>
 <p>Suppose we draw cards from a standard deck of <span class="math inline">\(52\)</span> cards. The probability of drawing an ace is <span class="math inline">\(4/52=1/13\)</span>.</p>
 <p>If two cards are drawn without replacement, then the probability that both cards are aces is</p>
 <p><span class="math display">\[
 \frac{4}{52}\cdot\frac{3}{51}.
 \]</span></p>
-<div id="de954231" class="cell" data-execution_count="22">
+<div id="70f0eb17" class="cell" data-execution_count="22">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">100_000</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Represent deck by 1 for ace and 0 for non-ace</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>deck <span class="op">=</span> np.array([<span class="dv">1</span>]<span class="op">*</span><span class="dv">4</span> <span class="op">+</span> [<span class="dv">0</span>]<span class="op">*</span><span class="dv">48</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>successes <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(N):</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    draw <span class="op">=</span> np.random.choice(deck, size<span class="op">=</span><span class="dv">2</span>, replace<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> draw.<span class="bu">sum</span>() <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        successes <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>empirical_prob <span class="op">=</span> successes <span class="op">/</span> N</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>theoretical_prob <span class="op">=</span> (<span class="dv">4</span><span class="op">/</span><span class="dv">52</span>) <span class="op">*</span> (<span class="dv">3</span><span class="op">/</span><span class="dv">51</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Empirical probability:"</span>, empirical_prob)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Theoretical probability:"</span>, theoretical_prob)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Empirical probability: 0.00475
 Theoretical probability: 0.004524886877828055</code></pre>
@@ -350,8 +554,8 @@ Theoretical probability: 0.004524886877828055</code></pre>
 </div>
 </section>
 </section>
-<section id="geometric-probability-model" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Geometric Probability Model</h1>
+<section id="geometric-probability-model" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Geometric Probability Model</h1>
 <p>Let <span class="math inline">\(\Omega\subseteq\mathbb{R}^d\)</span> be a measurable set with finite Lebesgue measure <span class="math inline">\(\mu(\Omega)&lt;\infty\)</span>. The <strong>geometric probability model</strong> is defined by</p>
 <p><span class="math display">\[
 \mathcal{F}=\{A\subseteq\Omega:\;A\text{ is measurable}\},
@@ -361,14 +565,45 @@ Theoretical probability: 0.004524886877828055</code></pre>
 P(A)=\frac{\mu(A)}{\mu(\Omega)}, \qquad A\in\mathcal{F}.
 \]</span></p>
 <p>Thus, probabilities are proportional to geometric quantities such as length, area, or volume. Informally, a random point is chosen uniformly from <span class="math inline">\(\Omega\)</span>, and the probability of an event is the fraction of the total measure occupied by the corresponding region.</p>
-<section id="example-bus-problem" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="example-bus-problem"><span class="header-section-number">3.1</span> Example: Bus Problem</h2>
+<section id="example-bus-problem" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="example-bus-problem"><span class="header-section-number">4.1</span> Example: Bus Problem</h2>
 <p>Suppose you and a bus arrive independently and uniformly at random between <span class="math inline">\(12:00\)</span> and <span class="math inline">\(13:00\)</span>. The bus waits for <span class="math inline">\(15\)</span> minutes before leaving, and you also wait <span class="math inline">\(15\)</span> minutes if the bus has not arrived yet.</p>
 <p>After rescaling time to <span class="math inline">\([0,1]\)</span>, <span class="math inline">\(15\)</span> minutes corresponds to <span class="math inline">\(1/4\)</span>. You catch the bus if <span class="math inline">\(|X-Y|\le 1/4\)</span>. The bad region consists of two triangles with total area <span class="math inline">\(2\cdot (3/4)^2/2=9/16\)</span>. Therefore,</p>
 <p><span class="math display">\[
 P(\text{catch the bus})=1-\frac{9}{16}=\frac{7}{16}.
 \]</span></p>
-<div id="153beaa7" class="cell" data-execution_count="27">
+<div id="d9ae3835" class="cell" data-execution_count="27">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">100_000</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.random(N)  <span class="co"># your arrival time</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> np.random.random(N)  <span class="co"># bus arrival time</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>event <span class="op">=</span> np.<span class="bu">abs</span>(X <span class="op">-</span> Y) <span class="op">&lt;=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">4</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>empirical_prob <span class="op">=</span> event.mean()</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>theoretical_prob <span class="op">=</span> <span class="dv">7</span><span class="op">/</span><span class="dv">16</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Empirical probability:"</span>, empirical_prob)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Theoretical probability:"</span>, theoretical_prob)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>plt.scatter(X[event], Y[event], s<span class="op">=</span><span class="dv">3</span>, alpha<span class="op">=</span><span class="fl">0.4</span>, label<span class="op">=</span><span class="st">"Catch bus"</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>plt.scatter(X[<span class="op">~</span>event], Y[<span class="op">~</span>event], s<span class="op">=</span><span class="dv">3</span>, alpha<span class="op">=</span><span class="fl">0.4</span>, label<span class="op">=</span><span class="st">"Miss bus"</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">300</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>plt.plot(x, x <span class="op">+</span> <span class="dv">1</span><span class="op">/</span><span class="dv">4</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>plt.plot(x, x <span class="op">-</span> <span class="dv">1</span><span class="op">/</span><span class="dv">4</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Your arrival time"</span>)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Bus arrival time"</span>)</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Bus Problem"</span>)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Empirical probability: 0.43745
 Theoretical probability: 0.4375</code></pre>
@@ -382,8 +617,8 @@ Theoretical probability: 0.4375</code></pre>
 </div>
 </div>
 </section>
-<section id="bertrands-paradox" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="bertrands-paradox"><span class="header-section-number">3.2</span> Bertrand’s Paradox</h2>
+<section id="bertrands-paradox" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="bertrands-paradox"><span class="header-section-number">4.2</span> Bertrand’s Paradox</h2>
 <p>Consider a circle of radius <span class="math inline">\(R\)</span>. We choose a chord at random and ask</p>
 <p><span class="math display">\[
 P(\text{the chord is longer than the side of an inscribed equilateral triangle})=?
@@ -416,7 +651,178 @@ P\left(L&gt;\sqrt{3}R\right)
 \frac13,\qquad \frac12,\qquad \frac14.
 \]</span></p>
 <p>This is Bertrand’s paradox. It shows that a probability problem is not well-defined until the probability space, or equivalently the random mechanism, is precisely specified.</p>
-<div id="e6fb3816" class="cell" data-scrolled="false" data-execution_count="46">
+<div id="cc770380" class="cell" data-scrolled="false" data-execution_count="46">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">20_000</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> <span class="dv">300</span>   <span class="co"># number of chords drawn in the plots</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>threshold <span class="op">=</span> np.sqrt(<span class="dv">3</span>) <span class="op">*</span> R</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Random endpoints on the circumference</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>theta1 <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, size<span class="op">=</span>N)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>theta2 <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, size<span class="op">=</span>N)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>x1_a <span class="op">=</span> R <span class="op">*</span> np.cos(theta1)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>y1_a <span class="op">=</span> R <span class="op">*</span> np.sin(theta1)</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>x2_a <span class="op">=</span> R <span class="op">*</span> np.cos(theta2)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>y2_a <span class="op">=</span> R <span class="op">*</span> np.sin(theta2)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>lengths_a <span class="op">=</span> np.sqrt((x1_a <span class="op">-</span> x2_a)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (y1_a <span class="op">-</span> y2_a)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>event_a <span class="op">=</span> lengths_a <span class="op">&gt;</span> threshold</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>empirical_a <span class="op">=</span> event_a.mean()</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>theoretical_a <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">3</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 2: Random distance from center</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, R, size<span class="op">=</span>N)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, size<span class="op">=</span>N)</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>nx <span class="op">=</span> np.cos(theta)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>ny <span class="op">=</span> np.sin(theta)</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>vx <span class="op">=</span> <span class="op">-</span>np.sin(theta)</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>vy <span class="op">=</span> np.cos(theta)</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>half_lengths <span class="op">=</span> np.sqrt(R<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> d<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>mid_x_b <span class="op">=</span> d <span class="op">*</span> nx</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>mid_y_b <span class="op">=</span> d <span class="op">*</span> ny</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>x1_b <span class="op">=</span> mid_x_b <span class="op">+</span> half_lengths <span class="op">*</span> vx</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>y1_b <span class="op">=</span> mid_y_b <span class="op">+</span> half_lengths <span class="op">*</span> vy</span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>x2_b <span class="op">=</span> mid_x_b <span class="op">-</span> half_lengths <span class="op">*</span> vx</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>y2_b <span class="op">=</span> mid_y_b <span class="op">-</span> half_lengths <span class="op">*</span> vy</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>lengths_b <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> half_lengths</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>event_b <span class="op">=</span> lengths_b <span class="op">&gt;</span> threshold</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>empirical_b <span class="op">=</span> event_b.mean()</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>theoretical_b <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 3: Random midpoint in the disk</span></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, size<span class="op">=</span>N)</span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> R <span class="op">*</span> np.sqrt(np.random.uniform(<span class="dv">0</span>, <span class="dv">1</span>, size<span class="op">=</span>N))</span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>mid_x_c <span class="op">=</span> rho <span class="op">*</span> np.cos(theta)</span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>mid_y_c <span class="op">=</span> rho <span class="op">*</span> np.sin(theta)</span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> rho</span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a>vx <span class="op">=</span> <span class="op">-</span>np.sin(theta)</span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a>vy <span class="op">=</span> np.cos(theta)</span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>half_lengths <span class="op">=</span> np.sqrt(R<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> d<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a>x1_c <span class="op">=</span> mid_x_c <span class="op">+</span> half_lengths <span class="op">*</span> vx</span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a>y1_c <span class="op">=</span> mid_y_c <span class="op">+</span> half_lengths <span class="op">*</span> vy</span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a>x2_c <span class="op">=</span> mid_x_c <span class="op">-</span> half_lengths <span class="op">*</span> vx</span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a>y2_c <span class="op">=</span> mid_y_c <span class="op">-</span> half_lengths <span class="op">*</span> vy</span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a>lengths_c <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> half_lengths</span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a>event_c <span class="op">=</span> lengths_c <span class="op">&gt;</span> threshold</span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>empirical_c <span class="op">=</span> event_c.mean()</span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>theoretical_c <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">4</span></span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Print comparison</span></span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bertrand's Paradox"</span>)</span>
+<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Method 1: Random endpoints"</span>)</span>
+<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Empirical probability:   </span><span class="sc">{</span>empirical_a<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Theoretical probability: </span><span class="sc">{</span>theoretical_a<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Method 2: Random distance from center"</span>)</span>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Empirical probability:   </span><span class="sc">{</span>empirical_b<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Theoretical probability: </span><span class="sc">{</span>theoretical_b<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Method 3: Random midpoint in disk"</span>)</span>
+<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Empirical probability:   </span><span class="sc">{</span>empirical_c<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Theoretical probability: </span><span class="sc">{</span>theoretical_c<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot all methods side by side</span></span>
+<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------</span></span>
+<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">5</span>))</span>
+<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a>methods <span class="op">=</span> [</span>
+<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a>        axes[<span class="dv">0</span>],</span>
+<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a>        x1_a, y1_a, x2_a, y2_a,</span>
+<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a>        event_a,</span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Method 1: Random Endpoints"</span>,</span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a>        empirical_a,</span>
+<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a>        theoretical_a</span>
+<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a>        axes[<span class="dv">1</span>],</span>
+<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a>        x1_b, y1_b, x2_b, y2_b,</span>
+<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a>        event_b,</span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Method 2: Random Distance"</span>,</span>
+<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a>        empirical_b,</span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a>        theoretical_b</span>
+<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a>        axes[<span class="dv">2</span>],</span>
+<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a>        x1_c, y1_c, x2_c, y2_c,</span>
+<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a>        event_c,</span>
+<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Method 3: Random Midpoint"</span>,</span>
+<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a>        empirical_c,</span>
+<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a>        theoretical_c</span>
+<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, x1, y1, x2, y2, event, title, empirical, theoretical <span class="kw">in</span> methods:</span>
+<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>    circle <span class="op">=</span> plt.Circle((<span class="dv">0</span>, <span class="dv">0</span>), R, fill<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a>    inner_circle <span class="op">=</span> plt.Circle((<span class="dv">0</span>, <span class="dv">0</span>), R<span class="op">/</span><span class="dv">2</span>, fill<span class="op">=</span><span class="va">False</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(circle)</span>
+<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(inner_circle)</span>
+<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(M):</span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> event[i]:</span>
+<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a>            ax.plot([x1[i], x2[i]], [y1[i], y2[i]], alpha<span class="op">=</span><span class="fl">0.45</span>)</span>
+<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a>            ax.plot([x1[i], x2[i]], [y1[i], y2[i]], alpha<span class="op">=</span><span class="fl">0.08</span>)</span>
+<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a>    ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(<span class="op">-</span><span class="fl">1.1</span>, <span class="fl">1.1</span>)</span>
+<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(<span class="op">-</span><span class="fl">1.1</span>, <span class="fl">1.1</span>)</span>
+<span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a>    ax.set_title(</span>
+<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a>        title</span>
+<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> <span class="ss">f"Empirical = </span><span class="sc">{</span>empirical<span class="sc">:.3f}</span><span class="ss">, theoretical = </span><span class="sc">{</span>theoretical<span class="sc">:.3f}</span><span class="ss">"</span></span>
+<span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a>    ax.set_xticks([])</span>
+<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a>    ax.set_yticks([])</span>
+<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a>plt.suptitle(</span>
+<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bertrand's Paradox: Three Random Chord Models"</span>,</span>
+<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">15</span></span>
+<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Bertrand's Paradox
 
@@ -442,8 +848,8 @@ Theoretical probability: 0.2500</code></pre>
 </div>
 </section>
 </section>
-<section id="bernoulli-scheme" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Bernoulli Scheme</h1>
+<section id="bernoulli-scheme" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Bernoulli Scheme</h1>
 <p>Fix <span class="math inline">\(n\in\mathbb{N}\)</span> and <span class="math inline">\(p\in(0,1)\)</span>. The <strong>Bernoulli scheme</strong> consists of <span class="math inline">\(n\)</span> independent trials, each resulting in success (<span class="math inline">\(1\)</span>) with probability <span class="math inline">\(p\)</span> and failure (<span class="math inline">\(0\)</span>) with probability <span class="math inline">\(1-p\)</span>.</p>
 <p>The sample space is</p>
 <p><span class="math display">\[
@@ -462,8 +868,8 @@ p^{\sum_{i=1}^{n}x_i}
 S_n=\sum_{i=1}^{n}x_i
 \]</span></p>
 <p>counts the number of successes.</p>
-<section id="example-binomial-distribution" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="example-binomial-distribution"><span class="header-section-number">4.1</span> Example: Binomial Distribution</h2>
+<section id="example-binomial-distribution" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="example-binomial-distribution"><span class="header-section-number">5.1</span> Example: Binomial Distribution</h2>
 <p>Let <span class="math inline">\(S_n\)</span> be the number of successes in <span class="math inline">\(n\)</span> independent Bernoulli trials with success probability <span class="math inline">\(p\)</span>. Then</p>
 <p><span class="math display">\[
 P(S_n=m)=\binom{n}{m}p^m(1-p)^{n-m},\qquad m=0,1,\ldots,n.
@@ -472,7 +878,26 @@ P(S_n=m)=\binom{n}{m}p^m(1-p)^{n-m},\qquad m=0,1,\ldots,n.
 <p><span class="math display">\[
 P(S_{10}=5)=\binom{10}{5}\left(\frac12\right)^{10}.
 \]</span></p>
-<div id="8e822131" class="cell" data-execution_count="33">
+<div id="3936278a" class="cell" data-execution_count="33">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>samples <span class="op">=</span> np.random.binomial(n, p, size<span class="op">=</span>N)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> np.arange(n <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>empirical_probs <span class="op">=</span> np.array([np.mean(samples <span class="op">==</span> k) <span class="cf">for</span> k <span class="kw">in</span> values])</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>theoretical_probs <span class="op">=</span> np.array([comb(n, k) <span class="op">*</span> p<span class="op">**</span>k <span class="op">*</span> (<span class="dv">1</span><span class="op">-</span>p)<span class="op">**</span>(n<span class="op">-</span>k) <span class="cf">for</span> k <span class="kw">in</span> values])</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>plt.bar(values <span class="op">-</span> <span class="fl">0.2</span>, empirical_probs, width<span class="op">=</span><span class="fl">0.4</span>, label<span class="op">=</span><span class="st">"Empirical"</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>plt.bar(values <span class="op">+</span> <span class="fl">0.2</span>, theoretical_probs, width<span class="op">=</span><span class="fl">0.4</span>, label<span class="op">=</span><span class="st">"Theoretical"</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of successes"</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Probability"</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Binomial Distribution: Simulation vs Theory"</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -482,22 +907,72 @@ P(S_{10}=5)=\binom{10}{5}\left(\frac12\right)^{10}.
 </div>
 </div>
 </section>
-<section id="example-at-least-one-success" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="example-at-least-one-success"><span class="header-section-number">4.2</span> Example: At Least One Success</h2>
+<section id="example-at-least-one-success" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="example-at-least-one-success"><span class="header-section-number">5.2</span> Example: At Least One Success</h2>
 <p>If <span class="math inline">\(S_n\sim\mathrm{Bin}(n,p)\)</span>, then</p>
 <p><span class="math display">\[
 P(S_n\ge 1)=1-P(S_n=0)=1-(1-p)^n.
 \]</span></p>
 <p>This formula is often easier than adding many probabilities.</p>
 </section>
-<section id="example-most-probable-number-of-successes" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="example-most-probable-number-of-successes"><span class="header-section-number">4.3</span> Example: Most Probable Number of Successes</h2>
+<section id="example-most-probable-number-of-successes" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="example-most-probable-number-of-successes"><span class="header-section-number">5.3</span> Example: Most Probable Number of Successes</h2>
 <p>If <span class="math inline">\(S_n\sim\mathrm{Bin}(n,p)\)</span>, then a most probable value is</p>
 <p><span class="math display">\[
 m=\lfloor (n+1)p\rfloor.
 \]</span></p>
 <p>If <span class="math inline">\((n+1)p\)</span> is an integer, then both <span class="math inline">\((n+1)p-1\)</span> and <span class="math inline">\((n+1)p\)</span> are modes.</p>
-<div id="69d54223" class="cell" data-execution_count="38">
+<div id="56d95062" class="cell" data-execution_count="38">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> comb</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> np.arange(n <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> np.array([</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    comb(n, k) <span class="op">*</span> p<span class="op">**</span>k <span class="op">*</span> (<span class="dv">1</span><span class="op">-</span>p)<span class="op">**</span>(n<span class="op">-</span>k)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> values</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>mode_formula <span class="op">=</span> <span class="bu">int</span>(np.floor((n <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> p))</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>mode_computed <span class="op">=</span> values[np.argmax(probs)]</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mode by formula:"</span>, mode_formula)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mode by computation:"</span>, mode_computed)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>bars <span class="op">=</span> plt.bar(values, probs, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Highlight the mode</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>bars[mode_formula].set_alpha(<span class="dv">1</span>)</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>plt.axvline(</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    mode_formula,</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    linestyle<span class="op">=</span><span class="st">"--"</span>,</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="ss">f"Mode = </span><span class="sc">{</span>mode_formula<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of successes $k$"</span>)</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r"</span><span class="dv">$</span><span class="vs">P</span><span class="kw">(</span><span class="vs">X=k</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>plt.title(</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"Binomial Distribution </span><span class="dv">$</span><span class="vs">X</span><span class="dv">\s</span><span class="vs">im</span><span class="dv">\m</span><span class="vs">athrm{Bin}</span><span class="kw">(</span><span class="vs">20,0</span><span class="dv">.</span><span class="vs">3</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"</span><span class="dv">$</span><span class="vs">P</span><span class="kw">(</span><span class="vs">X=k</span><span class="kw">)</span><span class="vs">=</span><span class="dv">\b</span><span class="vs">inom</span><span class="op">{20}</span><span class="vs">{k}</span><span class="kw">(</span><span class="vs">0</span><span class="dv">.</span><span class="vs">3</span><span class="kw">)</span><span class="dv">^</span><span class="vs">k</span><span class="kw">(</span><span class="vs">0</span><span class="dv">.</span><span class="vs">7</span><span class="kw">)</span><span class="dv">^</span><span class="vs">{20-k}</span><span class="dv">$</span><span class="vs">"</span></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>    <span class="vs">rf"Most probable value = </span><span class="sc">{</span>mode_formula<span class="sc">}</span><span class="vs">"</span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Mode by formula: 6
 Mode by computation: 6</code></pre>
@@ -512,8 +987,8 @@ Mode by computation: 6</code></pre>
 </div>
 </section>
 </section>
-<section id="independence-of-events" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Independence of Events</h1>
+<section id="independence-of-events" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Independence of Events</h1>
 <p>Let <span class="math inline">\(A,B\in\mathcal{F}\)</span>. The events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are called <strong>independent</strong> if</p>
 <p><span class="math display">\[
 P(A\cap B)=P(A)P(B).
@@ -534,8 +1009,8 @@ P\!\left(\bigcap_{i\in I}A_i\right)
 \prod_{i\in I}P(A_i).
 \]</span></p>
 <p>Mutual independence implies pairwise independence, but the converse is generally false.</p>
-<section id="example-dependent-events" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="example-dependent-events"><span class="header-section-number">5.1</span> Example: Dependent Events</h2>
+<section id="example-dependent-events" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="example-dependent-events"><span class="header-section-number">6.1</span> Example: Dependent Events</h2>
 <p>Draw two cards without replacement from a standard deck. Let <span class="math inline">\(A=\{\text{first card is an ace}\}\)</span> and <span class="math inline">\(B=\{\text{second card is an ace}\}\)</span>. Then</p>
 <p><span class="math display">\[
 P(A)=\frac4{52},\qquad P(B)=\frac4{52},
@@ -545,7 +1020,29 @@ P(A)=\frac4{52},\qquad P(B)=\frac4{52},
 P(A\cap B)=\frac4{52}\cdot\frac3{51}\neq \frac4{52}\cdot\frac4{52}.
 \]</span></p>
 <p>Therefore, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not independent.</p>
-<div id="51af1df2" class="cell" data-execution_count="39">
+<div id="08122a38" class="cell" data-execution_count="39">
+<details class="code-fold">
+<summary>Show Python code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">100_000</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>deck <span class="op">=</span> np.array([<span class="dv">1</span>]<span class="op">*</span><span class="dv">4</span> <span class="op">+</span> [<span class="dv">0</span>]<span class="op">*</span><span class="dv">48</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>A_values <span class="op">=</span> []</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>B_values <span class="op">=</span> []</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(N):</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    draw <span class="op">=</span> np.random.choice(deck, size<span class="op">=</span><span class="dv">2</span>, replace<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    A_values.append(draw[<span class="dv">0</span>] <span class="op">==</span> <span class="dv">1</span>)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    B_values.append(draw[<span class="dv">1</span>] <span class="op">==</span> <span class="dv">1</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array(A_values)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> np.array(B_values)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"P(A):"</span>, A.mean())</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"P(B):"</span>, B.mean())</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"P(A and B):"</span>, np.mean(A <span class="op">&amp;</span> B))</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"P(A)P(B):"</span>, A.mean() <span class="op">*</span> B.mean())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>P(A): 0.07821
 P(B): 0.07597
@@ -554,8 +1051,8 @@ P(A)P(B): 0.0059416137</code></pre>
 </div>
 </div>
 </section>
-<section id="example-pairwise-but-not-mutual-independence" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="example-pairwise-but-not-mutual-independence"><span class="header-section-number">5.2</span> Example: Pairwise but Not Mutual Independence</h2>
+<section id="example-pairwise-but-not-mutual-independence" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="example-pairwise-but-not-mutual-independence"><span class="header-section-number">6.2</span> Example: Pairwise but Not Mutual Independence</h2>
 <p>Toss two fair coins and write the outcomes as <span class="math inline">\(X,Y\in\{0,1\}\)</span>. Define three events</p>
 <p><span class="math display">\[
 A=\{X=0\},\qquad B=\{Y=0\},\qquad C=\{X=Y\}.
@@ -571,19 +1068,19 @@ P(A)P(B)P(C)=\frac12\cdot\frac12\cdot\frac12=\frac18.
 <p>Therefore, the events are pairwise independent but not mutually independent.</p>
 </section>
 </section>
-<section id="how-are-random-numbers-generated-by-a-computer" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> How Are Random Numbers Generated by a Computer?</h1>
+<section id="how-are-random-numbers-generated-by-a-computer" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> How Are Random Numbers Generated by a Computer?</h1>
 <p>Throughout this course we will frequently use Python functions such as</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>np.random.random()</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>np.random.randint()</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>np.random.binomial()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>np.random.random()</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>np.random.randint()</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>np.random.binomial()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>to simulate random experiments. This naturally raises the following question:</p>
 <blockquote class="blockquote">
 <p>How can a computer generate random numbers if a computer is a deterministic machine?</p>
 </blockquote>
 <hr>
-<section id="true-randomness-vs-pseudorandomness" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="true-randomness-vs-pseudorandomness"><span class="header-section-number">6.1</span> True Randomness vs Pseudorandomness</h2>
+<section id="true-randomness-vs-pseudorandomness" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="true-randomness-vs-pseudorandomness"><span class="header-section-number">7.1</span> True Randomness vs Pseudorandomness</h2>
 <p>A computer executes a sequence of deterministic instructions. If we start a program twice with exactly the same initial conditions, it will perform exactly the same calculations and produce exactly the same output.</p>
 <p>For this reason, most “random” numbers generated by a computer are not truly random. Instead, they are <strong>pseudorandom numbers</strong>.</p>
 <p>A pseudorandom number generator (PRNG) is a deterministic algorithm that produces a sequence of numbers that behaves <em>as if</em> it were random.</p>
@@ -597,18 +1094,18 @@ x_{n+1}=f(x_n).
 \]</span></p>
 <p>If the same seed is used again, exactly the same sequence will be generated.</p>
 <p>For example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.random())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Running this code twice produces exactly the same numbers.</p>
 <hr>
 </section>
-<section id="why-does-this-work" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="why-does-this-work"><span class="header-section-number">6.2</span> Why Does This Work?</h2>
+<section id="why-does-this-work" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="why-does-this-work"><span class="header-section-number">7.2</span> Why Does This Work?</h2>
 <p>Although pseudorandom numbers are generated deterministically, good generators are designed so that their outputs satisfy many statistical properties expected from genuinely random sequences.</p>
 <p>For practical purposes, the sequence appears random:</p>
 <ul>
@@ -620,8 +1117,8 @@ x_{n+1}=f(x_n).
 <p>As a result, pseudorandom generators are sufficient for most scientific simulations, machine learning algorithms, statistical experiments, computer graphics, and video games.</p>
 <hr>
 </section>
-<section id="how-difficult-is-it-to-generate-truly-random-numbers" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="how-difficult-is-it-to-generate-truly-random-numbers"><span class="header-section-number">6.3</span> How Difficult Is It to Generate Truly Random Numbers?</h2>
+<section id="how-difficult-is-it-to-generate-truly-random-numbers" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="how-difficult-is-it-to-generate-truly-random-numbers"><span class="header-section-number">7.3</span> How Difficult Is It to Generate Truly Random Numbers?</h2>
 <p>Generating <em>true</em> randomness is surprisingly difficult.</p>
 <p>A computer by itself cannot create randomness from nothing because its internal operations are deterministic.</p>
 <p>To obtain genuine randomness, we must rely on unpredictable physical phenomena such as:</p>
@@ -636,8 +1133,8 @@ x_{n+1}=f(x_n).
 <p>For example, some modern processors contain dedicated hardware that measures microscopic physical noise and converts it into random bits.</p>
 <hr>
 </section>
-<section id="why-is-true-randomness-important" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="why-is-true-randomness-important"><span class="header-section-number">6.4</span> Why Is True Randomness Important?</h2>
+<section id="why-is-true-randomness-important" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="why-is-true-randomness-important"><span class="header-section-number">7.4</span> Why Is True Randomness Important?</h2>
 <p>For many simulations, pseudorandom numbers are perfectly adequate.</p>
 <p>However, some applications require unpredictability rather than merely statistical randomness.</p>
 <p>Examples include:</p>
@@ -654,8 +1151,8 @@ x_{n+1}=f(x_n).
 <p>For this reason, cryptographic systems often combine pseudorandom generators with physical sources of randomness.</p>
 <hr>
 </section>
-<section id="randomness-and-monte-carlo-methods" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="randomness-and-monte-carlo-methods"><span class="header-section-number">6.5</span> Randomness and Monte Carlo Methods</h2>
+<section id="randomness-and-monte-carlo-methods" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="randomness-and-monte-carlo-methods"><span class="header-section-number">7.5</span> Randomness and Monte Carlo Methods</h2>
 <p>One of the most important applications of random numbers is <strong>Monte Carlo simulation</strong>.</p>
 <p>The basic idea is simple:</p>
 <ol type="1">
@@ -683,8 +1180,8 @@ N\to\infty.
 <p>This principle is used throughout science and engineering.</p>
 <hr>
 </section>
-<section id="random-numbers-in-real-life" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="random-numbers-in-real-life"><span class="header-section-number">6.6</span> Random Numbers in Real Life</h2>
+<section id="random-numbers-in-real-life" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="random-numbers-in-real-life"><span class="header-section-number">7.6</span> Random Numbers in Real Life</h2>
 <p>Random number generators play a crucial role in many modern technologies:</p>
 <ul>
 <li>weather forecasting;</li>
@@ -701,8 +1198,8 @@ N\to\infty.
 <p>Many scientific problems are so complicated that exact calculations are impossible, while Monte Carlo simulations using random numbers provide accurate approximations.</p>
 <hr>
 </section>
-<section id="historical-remark" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="historical-remark"><span class="header-section-number">6.7</span> Historical Remark</h2>
+<section id="historical-remark" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="historical-remark"><span class="header-section-number">7.7</span> Historical Remark</h2>
 <p>During the 1940s, scientists working on the Manhattan Project needed large quantities of random numbers to simulate neutron transport inside nuclear reactors.</p>
 <p>This led to the development of the <strong>Monte Carlo method</strong>, named after the famous casino in Monaco.</p>
 <p>Today Monte Carlo methods are among the most powerful computational tools in mathematics, statistics, physics, engineering, finance, and data science.</p>
