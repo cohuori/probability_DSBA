@@ -3,3 +3,4 @@
 - [Seminar 1: Basics of Combinatorics](seminars/Seminar_1.html)
 - [Seminar 2: Probabilistic Models](seminars/seminar_2.html)
 - [Seminar 3: Bayes Theorem](seminars/seminar_3.html)
+- [Seminar 4: Discrete Random Variables](seminars/seminar_4.html)

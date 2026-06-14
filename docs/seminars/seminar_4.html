@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Carlos Buitrago">
 
-<title>seminars – Probability Theory</title>
+<title>Seminar 4: Discrete Random Variables – Probability Theory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +27,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Probability Theory</span>
     </a>
   </div>
@@ -92,15 +122,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lectures.html"> 
+    <a class="nav-link" href="../lectures.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./seminars.html" aria-current="page"> 
+    <a class="nav-link" href="../seminars.html"> 
 <span class="menu-text">Seminars</span></a>
   </li>  
 </ul>
@@ -119,26 +149,256 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#seminars" id="toc-seminars" class="nav-link active" data-scroll-target="#seminars"><span class="header-section-number">1</span> Seminars</a></li>
+  <li><a href="#probability-distributions-and-random-variables" id="toc-probability-distributions-and-random-variables" class="nav-link active" data-scroll-target="#probability-distributions-and-random-variables"><span class="header-section-number">1</span> Probability Distributions and Random Variables</a>
+  <ul class="collapse">
+  <li><a href="#borel-sigma-algebra" id="toc-borel-sigma-algebra" class="nav-link" data-scroll-target="#borel-sigma-algebra"><span class="header-section-number">1.1</span> Borel <span class="math inline">\(\sigma\)</span>-Algebra</a></li>
+  <li><a href="#measurable-functions-and-random-variables" id="toc-measurable-functions-and-random-variables" class="nav-link" data-scroll-target="#measurable-functions-and-random-variables"><span class="header-section-number">1.2</span> Measurable Functions and Random Variables</a></li>
+  <li><a href="#probability-distributions" id="toc-probability-distributions" class="nav-link" data-scroll-target="#probability-distributions"><span class="header-section-number">1.3</span> Probability Distributions</a></li>
+  <li><a href="#distribution-of-a-random-variable" id="toc-distribution-of-a-random-variable" class="nav-link" data-scroll-target="#distribution-of-a-random-variable"><span class="header-section-number">1.4</span> Distribution of a Random Variable</a></li>
+  <li><a href="#probability-mass-function-pmf" id="toc-probability-mass-function-pmf" class="nav-link" data-scroll-target="#probability-mass-function-pmf"><span class="header-section-number">1.5</span> Probability Mass Function (PMF)</a></li>
+  </ul></li>
+  <li><a href="#examples-of-discrete-probability-distributions" id="toc-examples-of-discrete-probability-distributions" class="nav-link" data-scroll-target="#examples-of-discrete-probability-distributions"><span class="header-section-number">2</span> Examples of Discrete Probability Distributions</a>
+  <ul class="collapse">
+  <li><a href="#uniform-distribution" id="toc-uniform-distribution" class="nav-link" data-scroll-target="#uniform-distribution"><span class="header-section-number">2.1</span> Uniform Distribution</a></li>
+  <li><a href="#bernoulli-distribution" id="toc-bernoulli-distribution" class="nav-link" data-scroll-target="#bernoulli-distribution"><span class="header-section-number">2.2</span> Bernoulli Distribution</a></li>
+  <li><a href="#binomial-distribution" id="toc-binomial-distribution" class="nav-link" data-scroll-target="#binomial-distribution"><span class="header-section-number">2.3</span> Binomial Distribution</a></li>
+  <li><a href="#geometric-distribution" id="toc-geometric-distribution" class="nav-link" data-scroll-target="#geometric-distribution"><span class="header-section-number">2.4</span> Geometric Distribution</a></li>
+  <li><a href="#poisson-distribution" id="toc-poisson-distribution" class="nav-link" data-scroll-target="#poisson-distribution"><span class="header-section-number">2.5</span> Poisson Distribution</a></li>
+  </ul></li>
+  <li><a href="#poisson-limit-theorem" id="toc-poisson-limit-theorem" class="nav-link" data-scroll-target="#poisson-limit-theorem"><span class="header-section-number">3</span> Poisson Limit Theorem</a></li>
+  <li><a href="#independence-of-random-variables" id="toc-independence-of-random-variables" class="nav-link" data-scroll-target="#independence-of-random-variables"><span class="header-section-number">4</span> Independence of Random Variables</a>
+  <ul class="collapse">
+  <li><a href="#convolution-of-discrete-distributions" id="toc-convolution-of-discrete-distributions" class="nav-link" data-scroll-target="#convolution-of-discrete-distributions"><span class="header-section-number">4.1</span> Convolution of Discrete Distributions</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="seminar_4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Seminar 4: Discrete Random Variables</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="seminars" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Seminars</h1>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Carlos Buitrago </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="probability-distributions-and-random-variables" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Probability Distributions and Random Variables</h1>
+<p>In the previous lectures, probabilities were assigned directly to events in a probability space <span class="math inline">\((\Omega,\mathcal F,P)\)</span>. In practice, however, we are often interested in numerical quantities associated with the outcomes of an experiment, such as the number of heads obtained when tossing a coin several times, the number of customers arriving at a store during one hour, or the height of a randomly selected individual.</p>
+<p>Such quantities are modeled by <strong>random variables</strong>. To study them, we first introduce probability distributions on the real line.</p>
+<section id="borel-sigma-algebra" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="borel-sigma-algebra"><span class="header-section-number">1.1</span> Borel <span class="math inline">\(\sigma\)</span>-Algebra</h2>
+<p>The <strong>Borel <span class="math inline">\(\sigma\)</span>-algebra</strong> on <span class="math inline">\(\mathbb R\)</span>, denoted by <span class="math inline">\(\mathcal B(\mathbb R)\)</span>, is the smallest <span class="math inline">\(\sigma\)</span>-algebra containing all open subsets of <span class="math inline">\(\mathbb R\)</span>.</p>
+<p>Elements of <span class="math inline">\(\mathcal B(\mathbb R)\)</span> are called <strong>Borel sets</strong>. In particular, every open interval, closed interval, half-open interval, countable union, countable intersection, and complement of such sets belongs to <span class="math inline">\(\mathcal B(\mathbb R)\)</span>.</p>
+</section>
+<section id="measurable-functions-and-random-variables" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="measurable-functions-and-random-variables"><span class="header-section-number">1.2</span> Measurable Functions and Random Variables</h2>
+<p>Let <span class="math inline">\((\Omega,\mathcal F)\)</span> and <span class="math inline">\((\mathbb R,\mathcal B(\mathbb R))\)</span> be measurable spaces. A function</p>
+<p><span class="math display">\[
+\xi:\Omega\to\mathbb R
+\]</span></p>
+<p>is called <strong>measurable</strong> if</p>
+<p><span class="math display">\[
+\xi^{-1}(B)
+=
+\{\omega\in\Omega:\xi(\omega)\in B\}
+\in\mathcal F
+\qquad
+\forall B\in\mathcal B(\mathbb R).
+\]</span></p>
+<p>A <strong>random variable</strong> on a probability space <span class="math inline">\((\Omega,\mathcal F,P)\)</span> is simply a measurable function <span class="math inline">\(\xi:\Omega\to\mathbb R\)</span>.</p>
+<p>We denote by</p>
+<p><span class="math display">\[
+X_\xi=\{\xi(\omega):\omega\in\Omega\}
+\]</span></p>
+<p>the set of all possible values of <span class="math inline">\(\xi\)</span>.</p>
+<p>If <span class="math inline">\(X_\xi\)</span> is finite or countable, then <span class="math inline">\(\xi\)</span> is called a <strong>discrete random variable</strong>.</p>
+<p align="center">
+<img src="images/rv.png" width="400">
+</p>
+</section>
+<section id="probability-distributions" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="probability-distributions"><span class="header-section-number">1.3</span> Probability Distributions</h2>
+<p>A <strong>probability distribution</strong> is any probability measure on <span class="math inline">\((\mathbb R,\mathcal B(\mathbb R))\)</span>.</p>
+<p>That is,</p>
+<p><span class="math display">\[
+P:\mathcal B(\mathbb R)\to[0,1].
+\]</span></p>
+<p>If there exists a finite or countable set <span class="math inline">\(X\subseteq\mathbb R\)</span> such that <span class="math inline">\(P(X)=1\)</span>, then <span class="math inline">\(P\)</span> is called a <strong>discrete probability distribution</strong>.</p>
+</section>
+<section id="distribution-of-a-random-variable" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="distribution-of-a-random-variable"><span class="header-section-number">1.4</span> Distribution of a Random Variable</h2>
+<p>Let <span class="math inline">\(\xi\)</span> be a random variable on <span class="math inline">\((\Omega,\mathcal F,P)\)</span>.</p>
+<p>The <strong>probability distribution of <span class="math inline">\(\xi\)</span></strong> is the probability measure <span class="math inline">\(P_\xi\)</span> on <span class="math inline">\((\mathbb R,\mathcal B(\mathbb R))\)</span> defined by</p>
+<p><span class="math display">\[
+P_\xi(B)
+=
+P(\{\omega\in\Omega:\xi(\omega)\in B\})
+=
+P(\xi\in B),
+\qquad
+B\in\mathcal B(\mathbb R).
+\]</span></p>
+<p>Thus, the distribution of a random variable completely describes the probabilities of all events involving its values.</p>
+</section>
+<section id="probability-mass-function-pmf" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="probability-mass-function-pmf"><span class="header-section-number">1.5</span> Probability Mass Function (PMF)</h2>
+<p>Let <span class="math inline">\(\xi\)</span> be a discrete random variable and let <span class="math inline">\(X_\xi=\{x_1,x_2,\ldots\}\)</span>.</p>
+<p>The <strong>probability mass function</strong> (PMF) of <span class="math inline">\(\xi\)</span> is the function</p>
+<p><span class="math display">\[
+p_\xi:\mathbb R\to[0,1]
+\]</span></p>
+<p>defined by</p>
+<p><span class="math display">\[
+p_\xi(x_k)
+=
+P(\xi=x_k),
+\qquad
+x_k\in X_\xi,
+\]</span></p>
+<p>and $ p_(x)=0$, <span class="math inline">\(x\notin X_\xi\)</span></p>
+<p>The PMF completely determines the distribution of a discrete random variable and satisfies <span class="math inline">\(\sum_{x\in X_\xi} p_\xi(x)=1\)</span>.</p>
+</section>
+</section>
+<section id="examples-of-discrete-probability-distributions" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Examples of Discrete Probability Distributions</h1>
+<section id="uniform-distribution" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="uniform-distribution"><span class="header-section-number">2.1</span> Uniform Distribution</h2>
+<p>Let <span class="math inline">\(X\)</span> be a finite set. The uniform distribution on <span class="math inline">\(X\)</span> is defined by</p>
+<p><span class="math display">\[
+P(x)=\frac1{|X|},
+\qquad
+x\in X.
+\]</span></p>
+</section>
+<section id="bernoulli-distribution" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="bernoulli-distribution"><span class="header-section-number">2.2</span> Bernoulli Distribution</h2>
+<p>For <span class="math inline">\(p\in(0,1)\)</span>, <span class="math inline">\(X=\{0,1\}\)</span>, and</p>
+<p><span class="math display">\[
+P(0)=1-p,
+\qquad
+P(1)=p.
+\]</span></p>
+<p>We write</p>
+<p><span class="math display">\[
+\xi\sim\operatorname{Ber}(p).
+\]</span></p>
+</section>
+<section id="binomial-distribution" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="binomial-distribution"><span class="header-section-number">2.3</span> Binomial Distribution</h2>
+<p>For <span class="math inline">\(n\in\mathbb N\)</span> and <span class="math inline">\(p\in(0,1)\)</span>, <span class="math inline">\(X=\{0,1,\ldots,n\}\)</span>, and</p>
+<p><span class="math display">\[
+P(k)
+=
+\binom nk p^k(1-p)^{n-k}.
+\]</span></p>
+<p>We write</p>
+<p><span class="math display">\[
+\xi\sim\operatorname{Bin}(n,p).
+\]</span></p>
+</section>
+<section id="geometric-distribution" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="geometric-distribution"><span class="header-section-number">2.4</span> Geometric Distribution</h2>
+<p>For <span class="math inline">\(p\in(0,1)\)</span>, <span class="math inline">\(X=\mathbb N \setminus \{0\}\)</span>, and</p>
+<p><span class="math display">\[
+P(k)
+=
+(1-p)^{k-1}p,
+\qquad
+k\ge1.
+\]</span></p>
+<p>We write</p>
+<p><span class="math display">\[
+\xi\sim\operatorname{Geom}(p).
+\]</span></p>
+</section>
+<section id="poisson-distribution" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="poisson-distribution"><span class="header-section-number">2.5</span> Poisson Distribution</h2>
+<p>For <span class="math inline">\(\lambda&gt;0\)</span>, <span class="math inline">\(X=\{0,1,2,\ldots\}\)</span>, and</p>
+<p><span class="math display">\[
+P(k)
+=
+\frac{\lambda^k e^{-\lambda}}{k!}.
+\]</span></p>
+<p>We write</p>
+<p><span class="math display">\[
+\xi\sim\operatorname{Pois}(\lambda).
+\]</span></p>
+</section>
+</section>
+<section id="poisson-limit-theorem" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Poisson Limit Theorem</h1>
+<p>Let <span class="math inline">\(\xi_n\sim\operatorname{Bin}(n,p_n)\)</span> and suppose that <span class="math inline">\(np_n\to\lambda&gt;0\)</span>.</p>
+<p>Then for every fixed <span class="math inline">\(k\ge0\)</span>,</p>
+<p><span class="math display">\[
+P(\xi_n=k)
+\longrightarrow
+\frac{\lambda^k e^{-\lambda}}{k!}.
+\]</span></p>
+<p>In other words, the binomial distribution converges to the Poisson distribution when the number of trials becomes large and the success probability becomes small in such a way that the expected number of successes remains approximately constant.</p>
+</section>
+<section id="independence-of-random-variables" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Independence of Random Variables</h1>
+<p>Two discrete random variables <span class="math inline">\(\xi\)</span> and <span class="math inline">\(\eta\)</span> are called <strong>independent</strong> if</p>
+<p><span class="math display">\[
+P(\xi=x,\eta=y)
+=
+P(\xi=x)P(\eta=y)
+\]</span></p>
+<p>for all possible values <span class="math inline">\(x\in X_\xi\)</span> and <span class="math inline">\(y\in X_\eta\)</span>.</p>
+<p>Similarly, a collection of random variables <span class="math inline">\(\xi_1,\ldots,\xi_n\)</span> is called mutually independent if</p>
+<p><span class="math display">\[
+P(\xi_{i_1}=x_{i_1},\ldots,\xi_{i_k}=x_{i_k})
+=
+\prod_{j=1}^{k}
+P(\xi_{i_j}=x_{i_j})
+\]</span></p>
+<p>for every subset <span class="math inline">\(\{i_1,\ldots,i_k\}\subseteq\{1,\ldots,n\}\)</span>.</p>
+<section id="convolution-of-discrete-distributions" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="convolution-of-discrete-distributions"><span class="header-section-number">4.1</span> Convolution of Discrete Distributions</h2>
+<p>Let <span class="math inline">\(\xi\)</span> and <span class="math inline">\(\eta\)</span> be independent discrete random variables. Then</p>
+<p><span class="math display">\[
+P(\xi+\eta=k)
+=
+\sum_{i=-\infty}^{+\infty}
+P(\xi=i)P(\eta=k-i).
+\]</span></p>
+<p>This formula is called the <strong>convolution formula</strong>.</p>
+<p>Important examples:</p>
 <ul>
-<li><a href="seminars/Seminar_1.html">Seminar 1: Basics of Combinatorics</a></li>
-<li><a href="seminars/seminar_2.html">Seminar 2: Probabilistic Models</a></li>
-<li><a href="seminars/seminar_3.html">Seminar 3: Bayes Theorem</a></li>
-<li><a href="seminars/seminar_4.html">Seminar 4: Discrete Random Variables</a></li>
+<li>If <span class="math inline">\(\xi\sim\operatorname{Bin}(n,p)\)</span> and <span class="math inline">\(\eta\sim\operatorname{Bin}(m,p)\)</span> are independent, then</li>
 </ul>
+<p><span class="math display">\[
+\xi+\eta\sim\operatorname{Bin}(n+m,p).
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(\xi\sim\operatorname{Pois}(\lambda_1)\)</span> and <span class="math inline">\(\eta\sim\operatorname{Pois}(\lambda_2)\)</span> are independent, then</li>
+</ul>
+<p><span class="math display">\[
+\xi+\eta\sim\operatorname{Pois}(\lambda_1+\lambda_2).
+\]</span></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
