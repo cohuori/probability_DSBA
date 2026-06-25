@@ -8,7 +8,7 @@
 
 <meta name="author" content="Carlos Buitrago">
 
-<title>Seminar 5: Expectation and Variance of Discrete Random Variables – Probability Theory</title>
+<title>Seminar 5: Expectation and Variance of Discrete Random Variables – Probability &amp; Statistics at DSBA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -63,7 +63,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -78,13 +77,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6033a600180109c3731f6a886c29932c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -139,44 +138,11 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Probability Theory</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../lectures.html"> 
-<span class="menu-text">Lectures</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../seminars.html"> 
-<span class="menu-text">Seminars</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -212,8 +178,8 @@ window.Quarto = {
   <li><a href="#example-apples-and-oranges" id="toc-example-apples-and-oranges" class="nav-link" data-scroll-target="#example-apples-and-oranges"><span class="header-section-number">3.3</span> Example: Apples and Oranges</a></li>
   <li><a href="#example-the-hat-check-problem" id="toc-example-the-hat-check-problem" class="nav-link" data-scroll-target="#example-the-hat-check-problem"><span class="header-section-number">3.4</span> Example: The Hat-Check Problem</a></li>
   <li><a href="#example-a-casino-game-with-positive-expectation" id="toc-example-a-casino-game-with-positive-expectation" class="nav-link" data-scroll-target="#example-a-casino-game-with-positive-expectation"><span class="header-section-number">3.5</span> Example: A Casino Game with Positive Expectation</a></li>
+  <li><a href="#why-do-we-care-about-expectation-and-variance" id="toc-why-do-we-care-about-expectation-and-variance" class="nav-link" data-scroll-target="#why-do-we-care-about-expectation-and-variance"><span class="header-section-number">3.6</span> Why Do We Care About Expectation and Variance?</a></li>
   </ul></li>
-  <li><a href="#why-do-we-care-about-expectation-and-variance" id="toc-why-do-we-care-about-expectation-and-variance" class="nav-link" data-scroll-target="#why-do-we-care-about-expectation-and-variance"><span class="header-section-number">4</span> Why Do We Care About Expectation and Variance?</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="seminar_5.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -319,7 +285,7 @@ a\,\mathbb E[\xi]+b\,\mathbb E[\eta].
 \overline X_n=\frac{1}{n}\sum_{i=1}^n X_i
 \]</span></p>
 <p>as an approximation to the theoretical expectation <span class="math inline">\(\mathbb E[X]\)</span>.</p>
-<div id="40c53685" class="cell" data-execution_count="4">
+<div id="d3528c1b" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -335,7 +301,7 @@ a\,\mathbb E[\xi]+b\,\mathbb E[\eta].
 \mathbb E[\xi]=\frac{1+2+3+4+5+6}{6}=3.5.
 \]</span></p>
 <p>Notice that <span class="math inline">\(3.5\)</span> is not a possible outcome of a die roll. This is an important point: the expectation is not necessarily the most likely value, nor even a possible value. It is a long-run average.</p>
-<div id="3560a7a2" class="cell" data-execution_count="14">
+<div id="8ff5fa83" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">1_000</span></span>
@@ -369,7 +335,7 @@ a\,\mathbb E[\xi]+b\,\mathbb E[\eta].
 \mathbb E[\xi]=0.05.
 \]</span></p>
 <p>Most observations are equal to <span class="math inline">\(0\)</span>, but the long-run average still approaches <span class="math inline">\(0.05\)</span>.</p>
-<div id="5905f8b4" class="cell" data-execution_count="15">
+<div id="8c1cef7f" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">20_000</span></span>
@@ -541,7 +507,7 @@ s_n^2
 \left(X_i-\overline X_n\right)^2
 \]</span></p>
 <p>as an approximation to the theoretical variance <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
-<div id="a16e4e1f" class="cell" data-execution_count="22">
+<div id="072049c0" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -703,7 +669,7 @@ s_n^2
 \operatorname{Var}(\overline X_n)=\frac{\sigma^2}{n}.
 \]</span></p>
 <p>Thus, as <span class="math inline">\(n\)</span> grows, the sample mean becomes more stable.</p>
-<div id="986b36e8" class="cell" data-scrolled="false" data-execution_count="28">
+<div id="a5df05fe" class="cell" data-scrolled="false" data-execution_count="28">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>n_sim <span class="op">=</span> <span class="dv">20_000</span></span>
@@ -741,7 +707,7 @@ s_n^2
 \]</span></p>
 <p>where <span class="math inline">\(N=10\)</span> is the total number of fruits, <span class="math inline">\(K=4\)</span> is the number of apples, and <span class="math inline">\(n=3\)</span> is the number of selected fruits.</p>
 <p>In the simulation below, we repeat the experiment many times and compare the empirical distribution with the theoretical one.</p>
-<div id="62081fd8" class="cell" data-execution_count="32">
+<div id="11d5c8d2" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1099,7 +1065,7 @@ Theoretical P(xi &gt; 1) = 0.3333</code></pre>
 <h2 data-number="3.4" class="anchored" data-anchor-id="example-the-hat-check-problem"><span class="header-section-number">3.4</span> Example: The Hat-Check Problem</h2>
 <p>A group of <span class="math inline">\(n\)</span> students throw their hats at graduation. After that, each student randomly picks one hat from the floor. Let <span class="math inline">\(\xi\)</span> be the number of students who get their own hat back.</p>
 <p>In the simulation below, we randomly permute the hats many times and compare the empirical mean and variance with the theoretical values.</p>
-<div id="5213d5cc" class="cell" data-execution_count="37">
+<div id="a8561f6a" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1330,7 +1296,7 @@ X=
 0.1.
 \]</span></p>
 <p>So the game has positive expectation. However, this does not mean that a player is guaranteed to win. In the simulation below, we see that even a favorable game can produce losing streaks and negative outcomes over short periods.</p>
-<div id="3c41a0b6" class="cell" data-execution_count="38">
+<div id="537e04c4" class="cell" data-execution_count="38">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1471,14 +1437,14 @@ Fraction of players who lost money = 0.310</code></pre>
 </div>
 </div>
 </section>
-</section>
-<section id="why-do-we-care-about-expectation-and-variance" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Why Do We Care About Expectation and Variance?</h1>
+<section id="why-do-we-care-about-expectation-and-variance" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="why-do-we-care-about-expectation-and-variance"><span class="header-section-number">3.6</span> Why Do We Care About Expectation and Variance?</h2>
 <p>At first glance, expectation and variance may seem like purely mathematical quantities. However, they appear in almost every area of statistics, data science, machine learning, finance, engineering, and scientific research.</p>
 <p>The expectation describes what we should expect <strong>on average</strong> if an experiment is repeated many times, while the variance measures how much uncertainty or variability is present around that average.</p>
 <p>In practice, good decisions often require understanding <strong>both</strong> quantities.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

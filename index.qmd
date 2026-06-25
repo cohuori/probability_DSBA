@@ -1,5 +1,26 @@
-# Probability Theory
 
-Welcome to the course webpage.
+# Probability & Statistics (DSBA)
 
+Welcome to the seminar materials for the course **Probability & Statistics** at the HSE DSBA programme.
 
+Each seminar contains a **Theory Review** (summarizing the main concepts covered in the lectures together with additional examples and simulations) and a corresponding **Problem Set** for practice.
+
+## Seminars
+
+- **Seminar 1: Basics of Combinatorics**  
+  [Theory Review](seminars/seminar_1.html) · [Problem Set](seminars/problems_1.html)
+
+- **Seminar 2: Probabilistic Models**  
+  [Theory Review](seminars/seminar_2.html) · [Problem Set](seminars/problems_2.html)
+
+- **Seminar 3: Bayes' Theorem**  
+  [Theory Review](seminars/seminar_3.html) · [Problem Set](seminars/problems_3.html)
+
+- **Seminar 4: Discrete Random Variables**  
+  [Theory Review](seminars/seminar_4.html) · [Problem Set](seminars/problems_4.html)
+
+- **Seminar 5: Expectation and Variance of Discrete Random Variables**  
+  [Theory Review](seminars/seminar_5.html) · [Problem Set](seminars/problems_5.html)
+
+- **Seminar 6: Covariance, Correlation and the Weak Law of Large Numbers**  
+  [Theory Review](seminars/seminar_6.html) · [Problem Set](seminars/problems_6.html)

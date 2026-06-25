@@ -3,19 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "Probability Theory"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: lectures.qmd
-        text: Lectures
-      - href: seminars.qmd
-        text: Seminars
+  title: "Probability & Statistics at DSBA"
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
     toc: true
     number-sections: true
 
