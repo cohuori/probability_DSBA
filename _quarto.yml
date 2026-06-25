@@ -9,5 +9,9 @@ format:
   html:
     theme: flatly
     toc: true
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Show code"
+    smooth-scroll: true
+    page-layout: article
     number-sections: true
-
