@@ -13,5 +13,4 @@ format:
     code-fold: true
     code-summary: "Show code"
     smooth-scroll: true
-    page-layout: article
     number-sections: true
