@@ -8,7 +8,7 @@ Each seminar contains a **Theory Review** (summarizing the main concepts covered
 ## Seminars
 
 - **Seminar 1: Basics of Combinatorics**  
-  [Theory Review](seminars/Seminar_1.html) · [Problem Set](seminars/problems_1.html)
+  [Theory Review](seminars/Seminar_1.html) · [Problem Set](problems/problem_set_01.html)
 
 - **Seminar 2: Probabilistic Models**  
   [Theory Review](seminars/seminar_2.html) · [Problem Set](seminars/problems_2.html)
