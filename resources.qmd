@@ -1,0 +1,20 @@
+---
+title: "Resources"
+---
+
+# Resources
+
+This page will contain additional materials for the course.
+
+## Useful links
+
+- Syllabus
+
+## Additional materials
+
+- Formula sheet
+- Statistical Tables
+- Past exams
+- University of London Exams
+- Introduction to Statistical Inference. Stanford University
+- Book Mathematical Statistics and Data Analysis by John Rice

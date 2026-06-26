@@ -5,12 +5,79 @@ project:
 website:
   title: "Probability & Statistics at DSBA"
 
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: resources.qmd
+        text: Resources
+
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - href: index.qmd
+        text: Home
+
+      - section: "Seminars"
+
+        contents:
+
+          - section: "Seminar 1"
+            contents:
+              - href: Seminar_1.qmd
+                text: Theory Review
+              - href: problem_set_01.qmd
+                text: Problem Set
+
+          - section: "Seminar 2"
+            contents:
+              - href: seminar_2.qmd
+                text: Theory Review
+              - href: problem_set_02.qmd
+                text: Problem Set
+
+          - section: "Seminar 3"
+            contents:
+              - href: seminar_3.qmd
+                text: Theory Review
+              - href: problem_set_03.qmd
+                text: Problem Set
+
+          - section: "Seminar 4"
+            contents:
+              - href: seminar_4.qmd
+                text: Theory Review
+              - href: problem_set_04.qmd
+                text: Problem Set
+
+          - section: "Seminar 5"
+            contents:
+              - href: seminar_5.qmd
+                text: Theory Review
+              - href: problem_set_05.qmd
+                text: Problem Set
+
+          - section: "Seminar 6"
+            contents:
+              - href: seminar_6.qmd
+                text: Theory Review
+              - href: problem_set_06.qmd
+                text: Problem Set
+
+          - section: "Seminar 7"
+            contents:
+              - href: seminar_7.qmd
+                text: Theory Review
+              - href: problem_set_07.qmd
+                text: Problem Set
+
 format:
   html:
     theme: cosmo
     toc: true
     toc-depth: 3
     code-fold: true
-    code-summary: "Show code"
+    code-summary: "Show Python code"
     smooth-scroll: true
     number-sections: true
