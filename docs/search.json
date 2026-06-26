@@ -296,22 +296,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "1 Probability & Statistics (DSBA)",
+    "title": "Probability & Statistics at DSBA",
     "section": "",
-    "text": "Welcome to the seminar materials for the course Probability & Statistics at the HSE DSBA programme.\nEach seminar contains a Theory Review (summarizing the main concepts covered in the lectures together with additional examples and simulations) and a corresponding Problem Set for practice.\n\n\n\nSeminar 1: Basics of Combinatorics\nTheory Review · Problem Set\nSeminar 2: Probabilistic Models\nTheory Review · Problem Set\nSeminar 3: Bayes’ Theorem\nTheory Review · Problem Set\nSeminar 4: Discrete Random Variables\nTheory Review · Problem Set\nSeminar 5: Expectation and Variance of Discrete Random Variables\nTheory Review · Problem Set\nSeminar 6: Covariance, Correlation and the Weak Law of Large Numbers\nTheory Review · Problem Set",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Welcome to the seminar materials for the course Probability & Statistics at the HSE DSBA programme.\nEach seminar contains a Theory Review (summarizing the main concepts covered in the lectures together with additional examples and simulations) and a corresponding Problem Set for practice."
   },
   {
-    "objectID": "index.html#seminars",
-    "href": "index.html#seminars",
-    "title": "1 Probability & Statistics (DSBA)",
-    "section": "",
-    "text": "Seminar 1: Basics of Combinatorics\nTheory Review · Problem Set\nSeminar 2: Probabilistic Models\nTheory Review · Problem Set\nSeminar 3: Bayes’ Theorem\nTheory Review · Problem Set\nSeminar 4: Discrete Random Variables\nTheory Review · Problem Set\nSeminar 5: Expectation and Variance of Discrete Random Variables\nTheory Review · Problem Set\nSeminar 6: Covariance, Correlation and the Weak Law of Large Numbers\nTheory Review · Problem Set",
-    "crumbs": [
-      "Home"
-    ]
+    "objectID": "index.html#seminars---module-1",
+    "href": "index.html#seminars---module-1",
+    "title": "Probability & Statistics at DSBA",
+    "section": "1 Seminars - Module 1",
+    "text": "1 Seminars - Module 1\n\nSeminar 1: Basics of Combinatorics\nTheory Review · Problem Set\nSeminar 2: Probabilistic Models\nTheory Review · Problem Set\nSeminar 3: Bayes’ Theorem\nTheory Review · Problem Set\nSeminar 4: Discrete Random Variables\nTheory Review · Problem Set\nSeminar 5: Expectation and Variance of Discrete Random Variables\nTheory Review · Problem Set\nSeminar 6: Covariance, Correlation and the Weak Law of Large Numbers\nTheory Review · Problem Set"
   },
   {
     "objectID": "seminars/seminar_5.html",

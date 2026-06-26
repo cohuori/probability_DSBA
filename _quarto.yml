@@ -9,69 +9,71 @@ website:
     left:
       - href: index.qmd
         text: Home
+
+      - text: "Module 1"
+        menu:
+          - text: "Seminar 1: Basics of Combinatorics"
+            href: Seminar_1.qmd
+          - text: "Problem Set 1"
+            href: problem_set_01.qmd
+
+          - text: "---"
+
+          - text: "Seminar 2: Probabilistic Models"
+            href: seminar_2.qmd
+          - text: "Problem Set 2"
+            href: problem_set_02.qmd
+
+          - text: "---"
+
+          - text: "Seminar 3: Bayes' Theorem"
+            href: seminar_3.qmd
+          - text: "Problem Set 3"
+            href: problem_set_03.qmd
+
+          - text: "---"
+
+          - text: "Seminar 4: Discrete Random Variables"
+            href: seminar_4.qmd
+          - text: "Problem Set 4"
+            href: problem_set_04.qmd
+
+          - text: "---"
+
+          - text: "Seminar 5: Expectation and Variance"
+            href: seminar_5.qmd
+          - text: "Problem Set 5"
+            href: problem_set_05.qmd
+
+          - text: "---"
+
+          - text: "Seminar 6: Covariance, Correlation and WLLN"
+            href: seminar_6.qmd
+          - text: "Problem Set 6"
+            href: problem_set_06.qmd
+
+          - text: "---"
+
+          - text: "Seminar 7: Continuous Random Variables"
+            href: seminar_7.qmd
+          - text: "Problem Set 7"
+            href: problem_set_07.qmd
+
+      - text: "Module 2"
+        menu:
+          - text: "Coming soon"
+
+      - text: "Module 3"
+        menu:
+          - text: "Coming soon"
+
+      - text: "Module 4"
+        menu:
+          - text: "Coming soon"
+
       - href: resources.qmd
         text: Resources
-
-  sidebar:
-    style: "docked"
-    search: true
-    contents:
-      - href: index.qmd
-        text: Home
-
-      - section: "Seminars"
-
-        contents:
-
-          - section: "Seminar 1"
-            contents:
-              - href: Seminar_1.qmd
-                text: Theory Review
-              - href: problem_set_01.qmd
-                text: Problem Set
-
-          - section: "Seminar 2"
-            contents:
-              - href: seminar_2.qmd
-                text: Theory Review
-              - href: problem_set_02.qmd
-                text: Problem Set
-
-          - section: "Seminar 3"
-            contents:
-              - href: seminar_3.qmd
-                text: Theory Review
-              - href: problem_set_03.qmd
-                text: Problem Set
-
-          - section: "Seminar 4"
-            contents:
-              - href: seminar_4.qmd
-                text: Theory Review
-              - href: problem_set_04.qmd
-                text: Problem Set
-
-          - section: "Seminar 5"
-            contents:
-              - href: seminar_5.qmd
-                text: Theory Review
-              - href: problem_set_05.qmd
-                text: Problem Set
-
-          - section: "Seminar 6"
-            contents:
-              - href: seminar_6.qmd
-                text: Theory Review
-              - href: problem_set_06.qmd
-                text: Problem Set
-
-          - section: "Seminar 7"
-            contents:
-              - href: seminar_7.qmd
-                text: Theory Review
-              - href: problem_set_07.qmd
-                text: Problem Set
-
+     
 format:
   html:
     theme: cosmo

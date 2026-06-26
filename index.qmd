@@ -1,11 +1,9 @@
 
-# Probability & Statistics (DSBA)
-
 Welcome to the seminar materials for the course **Probability & Statistics** at the HSE DSBA programme.
 
 Each seminar contains a **Theory Review** (summarizing the main concepts covered in the lectures together with additional examples and simulations) and a corresponding **Problem Set** for practice.
 
-## Seminars
+## Seminars - Module 1
 
 - **Seminar 1: Basics of Combinatorics**  
   [Theory Review](seminars/Seminar_1.html) · [Problem Set](problems/problem_set_01.html)
