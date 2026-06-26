@@ -312,7 +312,7 @@
     "href": "problems/problem_set_01.html",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
     "section": "",
-    "text": "During the seminars, we will work on problems across three different categories of difficulty, with Category 1 being the easiest and Category 3 the most challenging."
+    "text": "During the seminars, we will work on problems of three different difficulty levels. Category 1 (🟢) contains introductory problems, Category 2 (🔵) contains standard problems, and Category 3 (🟡) contains the most challenging problems."
   },
   {
     "objectID": "problems/problem_set_01.html#category-1",
@@ -452,7 +452,14 @@
     "href": "problems/problem_set_01.html#problem-22",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
     "section": "2.2 Problem 22",
-    "text": "2.2 Problem 22\nA shelf holds 12 books in a row. We pick 5 books randomly.\nFind the probability that no pair of adjacent books is chosen.\n\n\n\n\n\n\nImportantProblem 23\n\n\n\n\n\nSome residents of Dolgoprudny consider a tram ticket “special” if the sum of the first three digits of its six-digit number is equal to the sum of the last three digits.\nFind the probability of getting a “lucky” ticket."
+    "text": "2.2 Problem 22\nA shelf holds 12 books in a row. We pick 5 books randomly.\nFind the probability that no pair of adjacent books is chosen."
+  },
+  {
+    "objectID": "problems/problem_set_01.html#problem-23",
+    "href": "problems/problem_set_01.html#problem-23",
+    "title": "Problem set 1: Basics of Probability. Combinatorics",
+    "section": "2.3 Problem 23",
+    "text": "2.3 Problem 23\nSome residents of Dolgoprudny consider a tram ticket “special” if the sum of the first three digits of its six-digit number is equal to the sum of the last three digits.\nFind the probability of getting a “lucky” ticket."
   },
   {
     "objectID": "seminars.html",
