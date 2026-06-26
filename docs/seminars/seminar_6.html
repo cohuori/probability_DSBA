@@ -77,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6033a600180109c3731f6a886c29932c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -323,7 +323,7 @@ b\,\operatorname{Cov}(\xi_2,\eta).
 <li><span class="math inline">\(\operatorname{Corr}=-1\)</span> : perfect negative linear relationship;</li>
 <li><span class="math inline">\(\operatorname{Corr}=0\)</span> : no linear relationship.</li>
 </ul>
-<div id="3f6fe369" class="cell" data-execution_count="3">
+<div id="edda15db" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -332,7 +332,7 @@ b\,\operatorname{Cov}(\xi_2,\eta).
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="7005063b" class="cell" data-execution_count="4">
+<div id="e6d1669d" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">1000</span></span>
@@ -423,7 +423,7 @@ b\,\operatorname{Cov}(\xi_2,\eta).
 \end{aligned}
 \]</span></p>
 <p>Our goal is to determine whether these two samples appear to be statistically independent.</p>
-<div id="c14db16e" class="cell" data-execution_count="20">
+<div id="97ee01a1" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
@@ -447,7 +447,7 @@ b\,\operatorname{Cov}(\xi_2,\eta).
 </div>
 </div>
 </div>
-<div id="d101a91e" class="cell" data-execution_count="22">
+<div id="bae3de5d" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -467,7 +467,7 @@ b\,\operatorname{Cov}(\xi_2,\eta).
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>kendall_corr, kendall_p <span class="op">=</span> kendalltau(russia, belarus)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="707c5d6b" class="cell" data-execution_count="23">
+<div id="7a630d29" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
@@ -624,7 +624,7 @@ p
 <blockquote class="blockquote">
 <p><strong>The probability of an event is the limiting value of its relative frequency in a large number of independent repetitions of the same experiment.</strong></p>
 </blockquote>
-<div id="a49a4c04" class="cell" data-execution_count="11">
+<div id="35e68bda" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show Python code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.37</span></span>
