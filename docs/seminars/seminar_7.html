@@ -116,9 +116,14 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#probability-distributions" id="toc-probability-distributions" class="nav-link active" data-scroll-target="#probability-distributions"><span class="header-section-number">1</span> Probability Distributions</a></li>
-  <li><a href="#cumulative-distribution-function" id="toc-cumulative-distribution-function" class="nav-link" data-scroll-target="#cumulative-distribution-function"><span class="header-section-number">2</span> Cumulative Distribution Function</a></li>
-  <li><a href="#properties-of-the-cdf" id="toc-properties-of-the-cdf" class="nav-link" data-scroll-target="#properties-of-the-cdf"><span class="header-section-number">3</span> Properties of the CDF</a></li>
+  <li><a href="#probability-distributions" id="toc-probability-distributions" class="nav-link active" data-scroll-target="#probability-distributions"><span class="header-section-number">0.1</span> Probability Distributions</a></li>
+  <li><a href="#cumulative-distribution-function" id="toc-cumulative-distribution-function" class="nav-link" data-scroll-target="#cumulative-distribution-function"><span class="header-section-number">0.2</span> Cumulative Distribution Function</a></li>
+  <li><a href="#properties-of-the-cdf" id="toc-properties-of-the-cdf" class="nav-link" data-scroll-target="#properties-of-the-cdf"><span class="header-section-number">0.3</span> Properties of the CDF</a></li>
+  <li><a href="#discrete-probability-distributions" id="toc-discrete-probability-distributions" class="nav-link" data-scroll-target="#discrete-probability-distributions"><span class="header-section-number">1</span> Discrete Probability Distributions</a>
+  <ul class="collapse">
+  <li><a href="#example-1-bernoulli-distribution" id="toc-example-1-bernoulli-distribution" class="nav-link" data-scroll-target="#example-1-bernoulli-distribution"><span class="header-section-number">1.1</span> Example 1: Bernoulli Distribution</a></li>
+  <li><a href="#example-2-uniform-distribution-on-a-finite-set" id="toc-example-2-uniform-distribution-on-a-finite-set" class="nav-link" data-scroll-target="#example-2-uniform-distribution-on-a-finite-set"><span class="header-section-number">1.2</span> Example 2: Uniform Distribution on a Finite Set</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="seminar_7.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -152,16 +157,16 @@ window.Quarto = {
 
 <p>A discrete random variable assigns positive probability to countably many values.</p>
 <p>A <strong>continuous random variable</strong> distributes its probability over intervals rather than individual points. In this lecture we study the most important class of continuous distributions: <strong>absolutely continuous distributions</strong>.</p>
-<section id="probability-distributions" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="probability-distributions"><span class="header-section-number">1</span> Probability Distributions</h2>
+<section id="probability-distributions" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="probability-distributions"><span class="header-section-number">0.1</span> Probability Distributions</h2>
 <p>A <strong>probability distribution</strong> on <span class="math inline">\(\mathbb R\)</span> is a probability measure</p>
 <p><span class="math display">\[
 P:\mathcal B(\mathbb R)\rightarrow[0,1],
 \]</span></p>
 <p>where <span class="math inline">\(\mathcal B(\mathbb R)\)</span> denotes the Borel <span class="math inline">\(\sigma\)</span>-algebra.</p>
 </section>
-<section id="cumulative-distribution-function" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="cumulative-distribution-function"><span class="header-section-number">2</span> Cumulative Distribution Function</h2>
+<section id="cumulative-distribution-function" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="cumulative-distribution-function"><span class="header-section-number">0.2</span> Cumulative Distribution Function</h2>
 <p>The cumulative distribution function (CDF) of a random variable <span class="math inline">\(\xi\)</span> is defined by</p>
 <p><span class="math display">\[
 F_{\xi}(x)=P(\xi\le x),\qquad x\in\mathbb R.
@@ -169,15 +174,87 @@ F_{\xi}(x)=P(\xi\le x),\qquad x\in\mathbb R.
 <p>Notice that the CDF completely determines the probability distribution.</p>
 <p>In other words, if two random variables have the same cumulative distribution function, then they have the same distribution.</p>
 </section>
-<section id="properties-of-the-cdf" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="properties-of-the-cdf"><span class="header-section-number">3</span> Properties of the CDF</h2>
+<section id="properties-of-the-cdf" class="level2" data-number="0.3">
+<h2 data-number="0.3" class="anchored" data-anchor-id="properties-of-the-cdf"><span class="header-section-number">0.3</span> Properties of the CDF</h2>
 <ol type="1">
 <li><span class="math inline">\(F(x)\)</span> is non-decreasing.</li>
 <li><span class="math inline">\(\displaystyle\lim_{x\to-\infty}F(x)=0\)</span> and <span class="math inline">\(\displaystyle\lim_{x\to\infty}F(x)=1\)</span>.</li>
 <li><span class="math inline">\(F(x)\)</span> is right-continuous.</li>
 </ol>
+<p>There are three fundamentally different types of probability distributions:</p>
+<ol type="1">
+<li><strong>Discrete distributions;</strong></li>
+<li><strong>Singular distributions;</strong></li>
+<li><strong>Absolutely continuous distributions.</strong></li>
+</ol>
+<p>Moreover, every probability distribution can be uniquely decomposed into a mixture of these three types.</p>
+<p>A <strong>singular distribution</strong> is concentrated on an uncountable set of Lebesgue measure zero, while assigning probability zero to every individual point.</p>
+<p>The most famous example is the <strong>Cantor distribution</strong>, whose cumulative distribution function is known as the <em>Devil’s staircase</em>.</p>
+<p>In this course we will only study <strong>discrete</strong> and <strong>absolutely continuous</strong> distributions.</p>
+</section>
+<section id="discrete-probability-distributions" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Discrete Probability Distributions</h1>
+<p>A probability distribution is called <strong>discrete</strong> if there exists a finite or countable set</p>
+<p><span class="math display">\[
+X=\{x_1,x_2,\ldots\}\subset\mathbb R
+\]</span></p>
+<p>such that</p>
+<p><span class="math display">\[
+P(X)=1.
+\]</span></p>
+<p>In other words, the random variable can only take countably many possible values.</p>
+<p>If</p>
+<p><span class="math display">\[
+p(x)=P(X=x)
+\]</span></p>
+<p>denotes the probability mass function (PMF), then the cumulative distribution function is</p>
+<p><span class="math display">\[
+F(y)=\sum_{\substack{x\in X\\x\le y}}p(x).
+\]</span></p>
+<p>Thus, the CDF is obtained by accumulating the probabilities of all values that do not exceed <span class="math inline">\(y\)</span>.</p>
+<section id="example-1-bernoulli-distribution" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="example-1-bernoulli-distribution"><span class="header-section-number">1.1</span> Example 1: Bernoulli Distribution</h2>
+<p>Let</p>
+<p><span class="math display">\[
+X\sim\operatorname{Bernoulli}(p).
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+P(X=0)=1-p,
+\qquad
+P(X=1)=p.
+\]</span></p>
+<p>Its cumulative distribution function is</p>
+<p><span class="math display">\[
+F(x)=
+\begin{cases}
+0,&amp;x&lt;0,\\[1ex]
+1-p,&amp;0\le x&lt;1,\\[1ex]
+1,&amp;x\ge1.
+\end{cases}
+\]</span></p>
+<p>Notice that the CDF is a step function with jumps equal to the probabilities of the corresponding outcomes.</p>
+</section>
+<section id="example-2-uniform-distribution-on-a-finite-set" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="example-2-uniform-distribution-on-a-finite-set"><span class="header-section-number">1.2</span> Example 2: Uniform Distribution on a Finite Set</h2>
+<p>Suppose</p>
+<p><span class="math display">\[
+X=\{x_1,x_2,\ldots,x_n\}
+\]</span></p>
+<p>and every value is equally likely.</p>
+<p>Then</p>
+<p><span class="math display">\[
+P(X=x_i)=\frac1n,
+\qquad i=1,\ldots,n.
+\]</span></p>
+<p>Its cumulative distribution function increases by exactly</p>
+<p><span class="math display">\[
+\frac1n
+\]</span></p>
+<p>at every point of the support.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

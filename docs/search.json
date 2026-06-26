@@ -315,88 +315,95 @@
     "text": "During the seminars, we will work on problems across three different categories of difficulty, with Category 1 being the easiest and Category 3 the most challenging."
   },
   {
+    "objectID": "problems/problem_set_01.html#category-1",
+    "href": "problems/problem_set_01.html#category-1",
+    "title": "Problem set 1: Basics of Probability. Combinatorics",
+    "section": "0.1 Category 1",
+    "text": "0.1 Category 1\n\n\n\n\n\n\nTip🟢 Problem 1\n\n\n\n\n\nSuppose that a class of 100 students consists of four subgroups…\n\n\n\n\nMen\nWomen\n\n\n\n\nTaking Economics\n17%\n38%\n\n\nNot taking Economics\n23%\n22%\n\n\n\nWhat is the chance that a randomly chosen student is:\n\na woman?\ntaking economics?\na man or taking economics?\na woman and taking economics?"
+  },
+  {
     "objectID": "problems/problem_set_01.html#problem-2",
     "href": "problems/problem_set_01.html#problem-2",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.1 Problem 2",
-    "text": "0.1 Problem 2\nSuppose that in families with three children births are independent, and the probability of a boy on each birth is \\(52\\%\\). Use the table\n\n\n\nOutcome\nBBB\nBBG\nBGB\nBGG\nGBB\nGBG\nGGB\nGGG\n\n\n\n\nProbability\n0.14\n0.13\n0.13\n0.12\n0.13\n0.12\n0.12\n0.11\n\n\n\nand find the chance that in a family of three children, there will be:\n\nexactly 2 girls;\nat least two girls;\nat least one child of each sex;\nthe middle child being opposite in sex to the other two."
+    "section": "0.2 Problem 2",
+    "text": "0.2 Problem 2\nSuppose that in families with three children births are independent, and the probability of a boy on each birth is \\(52\\%\\). Use the table\n\n\n\nOutcome\nBBB\nBBG\nBGB\nBGG\nGBB\nGBG\nGGB\nGGG\n\n\n\n\nProbability\n0.14\n0.13\n0.13\n0.12\n0.13\n0.12\n0.12\n0.11\n\n\n\nand find the chance that in a family of three children, there will be:\n\nexactly 2 girls;\nat least two girls;\nat least one child of each sex;\nthe middle child being opposite in sex to the other two."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-3",
     "href": "problems/problem_set_01.html#problem-3",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.2 Problem 3",
-    "text": "0.2 Problem 3\nYou take 3 cards from a deck of 36 cards. After you take each card you return it to the deck and shuffle the deck.\n\nWhat is the set of elementary outcomes and what are their probabilities?\nWhat is the probability to get \\((\\text{queen}, \\text{king}, \\text{ace})\\)? The first card is a queen, the second card is a king, the third card is an ace.\nWhat is the probability to get \\((\\text{king}, \\text{king}, \\text{ace})\\)?"
+    "section": "0.3 Problem 3",
+    "text": "0.3 Problem 3\nYou take 3 cards from a deck of 36 cards. After you take each card you return it to the deck and shuffle the deck.\n\nWhat is the set of elementary outcomes and what are their probabilities?\nWhat is the probability to get \\((\\text{queen}, \\text{king}, \\text{ace})\\)? The first card is a queen, the second card is a king, the third card is an ace.\nWhat is the probability to get \\((\\text{king}, \\text{king}, \\text{ace})\\)?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-4",
     "href": "problems/problem_set_01.html#problem-4",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.3 Problem 4",
-    "text": "0.3 Problem 4\nYou take 3 cards from a deck of 36 cards. After you take each card you do not return it to the deck.\nAnswer parts 1, 2, and 3 from the previous problem."
+    "section": "0.4 Problem 4",
+    "text": "0.4 Problem 4\nYou take 3 cards from a deck of 36 cards. After you take each card you do not return it to the deck.\nAnswer parts 1, 2, and 3 from the previous problem."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-5",
     "href": "problems/problem_set_01.html#problem-5",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.4 Problem 5",
-    "text": "0.4 Problem 5\nFind unions and intersections of the following events. In which case is one event a subset of the other?\n\n\\(A = \\{1, 2, 5, 6\\}\\), \\(B = \\{1, 5\\}\\).\n\\(A = \\{\\text{Ann}, \\text{Mary}, \\text{Mike}\\}\\), \\(B = \\{\\text{Tom}, \\text{Mike}, \\text{John}\\}\\).\n\\(A = \\{\\text{Moscow}, \\text{London}, \\text{Paris}\\}\\), \\(B = \\{\\text{Paris}, \\text{Berlin}, \\text{Tokyo}\\}\\), \\(C = \\{\\text{Tokyo}, \\text{Rome}\\}\\)."
+    "section": "0.5 Problem 5",
+    "text": "0.5 Problem 5\nFind unions and intersections of the following events. In which case is one event a subset of the other?\n\n\\(A = \\{1, 2, 5, 6\\}\\), \\(B = \\{1, 5\\}\\).\n\\(A = \\{\\text{Ann}, \\text{Mary}, \\text{Mike}\\}\\), \\(B = \\{\\text{Tom}, \\text{Mike}, \\text{John}\\}\\).\n\\(A = \\{\\text{Moscow}, \\text{London}, \\text{Paris}\\}\\), \\(B = \\{\\text{Paris}, \\text{Berlin}, \\text{Tokyo}\\}\\), \\(C = \\{\\text{Tokyo}, \\text{Rome}\\}\\)."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-6",
     "href": "problems/problem_set_01.html#problem-6",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.5 Problem 6",
-    "text": "0.5 Problem 6\n\nIf \\(A\\) and \\(B\\) are mutually exclusive events with probabilities of \\(0.6\\) and \\(0.2\\) respectively, then what is the probability of \\(A\\) or \\(B\\) occurring?\nIf \\(\\mathbb P(A)=0.2\\), \\(\\mathbb P(B)=0.3\\), and \\(\\mathbb P(A\\cap B)=0.1\\), then what is \\(\\mathbb P(A\\cup B)\\)?\nIf \\(\\mathbb P(A)=0.4\\), \\(\\mathbb P(B)=0.5\\), and \\(\\mathbb P(A\\cup B)=0.7\\), then what is \\(\\mathbb P(\\overline{A\\cap B})\\)?"
+    "section": "0.6 Problem 6",
+    "text": "0.6 Problem 6\n\nIf \\(A\\) and \\(B\\) are mutually exclusive events with probabilities of \\(0.6\\) and \\(0.2\\) respectively, then what is the probability of \\(A\\) or \\(B\\) occurring?\nIf \\(\\mathbb P(A)=0.2\\), \\(\\mathbb P(B)=0.3\\), and \\(\\mathbb P(A\\cap B)=0.1\\), then what is \\(\\mathbb P(A\\cup B)\\)?\nIf \\(\\mathbb P(A)=0.4\\), \\(\\mathbb P(B)=0.5\\), and \\(\\mathbb P(A\\cup B)=0.7\\), then what is \\(\\mathbb P(\\overline{A\\cap B})\\)?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-7",
     "href": "problems/problem_set_01.html#problem-7",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.6 Problem 7",
-    "text": "0.6 Problem 7\nA survey of the houses in an old residential area found \\(30\\%\\) with holes in the roof, \\(40\\%\\) with broken windows, and \\(25\\%\\) with both problems.\n\nWhat is the proportion of houses with one or the other, or both, problems?\nWhat is the proportion of houses with holes in the roof but without broken windows?\nWhat is the proportion of houses with exactly one of these problems?\nWhat is the proportion of houses with none of these problems?"
+    "section": "0.7 Problem 7",
+    "text": "0.7 Problem 7\nA survey of the houses in an old residential area found \\(30\\%\\) with holes in the roof, \\(40\\%\\) with broken windows, and \\(25\\%\\) with both problems.\n\nWhat is the proportion of houses with one or the other, or both, problems?\nWhat is the proportion of houses with holes in the roof but without broken windows?\nWhat is the proportion of houses with exactly one of these problems?\nWhat is the proportion of houses with none of these problems?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-8",
     "href": "problems/problem_set_01.html#problem-8",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.7 Problem 8",
-    "text": "0.7 Problem 8\nSuppose a word is picked at random from this sentence.\n\nWhat is the sample space of this random experiment?\nFind the probability that:\n\nthe word has at least 4 letters;\nthe word contains at least 2 vowels;\nthe word contains at least 4 letters and at least 2 vowels."
+    "section": "0.8 Problem 8",
+    "text": "0.8 Problem 8\nSuppose a word is picked at random from this sentence.\n\nWhat is the sample space of this random experiment?\nFind the probability that:\n\nthe word has at least 4 letters;\nthe word contains at least 2 vowels;\nthe word contains at least 4 letters and at least 2 vowels."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-9",
     "href": "problems/problem_set_01.html#problem-9",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.8 Problem 9",
-    "text": "0.8 Problem 9\nIn a group of students, none of whom are from DSBA, \\(25\\%\\) smoke hookah, \\(60\\%\\) drink alcohol, and \\(15\\%\\) do both.\nWhat fraction of students have at least one of these bad habits?"
+    "section": "0.9 Problem 9",
+    "text": "0.9 Problem 9\nIn a group of students, none of whom are from DSBA, \\(25\\%\\) smoke hookah, \\(60\\%\\) drink alcohol, and \\(15\\%\\) do both.\nWhat fraction of students have at least one of these bad habits?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-10",
     "href": "problems/problem_set_01.html#problem-10",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.9 Problem 10",
-    "text": "0.9 Problem 10\n20 families live in a neighborhood of Wolfenstein Castle: 4 have 1 child, 8 have 2 children, 5 have 3 children, and 3 have 4 children.\nIf we meet a local child near the castle, what are the probabilities \\(p_1,p_2,p_3,p_4\\) that the child comes from a family with 1, 2, 3, 4 children?"
+    "section": "0.10 Problem 10",
+    "text": "0.10 Problem 10\n20 families live in a neighborhood of Wolfenstein Castle: 4 have 1 child, 8 have 2 children, 5 have 3 children, and 3 have 4 children.\nIf we meet a local child near the castle, what are the probabilities \\(p_1,p_2,p_3,p_4\\) that the child comes from a family with 1, 2, 3, 4 children?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-11",
     "href": "problems/problem_set_01.html#problem-11",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.10 Problem 11",
-    "text": "0.10 Problem 11\nSuppose we roll a red die and a green die.\nWhat is the probability that the number on the red die is larger than the number on the green die?"
+    "section": "0.11 Problem 11",
+    "text": "0.11 Problem 11\nSuppose we roll a red die and a green die.\nWhat is the probability that the number on the red die is larger than the number on the green die?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-12",
     "href": "problems/problem_set_01.html#problem-12",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.11 Problem 12",
-    "text": "0.11 Problem 12\nTwo dice are rolled. Find the probability that:\n\nthe two numbers will differ by 1 or less;\nthe maximum of the two numbers will be 5 or larger."
+    "section": "0.12 Problem 12",
+    "text": "0.12 Problem 12\nTwo dice are rolled. Find the probability that:\n\nthe two numbers will differ by 1 or less;\nthe maximum of the two numbers will be 5 or larger."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-13",
     "href": "problems/problem_set_01.html#problem-13",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "0.12 Problem 13",
-    "text": "0.12 Problem 13\nIn Galileo’s time people thought that when three dice were rolled, a sum of 9 points and a sum of 10 points had the same probability, since each could be obtained in 6 ways:\n\\[\n\\begin{aligned}\n9: \\quad &1+2+6,\\;1+3+5,\\;1+4+4,\\;2+2+5,\\;2+3+4,\\;3+3+3,\\\\\n10: \\quad &1+3+6,\\;1+4+5,\\;2+4+4,\\;2+3+5,\\;2+2+6,\\;3+3+4.\n\\end{aligned}\n\\]\n\nCompute the probability of the event \\(1+2+6\\): one point on one die, two points on another, and six points on the remaining die.\nCompute the probability of the event \\(2+4+4\\): two points on one die, and four points on each of the remaining dice.\nFind the probabilities of the events \\(A=\\) “a total of 9 points on three dice” and \\(B=\\) “a total of 10 points on three dice”."
+    "section": "0.13 Problem 13",
+    "text": "0.13 Problem 13\nIn Galileo’s time people thought that when three dice were rolled, a sum of 9 points and a sum of 10 points had the same probability, since each could be obtained in 6 ways:\n\\[\n\\begin{aligned}\n9: \\quad &1+2+6,\\;1+3+5,\\;1+4+4,\\;2+2+5,\\;2+3+4,\\;3+3+3,\\\\\n10: \\quad &1+3+6,\\;1+4+5,\\;2+4+4,\\;2+3+5,\\;2+2+6,\\;3+3+4.\n\\end{aligned}\n\\]\n\nCompute the probability of the event \\(1+2+6\\): one point on one die, two points on another, and six points on the remaining die.\nCompute the probability of the event \\(2+4+4\\): two points on one die, and four points on each of the remaining dice.\nFind the probabilities of the events \\(A=\\) “a total of 9 points on three dice” and \\(B=\\) “a total of 10 points on three dice”."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-14",
@@ -493,22 +500,36 @@
     "objectID": "seminars/seminar_7.html#probability-distributions",
     "href": "seminars/seminar_7.html#probability-distributions",
     "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
-    "section": "1 Probability Distributions",
-    "text": "1 Probability Distributions\nA probability distribution on \\(\\mathbb R\\) is a probability measure\n\\[\nP:\\mathcal B(\\mathbb R)\\rightarrow[0,1],\n\\]\nwhere \\(\\mathcal B(\\mathbb R)\\) denotes the Borel \\(\\sigma\\)-algebra."
+    "section": "0.1 Probability Distributions",
+    "text": "0.1 Probability Distributions\nA probability distribution on \\(\\mathbb R\\) is a probability measure\n\\[\nP:\\mathcal B(\\mathbb R)\\rightarrow[0,1],\n\\]\nwhere \\(\\mathcal B(\\mathbb R)\\) denotes the Borel \\(\\sigma\\)-algebra."
   },
   {
     "objectID": "seminars/seminar_7.html#cumulative-distribution-function",
     "href": "seminars/seminar_7.html#cumulative-distribution-function",
     "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
-    "section": "2 Cumulative Distribution Function",
-    "text": "2 Cumulative Distribution Function\nThe cumulative distribution function (CDF) of a random variable \\(\\xi\\) is defined by\n\\[\nF_{\\xi}(x)=P(\\xi\\le x),\\qquad x\\in\\mathbb R.\n\\]\nNotice that the CDF completely determines the probability distribution.\nIn other words, if two random variables have the same cumulative distribution function, then they have the same distribution."
+    "section": "0.2 Cumulative Distribution Function",
+    "text": "0.2 Cumulative Distribution Function\nThe cumulative distribution function (CDF) of a random variable \\(\\xi\\) is defined by\n\\[\nF_{\\xi}(x)=P(\\xi\\le x),\\qquad x\\in\\mathbb R.\n\\]\nNotice that the CDF completely determines the probability distribution.\nIn other words, if two random variables have the same cumulative distribution function, then they have the same distribution."
   },
   {
     "objectID": "seminars/seminar_7.html#properties-of-the-cdf",
     "href": "seminars/seminar_7.html#properties-of-the-cdf",
     "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
-    "section": "3 Properties of the CDF",
-    "text": "3 Properties of the CDF\n\n\\(F(x)\\) is non-decreasing.\n\\(\\displaystyle\\lim_{x\\to-\\infty}F(x)=0\\) and \\(\\displaystyle\\lim_{x\\to\\infty}F(x)=1\\).\n\\(F(x)\\) is right-continuous."
+    "section": "0.3 Properties of the CDF",
+    "text": "0.3 Properties of the CDF\n\n\\(F(x)\\) is non-decreasing.\n\\(\\displaystyle\\lim_{x\\to-\\infty}F(x)=0\\) and \\(\\displaystyle\\lim_{x\\to\\infty}F(x)=1\\).\n\\(F(x)\\) is right-continuous.\n\nThere are three fundamentally different types of probability distributions:\n\nDiscrete distributions;\nSingular distributions;\nAbsolutely continuous distributions.\n\nMoreover, every probability distribution can be uniquely decomposed into a mixture of these three types.\nA singular distribution is concentrated on an uncountable set of Lebesgue measure zero, while assigning probability zero to every individual point.\nThe most famous example is the Cantor distribution, whose cumulative distribution function is known as the Devil’s staircase.\nIn this course we will only study discrete and absolutely continuous distributions."
+  },
+  {
+    "objectID": "seminars/seminar_7.html#example-1-bernoulli-distribution",
+    "href": "seminars/seminar_7.html#example-1-bernoulli-distribution",
+    "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
+    "section": "1.1 Example 1: Bernoulli Distribution",
+    "text": "1.1 Example 1: Bernoulli Distribution\nLet\n\\[\nX\\sim\\operatorname{Bernoulli}(p).\n\\]\nThen\n\\[\nP(X=0)=1-p,\n\\qquad\nP(X=1)=p.\n\\]\nIts cumulative distribution function is\n\\[\nF(x)=\n\\begin{cases}\n0,&x&lt;0,\\\\[1ex]\n1-p,&0\\le x&lt;1,\\\\[1ex]\n1,&x\\ge1.\n\\end{cases}\n\\]\nNotice that the CDF is a step function with jumps equal to the probabilities of the corresponding outcomes."
+  },
+  {
+    "objectID": "seminars/seminar_7.html#example-2-uniform-distribution-on-a-finite-set",
+    "href": "seminars/seminar_7.html#example-2-uniform-distribution-on-a-finite-set",
+    "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
+    "section": "1.2 Example 2: Uniform Distribution on a Finite Set",
+    "text": "1.2 Example 2: Uniform Distribution on a Finite Set\nSuppose\n\\[\nX=\\{x_1,x_2,\\ldots,x_n\\}\n\\]\nand every value is equally likely.\nThen\n\\[\nP(X=x_i)=\\frac1n,\n\\qquad i=1,\\ldots,n.\n\\]\nIts cumulative distribution function increases by exactly\n\\[\n\\frac1n\n\\]\nat every point of the support."
   },
   {
     "objectID": "seminars/Seminar_1.html",
