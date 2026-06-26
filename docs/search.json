@@ -238,39 +238,46 @@
     "text": "A discrete random variable assigns positive probability to countably many values.\nA continuous random variable distributes its probability over intervals rather than individual points. In this lecture we study the most important class of continuous distributions: absolutely continuous distributions."
   },
   {
-    "objectID": "seminars/seminar_7.html#probability-distributions",
-    "href": "seminars/seminar_7.html#probability-distributions",
-    "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
-    "section": "0.1 Probability Distributions",
-    "text": "0.1 Probability Distributions\nA probability distribution on \\(\\mathbb R\\) is a probability measure\n\\[\nP:\\mathcal B(\\mathbb R)\\rightarrow[0,1],\n\\]\nwhere \\(\\mathcal B(\\mathbb R)\\) denotes the Borel \\(\\sigma\\)-algebra."
-  },
-  {
     "objectID": "seminars/seminar_7.html#cumulative-distribution-function",
     "href": "seminars/seminar_7.html#cumulative-distribution-function",
     "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
-    "section": "0.2 Cumulative Distribution Function",
-    "text": "0.2 Cumulative Distribution Function\nThe cumulative distribution function (CDF) of a random variable \\(\\xi\\) is defined by\n\\[\nF_{\\xi}(x)=P(\\xi\\le x),\\qquad x\\in\\mathbb R.\n\\]\nNotice that the CDF completely determines the probability distribution.\nIn other words, if two random variables have the same cumulative distribution function, then they have the same distribution."
+    "section": "1.1 Cumulative Distribution Function",
+    "text": "1.1 Cumulative Distribution Function\nThe cumulative distribution function (CDF) of a random variable \\(\\xi\\) is defined by\n\\[\nF_{\\xi}(x)=P(\\xi\\le x),\\qquad x\\in\\mathbb R.\n\\]\nNotice that the CDF completely determines the probability distribution.\nIn other words, if two random variables have the same cumulative distribution function, then they have the same distribution.\n\n1.1.1 Properties of the CDF\n\n\\(F(x)\\) is non-decreasing.\n\\(\\displaystyle\\lim_{x\\to-\\infty}F(x)=0\\) and \\(\\displaystyle\\lim_{x\\to\\infty}F(x)=1\\).\n\\(F(x)\\) is right-continuous.\n\nThere are three fundamentally different types of probability distributions:\n\nDiscrete distributions;\nSingular distributions;\nAbsolutely continuous distributions.\n\nMoreover, every probability distribution can be uniquely decomposed into a mixture of these three types.\nA singular distribution is concentrated on an uncountable set of Lebesgue measure zero, while assigning probability zero to every individual point.\nThe most famous example is the Cantor distribution, whose cumulative distribution function is known as the Devil’s staircase.\nIn this course we will only study discrete and absolutely continuous distributions."
   },
   {
-    "objectID": "seminars/seminar_7.html#properties-of-the-cdf",
-    "href": "seminars/seminar_7.html#properties-of-the-cdf",
+    "objectID": "seminars/seminar_7.html#discrete-probability-distributions",
+    "href": "seminars/seminar_7.html#discrete-probability-distributions",
     "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
-    "section": "0.3 Properties of the CDF",
-    "text": "0.3 Properties of the CDF\n\n\\(F(x)\\) is non-decreasing.\n\\(\\displaystyle\\lim_{x\\to-\\infty}F(x)=0\\) and \\(\\displaystyle\\lim_{x\\to\\infty}F(x)=1\\).\n\\(F(x)\\) is right-continuous.\n\nThere are three fundamentally different types of probability distributions:\n\nDiscrete distributions;\nSingular distributions;\nAbsolutely continuous distributions.\n\nMoreover, every probability distribution can be uniquely decomposed into a mixture of these three types.\nA singular distribution is concentrated on an uncountable set of Lebesgue measure zero, while assigning probability zero to every individual point.\nThe most famous example is the Cantor distribution, whose cumulative distribution function is known as the Devil’s staircase.\nIn this course we will only study discrete and absolutely continuous distributions."
+    "section": "1.2 Discrete Probability Distributions",
+    "text": "1.2 Discrete Probability Distributions\nA probability distribution is called discrete if there exists a finite or countable set\n\\[\nX=\\{x_1,x_2,\\ldots\\}\\subset\\mathbb R\n\\]\nsuch that \\(P(X)=1\\)."
   },
   {
     "objectID": "seminars/seminar_7.html#example-1-bernoulli-distribution",
     "href": "seminars/seminar_7.html#example-1-bernoulli-distribution",
     "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
-    "section": "1.1 Example 1: Bernoulli Distribution",
-    "text": "1.1 Example 1: Bernoulli Distribution\nLet\n\\[\nX\\sim\\operatorname{Bernoulli}(p).\n\\]\nThen\n\\[\nP(X=0)=1-p,\n\\qquad\nP(X=1)=p.\n\\]\nIts cumulative distribution function is\n\\[\nF(x)=\n\\begin{cases}\n0,&x&lt;0,\\\\[1ex]\n1-p,&0\\le x&lt;1,\\\\[1ex]\n1,&x\\ge1.\n\\end{cases}\n\\]\nNotice that the CDF is a step function with jumps equal to the probabilities of the corresponding outcomes."
+    "section": "1.3 Example 1: Bernoulli Distribution",
+    "text": "1.3 Example 1: Bernoulli Distribution\nLet \\(X\\sim\\operatorname{Bernoulli}(p)\\). Its cumulative distribution function is\n\\[\nF(x)=\n\\begin{cases}\n0,&x&lt;0,\\\\[1ex]\n1-p,&0\\le x&lt;1,\\\\[1ex]\n1,&x\\ge1.\n\\end{cases}\n\\]\nNotice that the CDF is a step function with jumps equal to the probabilities of the corresponding outcomes."
   },
   {
-    "objectID": "seminars/seminar_7.html#example-2-uniform-distribution-on-a-finite-set",
-    "href": "seminars/seminar_7.html#example-2-uniform-distribution-on-a-finite-set",
+    "objectID": "seminars/seminar_7.html#properties-of-the-probability-density-function",
+    "href": "seminars/seminar_7.html#properties-of-the-probability-density-function",
     "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
-    "section": "1.2 Example 2: Uniform Distribution on a Finite Set",
-    "text": "1.2 Example 2: Uniform Distribution on a Finite Set\nSuppose\n\\[\nX=\\{x_1,x_2,\\ldots,x_n\\}\n\\]\nand every value is equally likely.\nThen\n\\[\nP(X=x_i)=\\frac1n,\n\\qquad i=1,\\ldots,n.\n\\]\nIts cumulative distribution function increases by exactly\n\\[\n\\frac1n\n\\]\nat every point of the support."
+    "section": "2.1 Properties of the Probability Density Function",
+    "text": "2.1 Properties of the Probability Density Function\n\nIf the cumulative distribution function is differentiable, then\n\n\\[\np(x)=F'(x).\n\\]\n\nEvery probability density function integrates to one,\n\n\\[\n\\int_{-\\infty}^{\\infty}p(x)\\,dx=1.\n\\]\n\nThe probability of any Borel set \\(B\\subseteq\\mathbb R\\) is obtained by integrating the density over that set,\n\n\\[\nP(B)=\\int_B p(t)\\,dt.\n\\]\nIn particular,\n\\[\nP(a\\le X\\le b)=\\int_a^b p(t)\\,dt.\n\\]"
+  },
+  {
+    "objectID": "seminars/seminar_7.html#examples-of-absolutely-continuous-distributions",
+    "href": "seminars/seminar_7.html#examples-of-absolutely-continuous-distributions",
+    "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
+    "section": "2.2 Examples of Absolutely Continuous Distributions",
+    "text": "2.2 Examples of Absolutely Continuous Distributions\n\n2.2.1 Uniform Distribution\nLet $ XU([a,b])$, where \\(a&lt;b\\). The probability density function is\n\\[\np(x)=\n\\begin{cases}\n\\dfrac1{b-a},&a\\le x\\le b,\\\\[1ex]\n0,&\\text{otherwise}.\n\\end{cases}\n\\]\nEvery interval of the same length inside \\([a,b]\\) has the same probability.\n\n\n2.2.2 Exponential Distribution\nLet \\(X\\sim\\operatorname{Exp}(\\lambda)\\), where \\(\\lambda&gt;0\\). Its probability density function is\n\\[\np(x)=\n\\begin{cases}\n\\lambda e^{-\\lambda x},&x\\ge0,\\\\[1ex]\n0,&x&lt;0.\n\\end{cases}\n\\]\nThe exponential distribution is commonly used to model waiting times.\n\n\n2.2.3 Normal Distribution\nA random variable is said to follow a normal distribution with parameters \\(\\mu\\in\\mathbb R\\) and \\(\\sigma^2&gt;0\\), if its probability density function is\n\\[\np(x)=\n\\frac1{\\sqrt{2\\pi}\\sigma}\n\\exp\\!\\left(\n-\\frac{(x-\\mu)^2}{2\\sigma^2}\n\\right).\n\\]\nWe write\n\\[\n\\boxed{\nX\\sim N(\\mu,\\sigma^2)\n}\n\\]\nThe normal distribution is one of the most important probability distributions in statistics and data science. Many natural phenomena are approximately normally distributed, and many statistical procedures are based on this distribution.\nA particularly important special case is the standard normal distribution\n\\[\nN(0,1),\n\\]\nwhich will play a central role throughout the remainder of the course."
+  },
+  {
+    "objectID": "seminars/seminar_7.html#the-standard-normal-table",
+    "href": "seminars/seminar_7.html#the-standard-normal-table",
+    "title": "Seminar 7: Continuous Random Variables. Normal Distribution",
+    "section": "2.3 The Standard Normal Table",
+    "text": "2.3 The Standard Normal Table\nThe cumulative distribution function of the standard normal distribution, \\(Z\\sim N(0,1)\\), is denoted by\n\\[\n\\Phi(z)=P(Z\\le z).\n\\]\nUnlike the cumulative distribution functions of the uniform or exponential distributions, the integral\n\\[\n\\Phi(z)\n=\n\\frac1{\\sqrt{2\\pi}}\n\\int_{-\\infty}^{z}\ne^{-t^2/2}\\,dt\n\\]\ncannot be evaluated using elementary functions.\nFor this reason, values of \\(\\Phi(z)\\) are usually obtained from a standard normal table, often called the Z-table.\n\n2.3.1 How is the Z-table organized?\nThe Z-table contains numerical values of \\(\\Phi(z)=P(Z\\le z)\\) for many values of \\(z\\).\nTypically,\n\nthe row contains the first decimal digit of \\(z\\);\nthe column contains the second decimal digit.\n\nSuppose we want to compute \\(P(Z\\le1.23)\\). Looking up the entry corresponding to row 1.2, and column 0.03, we obtain approximately\n\\[\n\\boxed{\\Phi(1.23)\\approx0.8907.}\n\\]\nTherefore,\n\\[\nP(N(0,1)\\le1.23)\\approx0.8907.\n\\]"
   },
   {
     "objectID": "lectures.html",
