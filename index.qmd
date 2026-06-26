@@ -21,3 +21,6 @@ Each seminar contains a **Theory Review** (summarizing the main concepts covered
 
 - **Seminar 6: Covariance, Correlation and the Weak Law of Large Numbers**  
   [Theory Review](seminars/seminar_6.html) · [Problem Set](seminars/problems_6.html)
+
+- **Seminar 7: Continuous Random Variables. Normal Distribution**  
+  [Theory Review](seminars/seminar_7.html) · [Problem Set](seminars/problems_7.html)
