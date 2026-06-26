@@ -319,7 +319,7 @@
     "href": "problems/problem_set_01.html#category-1",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
     "section": "0.1 Category 1",
-    "text": "0.1 Category 1\n\n\n\n\n\n\nTip🟢 Problem 1\n\n\n\n\n\nSuppose that a class of 100 students consists of four subgroups…\n\n\n\n\nMen\nWomen\n\n\n\n\nTaking Economics\n17%\n38%\n\n\nNot taking Economics\n23%\n22%\n\n\n\nWhat is the chance that a randomly chosen student is:\n\na woman?\ntaking economics?\na man or taking economics?\na woman and taking economics?"
+    "text": "0.1 Category 1\n\n\n\n\n\n\nTipProblem 1\n\n\n\n\n\nSuppose that a class of 100 students consists of four subgroups…\n\n\n\n\nMen\nWomen\n\n\n\n\nTaking Economics\n17%\n38%\n\n\nNot taking Economics\n23%\n22%\n\n\n\nWhat is the chance that a randomly chosen student is:\n\na woman?\ntaking economics?\na man or taking economics?\na woman and taking economics?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-2",
@@ -406,74 +406,53 @@
     "text": "0.13 Problem 13\nIn Galileo’s time people thought that when three dice were rolled, a sum of 9 points and a sum of 10 points had the same probability, since each could be obtained in 6 ways:\n\\[\n\\begin{aligned}\n9: \\quad &1+2+6,\\;1+3+5,\\;1+4+4,\\;2+2+5,\\;2+3+4,\\;3+3+3,\\\\\n10: \\quad &1+3+6,\\;1+4+5,\\;2+4+4,\\;2+3+5,\\;2+2+6,\\;3+3+4.\n\\end{aligned}\n\\]\n\nCompute the probability of the event \\(1+2+6\\): one point on one die, two points on another, and six points on the remaining die.\nCompute the probability of the event \\(2+4+4\\): two points on one die, and four points on each of the remaining dice.\nFind the probabilities of the events \\(A=\\) “a total of 9 points on three dice” and \\(B=\\) “a total of 10 points on three dice”."
   },
   {
-    "objectID": "problems/problem_set_01.html#problem-14",
-    "href": "problems/problem_set_01.html#problem-14",
-    "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "1.1 Problem 14",
-    "text": "1.1 Problem 14\nSuppose \\(n\\) friends are sitting around a table in random order.\nWhat is the probability that \\(A\\) sits next to \\(B\\)?"
-  },
-  {
     "objectID": "problems/problem_set_01.html#problem-15",
     "href": "problems/problem_set_01.html#problem-15",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "1.2 Problem 15",
-    "text": "1.2 Problem 15\nIn a box there are 10 white balls and 6 black balls. 4 balls are chosen randomly without replacement.\nWhat is the probability that among the chosen balls:\n\nthere is at least one black ball;\nthere are exactly two black balls?"
+    "section": "1.1 Problem 15",
+    "text": "1.1 Problem 15\nIn a box there are 10 white balls and 6 black balls. 4 balls are chosen randomly without replacement.\nWhat is the probability that among the chosen balls:\n\nthere is at least one black ball;\nthere are exactly two black balls?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-16",
     "href": "problems/problem_set_01.html#problem-16",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "1.3 Problem 16",
-    "text": "1.3 Problem 16\nA closet contains \\(n\\) pairs of boots. \\(2r\\) boots are randomly selected from the closet.\nWhat is the probability that among the selected boots:\n\nthere are no complete pairs;\nthere is exactly one complete pair?"
+    "section": "1.2 Problem 16",
+    "text": "1.2 Problem 16\nA closet contains \\(n\\) pairs of boots. \\(2r\\) boots are randomly selected from the closet.\nWhat is the probability that among the selected boots:\n\nthere are no complete pairs;\nthere is exactly one complete pair?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-17",
     "href": "problems/problem_set_01.html#problem-17",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "1.4 Problem 17",
-    "text": "1.4 Problem 17\nFind the probability that among 50 students attending a lecture on probability theory, at least two of them have the same date of birth."
+    "section": "1.3 Problem 17",
+    "text": "1.3 Problem 17\nFind the probability that among 50 students attending a lecture on probability theory, at least two of them have the same date of birth."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-18",
     "href": "problems/problem_set_01.html#problem-18",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "1.5 Problem 18",
-    "text": "1.5 Problem 18\nIn a box there are 28 black balls and 4 white balls. 10 balls are chosen randomly.\nWhat is the probability that among the chosen balls:\n\nthere is at least one white ball;\nthere is exactly one white ball;\nthere are at least two white balls;\nthere are exactly two white balls?"
+    "section": "1.4 Problem 18",
+    "text": "1.4 Problem 18\nIn a box there are 28 black balls and 4 white balls. 10 balls are chosen randomly.\nWhat is the probability that among the chosen balls:\n\nthere is at least one white ball;\nthere is exactly one white ball;\nthere are at least two white balls;\nthere are exactly two white balls?"
   },
   {
     "objectID": "problems/problem_set_01.html#problem-19",
     "href": "problems/problem_set_01.html#problem-19",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "1.6 Problem 19",
-    "text": "1.6 Problem 19\nA deck of playing cards contains 52 cards, divided into 4 different suits of 13 cards each. 6 cards are randomly drawn.\nFind the probability that:\n\namong these cards there will be the king of spades;\namong these cards there will be a representative of each suit."
-  },
-  {
-    "objectID": "problems/problem_set_01.html#problem-20",
-    "href": "problems/problem_set_01.html#problem-20",
-    "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "2.1 Problem 20",
-    "text": "2.1 Problem 20\nTwo \\(M\\)-sided dice are thrown.\nFind the probability that the sum of the two numbers obtained is equal to \\(i\\)."
+    "section": "1.5 Problem 19",
+    "text": "1.5 Problem 19\nA deck of playing cards contains 52 cards, divided into 4 different suits of 13 cards each. 6 cards are randomly drawn.\nFind the probability that:\n\namong these cards there will be the king of spades;\namong these cards there will be a representative of each suit."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-21",
     "href": "problems/problem_set_01.html#problem-21",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "2.2 Problem 21",
-    "text": "2.2 Problem 21\nA set of \\(n\\) balls is randomly placed into \\(m\\) boxes.\nFind the probability that all boxes are non-empty if the balls are distinguishable."
+    "section": "2.1 Problem 21",
+    "text": "2.1 Problem 21\nA set of \\(n\\) balls is randomly placed into \\(m\\) boxes.\nFind the probability that all boxes are non-empty if the balls are distinguishable."
   },
   {
     "objectID": "problems/problem_set_01.html#problem-22",
     "href": "problems/problem_set_01.html#problem-22",
     "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "2.3 Problem 22",
-    "text": "2.3 Problem 22\nA shelf holds 12 books in a row. We pick 5 books randomly.\nFind the probability that no pair of adjacent books is chosen."
-  },
-  {
-    "objectID": "problems/problem_set_01.html#problem-23",
-    "href": "problems/problem_set_01.html#problem-23",
-    "title": "Problem set 1: Basics of Probability. Combinatorics",
-    "section": "2.4 Problem 23",
-    "text": "2.4 Problem 23\nSome residents of Dolgoprudny consider a tram ticket “special” if the sum of the first three digits of its six-digit number is equal to the sum of the last three digits.\nFind the probability of getting a “lucky” ticket."
+    "section": "2.2 Problem 22",
+    "text": "2.2 Problem 22\nA shelf holds 12 books in a row. We pick 5 books randomly.\nFind the probability that no pair of adjacent books is chosen.\n\n\n\n\n\n\nImportantProblem 23\n\n\n\n\n\nSome residents of Dolgoprudny consider a tram ticket “special” if the sum of the first three digits of its six-digit number is equal to the sum of the last three digits.\nFind the probability of getting a “lucky” ticket."
   },
   {
     "objectID": "seminars.html",
