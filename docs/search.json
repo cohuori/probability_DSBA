@@ -4,21 +4,42 @@
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "This page will contain additional materials for the course.\n\n\n\nSyllabus\n\n\n\n\n\nFormula sheet\nStatistical Tables\nPast exams\nUniversity of London Exams\nIntroduction to Statistical Inference. Stanford University\nBook Mathematical Statistics and Data Analysis by John Rice"
+    "text": "This page contains additional materials for the course: statistical tables, formula sheets, distribution summaries, software tools, and recommended books.\n\n\nThese are the classical statistical tables that are commonly used in introductory probability and statistics courses. Although statistical software can compute these quantities instantly, understanding how to read these tables remains an important skill.\n\n\n\n\n\n\nTipStandard Normal Distribution (Z Table)\n\n\n\n\n\nThe Z table gives cumulative probabilities\n\\[\n\\Phi(z)=P(Z\\le z),\n\\qquad Z\\sim N(0,1).\n\\]\nIt is mainly used to compute probabilities and critical values for the normal distribution.\n📄 Download: Standard Normal Table\n\n\n\n\n\n\n\n\n\nTipStudent’s \\(t\\) Distribution\n\n\n\n\n\nThe Student’s \\(t\\) table provides critical values of the \\(t\\) distribution for different degrees of freedom.\nIt is primarily used when constructing confidence intervals or performing hypothesis tests for the mean when the population variance is unknown.\n📄 Download: Student’s t Table\n\n\n\n\n\n\n\n\n\nTipChi-Square Distribution\n\n\n\n\n\nThe chi-square table contains critical values of the \\(\\chi^2\\) distribution.\nIt is used for:\n\nconfidence intervals for variances,\ngoodness-of-fit tests,\ntests of independence.\n\n📄 Download: Chi-Square Table\n\n\n\n\n\n\n\n\n\nTipFisher’s \\(F\\) Distribution\n\n\n\n\n\nThe \\(F\\) table contains critical values of the Fisher distribution.\nIt is mainly used in:\n\nANOVA,\ncomparing variances,\nregression analysis.\n\n📄 Download: F Distribution Table\n\n\n\n\n\n\n\n\n\n\n\n\nNoteProbability Formula Sheet\n\n\n\n\n\nComing soon.\n\n\n\n\n\n\n\n\n\nNoteStatistics Formula Sheet\n\n\n\n\n\nComing soon.\n\n\n\n\n\n\n\n\n\n\n\n\nCautionMain Probability Distributions\n\n\n\n\n\nComing soon.\n\n\n\n\n\n\nComing soon.\n\n\n\nComing soon."
   },
   {
-    "objectID": "resources.html#useful-links",
-    "href": "resources.html#useful-links",
+    "objectID": "resources.html#statistical-tables",
+    "href": "resources.html#statistical-tables",
     "title": "Resources",
     "section": "",
-    "text": "Syllabus"
+    "text": "These are the classical statistical tables that are commonly used in introductory probability and statistics courses. Although statistical software can compute these quantities instantly, understanding how to read these tables remains an important skill.\n\n\n\n\n\n\nTipStandard Normal Distribution (Z Table)\n\n\n\n\n\nThe Z table gives cumulative probabilities\n\\[\n\\Phi(z)=P(Z\\le z),\n\\qquad Z\\sim N(0,1).\n\\]\nIt is mainly used to compute probabilities and critical values for the normal distribution.\n📄 Download: Standard Normal Table\n\n\n\n\n\n\n\n\n\nTipStudent’s \\(t\\) Distribution\n\n\n\n\n\nThe Student’s \\(t\\) table provides critical values of the \\(t\\) distribution for different degrees of freedom.\nIt is primarily used when constructing confidence intervals or performing hypothesis tests for the mean when the population variance is unknown.\n📄 Download: Student’s t Table\n\n\n\n\n\n\n\n\n\nTipChi-Square Distribution\n\n\n\n\n\nThe chi-square table contains critical values of the \\(\\chi^2\\) distribution.\nIt is used for:\n\nconfidence intervals for variances,\ngoodness-of-fit tests,\ntests of independence.\n\n📄 Download: Chi-Square Table\n\n\n\n\n\n\n\n\n\nTipFisher’s \\(F\\) Distribution\n\n\n\n\n\nThe \\(F\\) table contains critical values of the Fisher distribution.\nIt is mainly used in:\n\nANOVA,\ncomparing variances,\nregression analysis.\n\n📄 Download: F Distribution Table"
   },
   {
-    "objectID": "resources.html#additional-materials",
-    "href": "resources.html#additional-materials",
+    "objectID": "resources.html#formula-sheets",
+    "href": "resources.html#formula-sheets",
     "title": "Resources",
     "section": "",
-    "text": "Formula sheet\nStatistical Tables\nPast exams\nUniversity of London Exams\nIntroduction to Statistical Inference. Stanford University\nBook Mathematical Statistics and Data Analysis by John Rice"
+    "text": "NoteProbability Formula Sheet\n\n\n\n\n\nComing soon.\n\n\n\n\n\n\n\n\n\nNoteStatistics Formula Sheet\n\n\n\n\n\nComing soon."
+  },
+  {
+    "objectID": "resources.html#distribution-summaries",
+    "href": "resources.html#distribution-summaries",
+    "title": "Resources",
+    "section": "",
+    "text": "CautionMain Probability Distributions\n\n\n\n\n\nComing soon."
+  },
+  {
+    "objectID": "resources.html#software",
+    "href": "resources.html#software",
+    "title": "Resources",
+    "section": "",
+    "text": "Coming soon."
+  },
+  {
+    "objectID": "resources.html#recommended-books",
+    "href": "resources.html#recommended-books",
+    "title": "Resources",
+    "section": "",
+    "text": "Coming soon."
   },
   {
     "objectID": "seminars/seminar_4.html",

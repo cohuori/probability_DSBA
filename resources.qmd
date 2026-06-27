@@ -4,17 +4,91 @@ title: "Resources"
 
 # Resources
 
-This page will contain additional materials for the course.
+This page contains additional materials for the course: statistical tables, formula sheets, distribution summaries, software tools, and recommended books.
 
-## Useful links
+## Statistical Tables
 
-- Syllabus
+These are the classical statistical tables that are commonly used in introductory probability and statistics courses. Although statistical software can compute these quantities instantly, understanding how to read these tables remains an important skill.
 
-## Additional materials
+::: {.callout-tip collapse="true"}
+## Standard Normal Distribution (Z Table)
 
-- Formula sheet
-- Statistical Tables
-- Past exams
-- University of London Exams
-- Introduction to Statistical Inference. Stanford University
-- Book Mathematical Statistics and Data Analysis by John Rice
+The Z table gives cumulative probabilities
+
+$$
+\Phi(z)=P(Z\le z),
+\qquad Z\sim N(0,1).
+$$
+
+It is mainly used to compute probabilities and critical values for the normal distribution.
+
+📄 **Download:** [Standard Normal Table](resources/tables/normal_table.pdf)
+:::
+
+::: {.callout-tip collapse="true"}
+## Student's $t$ Distribution
+
+The Student's $t$ table provides critical values of the $t$ distribution for different degrees of freedom.
+
+It is primarily used when constructing confidence intervals or performing hypothesis tests for the mean when the population variance is unknown.
+
+📄 **Download:** [Student's t Table](resources/tables/t_table.pdf)
+:::
+
+::: {.callout-tip collapse="true"}
+## Chi-Square Distribution
+
+The chi-square table contains critical values of the $\chi^2$ distribution.
+
+It is used for:
+
+- confidence intervals for variances,
+- goodness-of-fit tests,
+- tests of independence.
+
+📄 **Download:** [Chi-Square Table](resources/tables/chi_square_table.pdf)
+:::
+
+::: {.callout-tip collapse="true"}
+## Fisher's $F$ Distribution
+
+The $F$ table contains critical values of the Fisher distribution.
+
+It is mainly used in:
+
+- ANOVA,
+- comparing variances,
+- regression analysis.
+
+📄 **Download:** [F Distribution Table](resources/tables/f_table.pdf)
+:::
+
+## Formula Sheets
+
+::: {.callout-note collapse="true"}
+## Probability Formula Sheet
+
+Coming soon.
+:::
+
+::: {.callout-note collapse="true"}
+## Statistics Formula Sheet
+
+Coming soon.
+:::
+
+## Distribution Summaries
+
+::: {.callout-caution collapse="true"}
+## Main Probability Distributions
+
+Coming soon.
+:::
+
+## Software
+
+Coming soon.
+
+## Recommended Books
+
+Coming soon.
