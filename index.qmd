@@ -8,19 +8,19 @@ Each seminar contains a **Theory Review** (summarizing the main concepts covered
   [Theory Review](seminars/Seminar_1.html) · [Problem Set](problems/problem_set_01.html)
 
 - **Seminar 2: Probabilistic Models**  
-  [Theory Review](seminars/seminar_2.html) · [Problem Set](seminars/problems_2.html)
+  [Theory Review](seminars/seminar_2.html) · [Problem Set](problems/problem_set_02.html)
 
 - **Seminar 3: Bayes' Theorem**  
-  [Theory Review](seminars/seminar_3.html) · [Problem Set](seminars/problems_3.html)
+  [Theory Review](seminars/seminar_3.html) · [Problem Set](problems/problem_set_03.html)
 
 - **Seminar 4: Discrete Random Variables**  
-  [Theory Review](seminars/seminar_4.html) · [Problem Set](seminars/problems_4.html)
+  [Theory Review](seminars/seminar_4.html) · [Problem Set](problems/problem_set_04.html)
 
 - **Seminar 5: Expectation and Variance of Discrete Random Variables**  
-  [Theory Review](seminars/seminar_5.html) · [Problem Set](seminars/problems_5.html)
+  [Theory Review](seminars/seminar_5.html) · [Problem Set](problems/problem_set_05.html)
 
 - **Seminar 6: Covariance, Correlation and the Weak Law of Large Numbers**  
-  [Theory Review](seminars/seminar_6.html) · [Problem Set](seminars/problems_6.html)
+  [Theory Review](seminars/seminar_6.html) · [Problem Set](problems/problem_set_06.html)
 
 - **Seminar 7: Continuous Random Variables. Normal Distribution**  
-  [Theory Review](seminars/seminar_7.html) · [Problem Set](seminars/problems_7.html)
+  [Theory Review](seminars/seminar_7.html) · [Problem Set](problems/problem_set_07.html)

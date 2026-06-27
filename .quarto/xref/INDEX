@@ -55,5 +55,8 @@
   },
   "resources.qmd": {
     "resources.html": "44b30be6"
+  },
+  "problems/problem_set_02.ipynb": {
+    "problem_set_02.html": "40572a6e"
   }
 }
