@@ -4,7 +4,7 @@ title: "Resources"
 
 # Resources
 
-This page contains additional materials for the course: statistical tables, formula sheets, distribution summaries, software tools, and recommended books.
+This page contains additional materials for the course: statistical tables, formula sheets, distribution summaries and recommended books.
 
 ## Statistical Tables
 
