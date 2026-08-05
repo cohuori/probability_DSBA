@@ -3,13 +3,18 @@ project:
   output-dir: docs
 
 website:
-  title: "Probability & Statistics at DSBA"
+  title: ""
+  search: false
 
   navbar:
     left:
+      - href: https://cohuori.github.io
+        text: "Carlos Buitrago"
+
       - href: index.qmd
-        text: Home
-      
+        text: "Probability & Statistics at DSBA"
+
+    right:
       - href: resources.qmd
         text: Resources
      

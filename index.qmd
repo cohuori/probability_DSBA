@@ -24,3 +24,26 @@ Each seminar contains a **Theory Review** (summarizing the main concepts covered
 
 - **Seminar 7: Continuous Random Variables. Normal Distribution**  
   [Theory Review](seminars/seminar_7.html) · [Problem Set](problems/problem_set_07.html)
+
+## Seminars - Module 2
+
+- **Seminar 8: Random Vectors. Distributions derived from Normal distribution**  
+  [Theory Review](seminars/Seminar_8.html) · [Problem Set](problems/problem_set_08.html)
+
+- **Seminar 9: Expectation. Moment Generating Functions**  
+  [Theory Review](seminars/seminar_9.html) · [Problem Set](problems/problem_set_09.html)
+
+- **Seminar 10: CLT. Limit theorems**  
+  [Theory Review](seminars/seminar_10.html) · [Problem Set](problems/problem_set_10.html)
+
+- **Seminar 11: Point Estimators and their Properties**  
+  [Theory Review](seminars/seminar_11.html) · [Problem Set](problems/problem_set_11.html)
+
+- **Seminar 12: MLE & Method of Moments**  
+  [Theory Review](seminars/seminar_12.html) · [Problem Set](problems/problem_set_12.html)
+
+- **Seminar 13: Efficiency and the Cramer-Rao Lower Bound**  
+  [Theory Review](seminars/seminar_13.html) · [Problem Set](problems/problem_set_13.html)
+
+- **Seminar 14: Sufficient Statistics & Exponential families**  
+  [Theory Review](seminars/seminar_14.html) · [Problem Set](problems/problem_set_14.html)
