@@ -11,10 +11,19 @@ website:
       - href: https://cohuori.github.io
         text: "Carlos Buitrago"
 
+      - text: "›"
+
+      - href: https://cohuori.github.io/teaching/
+        text: "Teaching"
+
+      - text: "›"
+
       - href: index.qmd
+
         text: "Probability & Statistics at DSBA"
 
     right:
+    
       - href: resources.qmd
         text: Resources
      
