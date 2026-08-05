@@ -585,7 +585,7 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Welcome to the seminar materials for the course Probability & Statistics at the HSE DSBA programme.\nEach seminar contains a Theory Review (summarizing the main concepts covered in the lectures together with additional examples and simulations) and a corresponding Problem Set for practice."
+    "text": "Welcome to the seminar materials for the course Probability & Statistics in the HSE DSBA programme."
   },
   {
     "objectID": "index.html#seminars---module-1",
@@ -1601,5 +1601,19 @@
     "title": "Seminar 12: MLE & Method of Moments",
     "section": "16.3 Main Ideas of This Chapter",
     "text": "16.3 Main Ideas of This Chapter\nThis chapter introduced two of the most important estimation methods in mathematical statistics.\nThe Method of Moments estimates unknown parameters by matching theoretical and empirical moments.\nThe Maximum Likelihood Method estimates the parameter that makes the observed sample most likely under the assumed statistical model.\nAlthough these methods are constructed differently, they share many desirable asymptotic properties and can both be viewed as solving estimating equations.\nThis unified perspective extends naturally to many advanced estimation methods encountered in modern statistics, econometrics, and machine learning."
+  },
+  {
+    "objectID": "index.html#additional-information",
+    "href": "index.html#additional-information",
+    "title": "",
+    "section": "3 Additional Information",
+    "text": "3 Additional Information\nInformation about grading, homework, deadlines, and course announcements is available in the Course Information section.\nAdditional materials, including statistical tables, cheat sheets, and other useful resources, can be found in the Resources section."
+  },
+  {
+    "objectID": "course_information.html",
+    "href": "course_information.html",
+    "title": "1 Course Information",
+    "section": "",
+    "text": "1 Course Information\n\nGrades\nList of Students"
   }
 ]

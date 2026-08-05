@@ -1,6 +1,4 @@
-Welcome to the seminar materials for the course **Probability & Statistics** at the HSE DSBA programme.
-
-Each seminar contains a **Theory Review** (summarizing the main concepts covered in the lectures together with additional examples and simulations) and a corresponding **Problem Set** for practice.
+Welcome to the seminar materials for the course **Probability & Statistics** in the **HSE DSBA** programme.
 
 ## Seminars - Module 1
 
@@ -47,3 +45,10 @@ Each seminar contains a **Theory Review** (summarizing the main concepts covered
 
 - **Seminar 14: Sufficient Statistics & Exponential families**  
   [Theory Review](seminars/seminar_14.html) · [Problem Set](problems/problem_set_14.html)
+
+
+## Additional Information
+
+Information about grading, homework, deadlines, and course announcements is available in the [Course Information](course_information.qmd) section.
+
+Additional materials, including statistical tables, cheat sheets, and other useful resources, can be found in the [Resources](resources.qmd) section.
